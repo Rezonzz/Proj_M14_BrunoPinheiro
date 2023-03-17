@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>No Japão, que depois de uma má performance no Mundial, decide criar um novo sistema de treino para produzir o melhor avançado do mundo. Para isso, eles estabelecem o Blue Lock, uma academia para avançados promissores, onde os jogadores são colocados num ambiente altamente competitivo e são incentivados a desenvolver as suas habilidades individuais para se tornarem o melhor avançado do mundo. E quem teve essa excelente ideia foi Bruno Pinheiro o grande treinador português que levou o Japão à Vitória. Depois dessa vitória formaram-se muitas academias "Blue Lock" em várias outras modalidades. </value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

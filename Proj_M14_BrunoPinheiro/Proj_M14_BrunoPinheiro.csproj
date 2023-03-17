@@ -52,6 +52,12 @@
     <Compile Include="frm_historia.Designer.cs">
       <DependentUpon>frm_historia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_inscricao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_inscricao.Designer.cs">
+      <DependentUpon>frm_inscricao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_historia.resx">
       <DependentUpon>frm_historia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_inscricao.resx">
+      <DependentUpon>frm_inscricao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
@@ -136,6 +145,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minussf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
