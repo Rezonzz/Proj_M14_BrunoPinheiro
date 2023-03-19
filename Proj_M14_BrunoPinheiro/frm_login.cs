@@ -145,7 +145,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void txt_password_TextChanged(object sender, EventArgs e)
         {
-            txt_password.MaxLength = 15;
+            txt_password.MaxLength = 50;
             if (txt_password.Text != "" && txt_password.Text != "Password")
             {
                 lbl_limpar.Visible = true;

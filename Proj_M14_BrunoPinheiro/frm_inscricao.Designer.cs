@@ -66,6 +66,10 @@
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -79,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_password
@@ -86,7 +91,7 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_password.Location = new System.Drawing.Point(358, 397);
+            this.lbl_password.Location = new System.Drawing.Point(90, 468);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(82, 17);
             this.lbl_password.TabIndex = 97;
@@ -109,7 +114,7 @@
             // 
             this.lbl_invalido.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_invalido.ForeColor = System.Drawing.Color.Red;
-            this.lbl_invalido.Location = new System.Drawing.Point(187, 480);
+            this.lbl_invalido.Location = new System.Drawing.Point(319, 480);
             this.lbl_invalido.Name = "lbl_invalido";
             this.lbl_invalido.Size = new System.Drawing.Size(236, 32);
             this.lbl_invalido.TabIndex = 93;
@@ -120,7 +125,7 @@
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_password.Location = new System.Drawing.Point(362, 414);
+            this.txt_password.Location = new System.Drawing.Point(94, 485);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -129,6 +134,8 @@
             this.txt_password.Text = "Password";
             this.txt_password.UseSystemPasswordChar = true;
             this.txt_password.Click += new System.EventHandler(this.txt_password_Click);
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
+            this.txt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyDown);
             // 
             // txt_email
             // 
@@ -143,6 +150,7 @@
             this.txt_email.TabIndex = 91;
             this.txt_email.Text = "Email";
             this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // lbl_limpar
             // 
@@ -151,7 +159,7 @@
             this.lbl_limpar.Enabled = false;
             this.lbl_limpar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_limpar.Location = new System.Drawing.Point(376, 524);
+            this.lbl_limpar.Location = new System.Drawing.Point(508, 524);
             this.lbl_limpar.Name = "lbl_limpar";
             this.lbl_limpar.Size = new System.Drawing.Size(51, 15);
             this.lbl_limpar.TabIndex = 90;
@@ -165,7 +173,7 @@
             this.lbl_sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_sair.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_sair.Location = new System.Drawing.Point(282, 557);
+            this.lbl_sair.Location = new System.Drawing.Point(414, 557);
             this.lbl_sair.Name = "lbl_sair";
             this.lbl_sair.Size = new System.Drawing.Size(33, 15);
             this.lbl_sair.TabIndex = 89;
@@ -178,7 +186,7 @@
             this.btn_inscrevase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inscrevase.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscrevase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_inscrevase.Location = new System.Drawing.Point(230, 517);
+            this.btn_inscrevase.Location = new System.Drawing.Point(362, 517);
             this.btn_inscrevase.Name = "btn_inscrevase";
             this.btn_inscrevase.Size = new System.Drawing.Size(140, 37);
             this.btn_inscrevase.TabIndex = 88;
@@ -200,7 +208,7 @@
             // 
             this.pnl_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.pnl_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.pnl_2.Location = new System.Drawing.Point(319, 452);
+            this.pnl_2.Location = new System.Drawing.Point(51, 523);
             this.pnl_2.Name = "pnl_2";
             this.pnl_2.Size = new System.Drawing.Size(236, 1);
             this.pnl_2.TabIndex = 86;
@@ -297,6 +305,7 @@
             this.txt_nome.TabIndex = 100;
             this.txt_nome.Text = "Nome";
             this.txt_nome.Click += new System.EventHandler(this.txt_nome_Click);
+            this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
             // 
             // panel1
             // 
@@ -331,6 +340,7 @@
             this.txt_morada.TabIndex = 104;
             this.txt_morada.Text = "Morada";
             this.txt_morada.Click += new System.EventHandler(this.txt_morada_Click);
+            this.txt_morada.TextChanged += new System.EventHandler(this.txt_morada_TextChanged);
             // 
             // panel2
             // 
@@ -365,6 +375,7 @@
             this.txt_telefone.TabIndex = 108;
             this.txt_telefone.Text = "Telefone";
             this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
+            this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
             // 
             // panel3
             // 
@@ -399,6 +410,7 @@
             this.txt_nif.TabIndex = 112;
             this.txt_nif.Text = "NIF";
             this.txt_nif.Click += new System.EventHandler(this.txt_nif_Click);
+            this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
             // 
             // panel4
             // 
@@ -452,7 +464,7 @@
             // 
             this.pic_mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_mostrar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.show;
-            this.pic_mostrar.Location = new System.Drawing.Point(522, 414);
+            this.pic_mostrar.Location = new System.Drawing.Point(254, 485);
             this.pic_mostrar.Name = "pic_mostrar";
             this.pic_mostrar.Size = new System.Drawing.Size(30, 30);
             this.pic_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -465,7 +477,7 @@
             this.pic_ocultado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_ocultado.Enabled = false;
             this.pic_ocultado.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.hide;
-            this.pic_ocultado.Location = new System.Drawing.Point(522, 414);
+            this.pic_ocultado.Location = new System.Drawing.Point(254, 485);
             this.pic_ocultado.Name = "pic_ocultado";
             this.pic_ocultado.Size = new System.Drawing.Size(30, 30);
             this.pic_ocultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -477,7 +489,7 @@
             // pic_password
             // 
             this.pic_password.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.key;
-            this.pic_password.Location = new System.Drawing.Point(319, 410);
+            this.pic_password.Location = new System.Drawing.Point(51, 481);
             this.pic_password.Name = "pic_password";
             this.pic_password.Size = new System.Drawing.Size(37, 36);
             this.pic_password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -504,12 +516,58 @@
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(355, 400);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 17);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Data de Nascimento";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel5.Location = new System.Drawing.Point(316, 453);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 1);
+            this.panel5.TabIndex = 115;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.data_de_nascimento;
+            this.pictureBox6.Location = new System.Drawing.Point(316, 411);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 114;
+            this.pictureBox6.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(359, 420);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(191, 20);
+            this.dateTimePicker1.TabIndex = 118;
+            // 
             // frm_inscricao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(590, 584);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.lbl_nif);
             this.Controls.Add(this.txt_nif);
@@ -563,6 +621,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +666,9 @@
         private System.Windows.Forms.TextBox txt_nif;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

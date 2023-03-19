@@ -354,5 +354,84 @@ namespace Proj_M14_BrunoPinheiro
                 lbl_nome.Visible = false;
             }
         }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            txt_email.MaxLength = 50;
+            if (txt_email.Text != "" && txt_email.Text != "Email")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_email.Visible = true;
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            txt_password.MaxLength = 50;
+            if (txt_password.Text != "" && txt_password.Text != "Password")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_password.Visible = true;
+            }
+        }
+
+        private void txt_nome_TextChanged(object sender, EventArgs e)
+        {
+            txt_nome.MaxLength = 50;
+            if (txt_nome.Text != "" && txt_nome.Text != "Nome")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_nome.Visible = true;
+            }
+        }
+
+        private void txt_morada_TextChanged(object sender, EventArgs e)
+        {
+            txt_morada.MaxLength = 100;
+            if (txt_morada.Text != "" && txt_morada.Text != "Morada")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_morada.Visible = true;
+            }
+        }
+
+        private void txt_telefone_TextChanged(object sender, EventArgs e)
+        {
+            txt_telefone.MaxLength = 15;
+            if (txt_telefone.Text != "" && txt_telefone.Text != "Telefone")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_telefone.Visible = true;
+            }
+        }
+
+        private void txt_nif_TextChanged(object sender, EventArgs e)
+        {
+            txt_nif.MaxLength = 9;
+            if (txt_nif.Text != "" && txt_nif.Text != "NIF")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+                lbl_nif.Visible = true;
+            }
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_password.Text == "")
+                {
+                    lbl_password.Visible = false;
+                }
+                btn_inscrevase.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
