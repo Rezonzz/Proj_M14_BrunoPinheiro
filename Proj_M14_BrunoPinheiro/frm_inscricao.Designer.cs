@@ -42,9 +42,6 @@
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,20 +54,24 @@
             this.lbl_nif = new System.Windows.Forms.Label();
             this.txt_nif = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dtp_nasc = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pic_mostrar = new System.Windows.Forms.PictureBox();
-            this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pic_mostrar = new System.Windows.Forms.PictureBox();
+            this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
@@ -78,12 +79,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_password
@@ -114,7 +114,7 @@
             // 
             this.lbl_invalido.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_invalido.ForeColor = System.Drawing.Color.Red;
-            this.lbl_invalido.Location = new System.Drawing.Point(319, 480);
+            this.lbl_invalido.Location = new System.Drawing.Point(175, 543);
             this.lbl_invalido.Name = "lbl_invalido";
             this.lbl_invalido.Size = new System.Drawing.Size(236, 32);
             this.lbl_invalido.TabIndex = 93;
@@ -151,6 +151,7 @@
             this.txt_email.Text = "Email";
             this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_email_KeyDown);
             // 
             // lbl_limpar
             // 
@@ -159,7 +160,7 @@
             this.lbl_limpar.Enabled = false;
             this.lbl_limpar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_limpar.Location = new System.Drawing.Point(508, 524);
+            this.lbl_limpar.Location = new System.Drawing.Point(505, 482);
             this.lbl_limpar.Name = "lbl_limpar";
             this.lbl_limpar.Size = new System.Drawing.Size(51, 15);
             this.lbl_limpar.TabIndex = 90;
@@ -173,7 +174,7 @@
             this.lbl_sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_sair.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_sair.Location = new System.Drawing.Point(414, 557);
+            this.lbl_sair.Location = new System.Drawing.Point(411, 515);
             this.lbl_sair.Name = "lbl_sair";
             this.lbl_sair.Size = new System.Drawing.Size(33, 15);
             this.lbl_sair.TabIndex = 89;
@@ -186,7 +187,7 @@
             this.btn_inscrevase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inscrevase.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_inscrevase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_inscrevase.Location = new System.Drawing.Point(362, 517);
+            this.btn_inscrevase.Location = new System.Drawing.Point(359, 475);
             this.btn_inscrevase.Name = "btn_inscrevase";
             this.btn_inscrevase.Size = new System.Drawing.Size(140, 37);
             this.btn_inscrevase.TabIndex = 88;
@@ -246,40 +247,6 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
-            // pic_close
-            // 
-            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(554, 16);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(18, 18);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 99;
-            this.pic_close.TabStop = false;
-            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
-            this.pic_logo.Location = new System.Drawing.Point(12, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(32, 32);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 102;
-            this.pic_logo.TabStop = false;
-            // 
-            // pic_minimize
-            // 
-            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(519, 16);
-            this.pic_minimize.Name = "pic_minimize";
-            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
-            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_minimize.TabIndex = 100;
-            this.pic_minimize.TabStop = false;
-            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
-            // 
             // lbl_nome
             // 
             this.lbl_nome.AutoSize = true;
@@ -306,6 +273,7 @@
             this.txt_nome.Text = "Nome";
             this.txt_nome.Click += new System.EventHandler(this.txt_nome_Click);
             this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
+            this.txt_nome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_nome_KeyDown);
             // 
             // panel1
             // 
@@ -341,6 +309,7 @@
             this.txt_morada.Text = "Morada";
             this.txt_morada.Click += new System.EventHandler(this.txt_morada_Click);
             this.txt_morada.TextChanged += new System.EventHandler(this.txt_morada_TextChanged);
+            this.txt_morada.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_morada_KeyDown);
             // 
             // panel2
             // 
@@ -376,6 +345,7 @@
             this.txt_telefone.Text = "Telefone";
             this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
             this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
+            this.txt_telefone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_telefone_KeyDown);
             // 
             // panel3
             // 
@@ -411,6 +381,7 @@
             this.txt_nif.Text = "NIF";
             this.txt_nif.Click += new System.EventHandler(this.txt_nif_Click);
             this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
+            this.txt_nif.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_nif_KeyDown);
             // 
             // panel4
             // 
@@ -419,6 +390,83 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
             this.panel4.TabIndex = 111;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(355, 400);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 17);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Data de Nascimento";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel5.Location = new System.Drawing.Point(316, 453);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 1);
+            this.panel5.TabIndex = 115;
+            // 
+            // dtp_nasc
+            // 
+            this.dtp_nasc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_nasc.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_nasc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_nasc.Location = new System.Drawing.Point(359, 423);
+            this.dtp_nasc.Name = "dtp_nasc";
+            this.dtp_nasc.Size = new System.Drawing.Size(191, 20);
+            this.dtp_nasc.TabIndex = 118;
+            this.dtp_nasc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtp_nasc_KeyDown);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.data_de_nascimento;
+            this.pictureBox6.Location = new System.Drawing.Point(316, 411);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 114;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pic_close
+            // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(554, 16);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(18, 18);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 99;
+            this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
+            this.pic_logo.Location = new System.Drawing.Point(12, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 102;
+            this.pic_logo.TabStop = false;
+            // 
+            // pic_minimize
+            // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.pic_minimize.Location = new System.Drawing.Point(519, 16);
+            this.pic_minimize.Name = "pic_minimize";
+            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
+            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_minimize.TabIndex = 100;
+            this.pic_minimize.TabStop = false;
+            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
             // pictureBox5
             // 
@@ -460,32 +508,6 @@
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
             // 
-            // pic_mostrar
-            // 
-            this.pic_mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_mostrar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.show;
-            this.pic_mostrar.Location = new System.Drawing.Point(254, 485);
-            this.pic_mostrar.Name = "pic_mostrar";
-            this.pic_mostrar.Size = new System.Drawing.Size(30, 30);
-            this.pic_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_mostrar.TabIndex = 95;
-            this.pic_mostrar.TabStop = false;
-            this.pic_mostrar.Click += new System.EventHandler(this.pic_mostrar_Click);
-            // 
-            // pic_ocultado
-            // 
-            this.pic_ocultado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_ocultado.Enabled = false;
-            this.pic_ocultado.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.hide;
-            this.pic_ocultado.Location = new System.Drawing.Point(254, 485);
-            this.pic_ocultado.Name = "pic_ocultado";
-            this.pic_ocultado.Size = new System.Drawing.Size(30, 30);
-            this.pic_ocultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ocultado.TabIndex = 94;
-            this.pic_ocultado.TabStop = false;
-            this.pic_ocultado.Visible = false;
-            this.pic_ocultado.Click += new System.EventHandler(this.pic_ocultado_Click);
-            // 
             // pic_password
             // 
             this.pic_password.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.key;
@@ -516,47 +538,31 @@
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // pic_mostrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.label1.Location = new System.Drawing.Point(355, 400);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 17);
-            this.label1.TabIndex = 117;
-            this.label1.Text = "Data de Nascimento";
+            this.pic_mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_mostrar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.show;
+            this.pic_mostrar.Location = new System.Drawing.Point(254, 485);
+            this.pic_mostrar.Name = "pic_mostrar";
+            this.pic_mostrar.Size = new System.Drawing.Size(30, 30);
+            this.pic_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_mostrar.TabIndex = 95;
+            this.pic_mostrar.TabStop = false;
+            this.pic_mostrar.Click += new System.EventHandler(this.pic_mostrar_Click);
             // 
-            // panel5
+            // pic_ocultado
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel5.Location = new System.Drawing.Point(316, 453);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(236, 1);
-            this.panel5.TabIndex = 115;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.data_de_nascimento;
-            this.pictureBox6.Location = new System.Drawing.Point(316, 411);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 114;
-            this.pictureBox6.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(359, 420);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(191, 20);
-            this.dateTimePicker1.TabIndex = 118;
+            this.pic_ocultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_ocultado.Enabled = false;
+            this.pic_ocultado.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.hide;
+            this.pic_ocultado.Location = new System.Drawing.Point(254, 485);
+            this.pic_ocultado.Name = "pic_ocultado";
+            this.pic_ocultado.Size = new System.Drawing.Size(30, 30);
+            this.pic_ocultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ocultado.TabIndex = 94;
+            this.pic_ocultado.TabStop = false;
+            this.pic_ocultado.Visible = false;
+            this.pic_ocultado.Click += new System.EventHandler(this.pic_ocultado_Click);
             // 
             // frm_inscricao
             // 
@@ -564,7 +570,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(590, 584);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_nasc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox6);
@@ -609,6 +615,7 @@
             this.Text = "Blue Lock - Inscrição";
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
@@ -616,12 +623,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,6 +675,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_nasc;
     }
 }

@@ -433,5 +433,134 @@ namespace Proj_M14_BrunoPinheiro
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void txt_nome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_email.Text == "Email")
+                {
+                    txt_email.ResetText();
+                    txt_email.Focus();
+                    lbl_email.Visible = true;
+                    if (txt_nome.Text == "")
+                    {
+                        txt_nome.Text = "Nome";
+                        lbl_nome.Visible = false;
+                    }
+                }
+                else
+                {
+                    txt_email.Focus();
+                    lbl_email.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_morada.Text == "Morada")
+                {
+                    txt_morada.ResetText();
+                    txt_morada.Focus();
+                    lbl_morada.Visible = true;
+                    if (txt_email.Text == "")
+                    {
+                        txt_email.Text = "Email";
+                        lbl_email.Visible = false;
+                    }
+                }
+                else
+                {
+                    txt_morada.Focus();
+                    lbl_morada.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_morada_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_telefone.Text == "Telefone")
+                {
+                    txt_telefone.ResetText();
+                    txt_telefone.Focus();
+                    lbl_telefone.Visible = true;
+                    if (txt_morada.Text == "")
+                    {
+                        txt_morada.Text = "Morada";
+                        lbl_morada.Visible = false;
+                    }
+                }
+                else
+                {
+                    txt_telefone.Focus();
+                    lbl_telefone.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_telefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_nif.Text == "NIF")
+                {
+                    txt_nif.ResetText();
+                    txt_nif.Focus();
+                    lbl_nif.Visible = true;
+                    if (txt_telefone.Text == "")
+                    {
+                        txt_telefone.Text = "Telefone";
+                        lbl_telefone.Visible = false;
+                    }
+                }
+                else
+                {
+                    txt_nif.Focus();
+                    lbl_nif.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_nif_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtp_nasc.Focus();
+                if (txt_nif.Text == "")
+                {
+                    txt_nif.Text = "NIF";
+                    lbl_nif.Visible = false;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void dtp_nasc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_password.Text == "Password")
+                {
+                    txt_password.ResetText();
+                    txt_password.Focus();
+                    lbl_password.Visible = true;
+                }
+                else
+                {
+                    txt_password.Focus();
+                    lbl_password.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
