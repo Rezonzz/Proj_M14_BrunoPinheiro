@@ -39,6 +39,8 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
             this.Close();
         }
 
@@ -601,42 +603,28 @@ namespace Proj_M14_BrunoPinheiro
                                         if (txt_password.Text != "")
                                         {
                                             con.Open();
-                                            MySqlCommand verificarEmailTelefone = new MySqlCommand("SELECT COUNT(*) FROM socios WHERE email = @email OR telefone = @telefone", con);
-                                            verificarEmailTelefone.Parameters.AddWithValue("@email", txt_email.Text);
-                                            verificarEmailTelefone.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+                                            string senhaHash = GerarHashSenha(txt_password.Text);
+                                            MySqlCommand login = new MySqlCommand("INSERT INTO login(email, password) VALUES (@email, @password); SELECT LAST_INSERT_ID();", con);
+                                            login.Parameters.AddWithValue("@email", txt_email.Text);
+                                            login.Parameters.AddWithValue("@password", senhaHash);
 
-                                            int count = Convert.ToInt32(verificarEmailTelefone.ExecuteScalar());
+                                            int idLogin = Convert.ToInt32(login.ExecuteScalar());
 
-                                            if (count > 0)
-                                            {
-                                                MessageBox.Show("Já existe um sócio com o mesmo e-mail ou telefone!", "Erro");
-                                                return;
-                                            }
-                                            else
-                                            {
-                                                string senhaHash = GerarHashSenha(txt_password.Text);
-                                                MySqlCommand login = new MySqlCommand("INSERT INTO login(email, password) VALUES (@email, @password); SELECT LAST_INSERT_ID();", con);
-                                                login.Parameters.AddWithValue("@email", txt_email.Text);
-                                                login.Parameters.AddWithValue("@password", senhaHash);
+                                            MySqlCommand inscrever = new MySqlCommand("INSERT INTO socios(nomeCliente,email,morada,telefone, NIF, idLogin ,dataNascimento, password) VALUES (@nomeCliente,@email,@morada,@telefone, @nif, @idLogin,@dataNascimento, @password)", con);
+                                            inscrever.Parameters.AddWithValue("@nomeCliente", txt_nome.Text);
+                                            inscrever.Parameters.AddWithValue("@email", txt_email.Text);
+                                            inscrever.Parameters.AddWithValue("@morada", txt_morada.Text);
+                                            inscrever.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+                                            inscrever.Parameters.AddWithValue("@nif", txt_nif.Text);
+                                            inscrever.Parameters.AddWithValue("@idLogin", idLogin);
+                                            inscrever.Parameters.AddWithValue("@dataNascimento", dtp_nasc.Value);
+                                            inscrever.Parameters.AddWithValue("@password", senhaHash);
+                                            inscrever.ExecuteNonQuery();
 
-                                                int idLogin = Convert.ToInt32(login.ExecuteScalar());
-
-                                                MySqlCommand inscrever = new MySqlCommand("INSERT INTO socios(nomeCliente,email,morada,telefone, NIF, idLogin ,dataNascimento, password) VALUES (@nomeCliente,@email,@morada,@telefone, @nif, @idLogin,@dataNascimento, @password)", con);
-                                                inscrever.Parameters.AddWithValue("@nomeCliente", txt_nome.Text);
-                                                inscrever.Parameters.AddWithValue("@email", txt_email.Text);
-                                                inscrever.Parameters.AddWithValue("@morada", txt_morada.Text);
-                                                inscrever.Parameters.AddWithValue("@telefone", txt_telefone.Text);
-                                                inscrever.Parameters.AddWithValue("@nif", txt_nif.Text);
-                                                inscrever.Parameters.AddWithValue("@idLogin", idLogin);
-                                                inscrever.Parameters.AddWithValue("@dataNascimento", dtp_nasc.Value);
-                                                inscrever.Parameters.AddWithValue("@password", senhaHash);
-                                                inscrever.ExecuteNonQuery();
-
-                                                MessageBox.Show("Inscrição feita com Sucesso!", "Inscrição");
-                                                frm_areacliente frm_areacliente = new frm_areacliente();
-                                                frm_areacliente.Show();
-                                                this.Close();
-                                            }
+                                            MessageBox.Show("Inscrição feita com Sucesso!", "Inscrição");
+                                            frm_areacliente frm_areacliente = new frm_areacliente();
+                                            frm_areacliente.Show();
+                                            this.Close();
                                         }
                                         else
                                         {
@@ -680,8 +668,9 @@ namespace Proj_M14_BrunoPinheiro
             con.Close();
         }
 
-        private void frm_inscricao_FormClosed(object sender, FormClosedEventArgs e)
+        private void lbl_sair_Click(object sender, EventArgs e)
         {
+            this.Close();
             frm_menu frm_menu = new frm_menu();
             frm_menu.Show();
         }

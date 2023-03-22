@@ -73,6 +73,36 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5496234 {
+            get {
+                object obj = ResourceManager.GetObject("5496234", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap badminton {
+            get {
+                object obj = ResourceManager.GetObject("badminton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap basquetebol {
+            get {
+                object obj = ResourceManager.GetObject("basquetebol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_lock_anime {
             get {
                 object obj = ResourceManager.GetObject("blue-lock-anime", resourceCulture);
@@ -86,6 +116,16 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap Blue_Lock_Isagi_GIF___Blue_Lock_Isagi_Yoichi___Descubre_y_comparte_GIF {
             get {
                 object obj = ResourceManager.GetObject("Blue Lock Isagi GIF - Blue Lock Isagi Yoichi - Descubre y comparte GIF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bola {
+            get {
+                object obj = ResourceManager.GetObject("bola", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

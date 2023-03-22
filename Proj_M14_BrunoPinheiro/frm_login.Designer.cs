@@ -43,20 +43,20 @@
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_password = new System.Windows.Forms.PictureBox();
-            this.pic_username = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.pic_password = new System.Windows.Forms.PictureBox();
+            this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pic_mostrar = new System.Windows.Forms.PictureBox();
             this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
@@ -97,6 +97,7 @@
             this.lbl_registrar.Size = new System.Drawing.Size(211, 13);
             this.lbl_registrar.TabIndex = 76;
             this.lbl_registrar.Text = "Ainda não se inscreveu? Inscreva-se";
+            this.lbl_registrar.Click += new System.EventHandler(this.lbl_registrar_Click);
             // 
             // lbl_invalido
             // 
@@ -167,6 +168,7 @@
             this.lbl_sair.Size = new System.Drawing.Size(33, 15);
             this.lbl_sair.TabIndex = 71;
             this.lbl_sair.Text = "Sair";
+            this.lbl_sair.Click += new System.EventHandler(this.lbl_sair_Click);
             // 
             // btn_login
             // 
@@ -236,26 +238,6 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
-            // pic_password
-            // 
-            this.pic_password.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.key;
-            this.pic_password.Location = new System.Drawing.Point(53, 322);
-            this.pic_password.Name = "pic_password";
-            this.pic_password.Size = new System.Drawing.Size(37, 36);
-            this.pic_password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_password.TabIndex = 66;
-            this.pic_password.TabStop = false;
-            // 
-            // pic_username
-            // 
-            this.pic_username.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.mail;
-            this.pic_username.Location = new System.Drawing.Point(53, 245);
-            this.pic_username.Name = "pic_username";
-            this.pic_username.Size = new System.Drawing.Size(37, 36);
-            this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_username.TabIndex = 65;
-            this.pic_username.TabStop = false;
-            // 
             // pic_close
             // 
             this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -289,6 +271,26 @@
             this.pic_minimize.TabIndex = 100;
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
+            // 
+            // pic_password
+            // 
+            this.pic_password.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.key;
+            this.pic_password.Location = new System.Drawing.Point(53, 322);
+            this.pic_password.Name = "pic_password";
+            this.pic_password.Size = new System.Drawing.Size(37, 36);
+            this.pic_password.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_password.TabIndex = 66;
+            this.pic_password.TabStop = false;
+            // 
+            // pic_username
+            // 
+            this.pic_username.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.mail;
+            this.pic_username.Location = new System.Drawing.Point(53, 245);
+            this.pic_username.Name = "pic_username";
+            this.pic_username.Size = new System.Drawing.Size(37, 36);
+            this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_username.TabIndex = 65;
+            this.pic_username.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -356,15 +358,14 @@
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Login";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_login_FormClosed);
             this.Load += new System.EventHandler(this.frm_login_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();

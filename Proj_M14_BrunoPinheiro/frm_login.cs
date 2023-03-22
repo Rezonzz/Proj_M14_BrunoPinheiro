@@ -52,6 +52,8 @@ namespace Proj_M14_BrunoPinheiro
         private void pic_close_Click(object sender, EventArgs e)
         {
             this.Close();
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)
@@ -262,10 +264,18 @@ namespace Proj_M14_BrunoPinheiro
             }
         }
 
-        private void frm_login_FormClosed(object sender, FormClosedEventArgs e)
+        private void lbl_sair_Click(object sender, EventArgs e)
         {
+            this.Close();
             frm_menu frm_menu = new frm_menu();
             frm_menu.Show();
+        }
+
+        private void lbl_registrar_Click(object sender, EventArgs e)
+        {
+            frm_inscricao frm_inscricao = new frm_inscricao();
+            frm_inscricao.Show();
+            this.Close();
         }
     }
 }

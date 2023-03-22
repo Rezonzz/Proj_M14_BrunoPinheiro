@@ -179,6 +179,7 @@
             this.lbl_sair.Size = new System.Drawing.Size(33, 15);
             this.lbl_sair.TabIndex = 89;
             this.lbl_sair.Text = "Sair";
+            this.lbl_sair.Click += new System.EventHandler(this.lbl_sair_Click);
             // 
             // btn_inscrevase
             // 
@@ -614,7 +615,6 @@
             this.Name = "frm_inscricao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Inscrição";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_inscricao_FormClosed);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

@@ -16,5 +16,18 @@ namespace Proj_M14_BrunoPinheiro
         {
             InitializeComponent();
         }
+
+        private void frm_administracao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
+        }
     }
 }

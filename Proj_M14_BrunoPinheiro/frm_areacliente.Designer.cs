@@ -74,6 +74,7 @@
             this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_close.TabIndex = 99;
             this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
             // pic_logo
             // 
@@ -109,6 +110,7 @@
             this.Name = "frm_areacliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Área de Cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_areacliente_FormClosed);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
