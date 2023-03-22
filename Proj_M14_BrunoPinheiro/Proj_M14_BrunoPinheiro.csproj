@@ -55,6 +55,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conn.cs" />
+    <Compile Include="frm_administracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_administracao.Designer.cs">
+      <DependentUpon>frm_administracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_areacliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_areacliente.Designer.cs">
+      <DependentUpon>frm_areacliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_historia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_administracao.resx">
+      <DependentUpon>frm_administracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_areacliente.resx">
+      <DependentUpon>frm_areacliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_historia.resx">
       <DependentUpon>frm_historia.cs</DependentUpon>
     </EmbeddedResource>

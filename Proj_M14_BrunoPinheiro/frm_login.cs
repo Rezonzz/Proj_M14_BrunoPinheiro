@@ -1,13 +1,16 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Proj_M14_BrunoPinheiro
 {
@@ -191,6 +194,78 @@ namespace Proj_M14_BrunoPinheiro
                 btn_login.PerformClick();
                 e.SuppressKeyPress = true;
             }
+        }
+
+        public static string GerarHashSenha(string senha)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Converte a senha para um array de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                // Converte o array de bytes para uma string hexadecimal
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            if(txt_email.Text != "")
+            {
+                if(txt_password.Text != "")
+                {
+                    con.Open();
+                    string senhaHash = GerarHashSenha(txt_password.Text);
+                    MySqlCommand login = new MySqlCommand("SELECT idLogin FROM login WHERE email = @email AND password = @senha", con);
+                    login.Parameters.AddWithValue("@email", txt_email.Text);
+                    login.Parameters.AddWithValue("@senha", senhaHash);
+
+                    object resultado = login.ExecuteScalar();
+                    int idLogin = resultado != null ? Convert.ToInt32(resultado) : -1;
+
+                    if (idLogin > 0)
+                    {
+                        MySqlCommand buscarTipoLogin = new MySqlCommand("SELECT tl.TipoLogin FROM tipologin tl JOIN login l ON tl.idTipoLogin = l.idTipoLogin WHERE l.idLogin = @idLogin", con);
+                        buscarTipoLogin.Parameters.AddWithValue("@idLogin", idLogin);
+
+                        string tipoLogin = buscarTipoLogin.ExecuteScalar().ToString();
+
+                        if (tipoLogin == "Cliente")
+                        {
+                            MessageBox.Show("Login feito com Sucesso!", "Login");
+                            frm_areacliente frm_areacliente = new frm_areacliente();
+                            frm_areacliente.Show();
+                            this.Close();
+                        }
+                        else if (tipoLogin == "Administrador")
+                        {
+                            MessageBox.Show("Login feito com Sucesso!", "Login");
+                            frm_administracao frm_administracao = new frm_administracao();
+                            frm_administracao.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro desconhecido!", "Inscrição");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email ou Password errados!", "Login");
+                    }
+                }
+            }
+        }
+
+        private void frm_login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
         }
     }
 }

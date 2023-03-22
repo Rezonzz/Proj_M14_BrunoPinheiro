@@ -43,23 +43,23 @@
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_mostrar = new System.Windows.Forms.PictureBox();
-            this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_mostrar = new System.Windows.Forms.PictureBox();
+            this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_password
@@ -181,6 +181,7 @@
             this.btn_login.TabIndex = 70;
             this.btn_login.Text = "LOG IN";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_login
             // 
@@ -234,32 +235,6 @@
             this.lbl_name.Size = new System.Drawing.Size(105, 22);
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
-            // 
-            // pic_mostrar
-            // 
-            this.pic_mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_mostrar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.show;
-            this.pic_mostrar.Location = new System.Drawing.Point(256, 326);
-            this.pic_mostrar.Name = "pic_mostrar";
-            this.pic_mostrar.Size = new System.Drawing.Size(30, 30);
-            this.pic_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_mostrar.TabIndex = 78;
-            this.pic_mostrar.TabStop = false;
-            this.pic_mostrar.Click += new System.EventHandler(this.pic_mostrar_Click);
-            // 
-            // pic_ocultado
-            // 
-            this.pic_ocultado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_ocultado.Enabled = false;
-            this.pic_ocultado.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.hide;
-            this.pic_ocultado.Location = new System.Drawing.Point(256, 326);
-            this.pic_ocultado.Name = "pic_ocultado";
-            this.pic_ocultado.Size = new System.Drawing.Size(30, 30);
-            this.pic_ocultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_ocultado.TabIndex = 77;
-            this.pic_ocultado.TabStop = false;
-            this.pic_ocultado.Visible = false;
-            this.pic_ocultado.Click += new System.EventHandler(this.pic_ocultado_Click);
             // 
             // pic_password
             // 
@@ -325,6 +300,32 @@
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
+            // pic_mostrar
+            // 
+            this.pic_mostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_mostrar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.show;
+            this.pic_mostrar.Location = new System.Drawing.Point(256, 326);
+            this.pic_mostrar.Name = "pic_mostrar";
+            this.pic_mostrar.Size = new System.Drawing.Size(30, 30);
+            this.pic_mostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_mostrar.TabIndex = 78;
+            this.pic_mostrar.TabStop = false;
+            this.pic_mostrar.Click += new System.EventHandler(this.pic_mostrar_Click);
+            // 
+            // pic_ocultado
+            // 
+            this.pic_ocultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_ocultado.Enabled = false;
+            this.pic_ocultado.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.hide;
+            this.pic_ocultado.Location = new System.Drawing.Point(256, 326);
+            this.pic_ocultado.Name = "pic_ocultado";
+            this.pic_ocultado.Size = new System.Drawing.Size(30, 30);
+            this.pic_ocultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_ocultado.TabIndex = 77;
+            this.pic_ocultado.TabStop = false;
+            this.pic_ocultado.Visible = false;
+            this.pic_ocultado.Click += new System.EventHandler(this.pic_ocultado_Click);
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,17 +356,18 @@
             this.Name = "frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_login_FormClosed);
             this.Load += new System.EventHandler(this.frm_login_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

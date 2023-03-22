@@ -193,6 +193,7 @@
             this.btn_inscrevase.TabIndex = 88;
             this.btn_inscrevase.Text = "INSCREVA-SE";
             this.btn_inscrevase.UseVisualStyleBackColor = false;
+            this.btn_inscrevase.Click += new System.EventHandler(this.btn_inscrevase_Click);
             // 
             // lbl_login
             // 
@@ -613,6 +614,7 @@
             this.Name = "frm_inscricao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Inscrição";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_inscricao_FormClosed);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

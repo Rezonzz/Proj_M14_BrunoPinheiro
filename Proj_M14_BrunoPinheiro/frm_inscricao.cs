@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -561,6 +563,127 @@ namespace Proj_M14_BrunoPinheiro
                 }
                 e.SuppressKeyPress = true;
             }
+        }
+
+        public static string GerarHashSenha(string senha)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Converte a senha para um array de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                // Converte o array de bytes para uma string hexadecimal
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        private void btn_inscrevase_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                if (txt_nome.Text != "")
+                {
+                    if (txt_email.Text != "")
+                    {
+                        if (txt_morada.Text != "")
+                        {
+                            if (txt_telefone.Text != "")
+                            {
+                                if (txt_nif.Text != "")
+                                {
+                                    if (dtp_nasc.Value.Date <= DateTime.Today)
+                                    {
+                                        if (txt_password.Text != "")
+                                        {
+                                            con.Open();
+                                            MySqlCommand verificarEmailTelefone = new MySqlCommand("SELECT COUNT(*) FROM socios WHERE email = @email OR telefone = @telefone", con);
+                                            verificarEmailTelefone.Parameters.AddWithValue("@email", txt_email.Text);
+                                            verificarEmailTelefone.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+
+                                            int count = Convert.ToInt32(verificarEmailTelefone.ExecuteScalar());
+
+                                            if (count > 0)
+                                            {
+                                                MessageBox.Show("Já existe um sócio com o mesmo e-mail ou telefone!", "Erro");
+                                                return;
+                                            }
+                                            else
+                                            {
+                                                string senhaHash = GerarHashSenha(txt_password.Text);
+                                                MySqlCommand login = new MySqlCommand("INSERT INTO login(email, password) VALUES (@email, @password); SELECT LAST_INSERT_ID();", con);
+                                                login.Parameters.AddWithValue("@email", txt_email.Text);
+                                                login.Parameters.AddWithValue("@password", senhaHash);
+
+                                                int idLogin = Convert.ToInt32(login.ExecuteScalar());
+
+                                                MySqlCommand inscrever = new MySqlCommand("INSERT INTO socios(nomeCliente,email,morada,telefone, NIF, idLogin ,dataNascimento, password) VALUES (@nomeCliente,@email,@morada,@telefone, @nif, @idLogin,@dataNascimento, @password)", con);
+                                                inscrever.Parameters.AddWithValue("@nomeCliente", txt_nome.Text);
+                                                inscrever.Parameters.AddWithValue("@email", txt_email.Text);
+                                                inscrever.Parameters.AddWithValue("@morada", txt_morada.Text);
+                                                inscrever.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+                                                inscrever.Parameters.AddWithValue("@nif", txt_nif.Text);
+                                                inscrever.Parameters.AddWithValue("@idLogin", idLogin);
+                                                inscrever.Parameters.AddWithValue("@dataNascimento", dtp_nasc.Value);
+                                                inscrever.Parameters.AddWithValue("@password", senhaHash);
+                                                inscrever.ExecuteNonQuery();
+
+                                                MessageBox.Show("Inscrição feita com Sucesso!", "Inscrição");
+                                                frm_areacliente frm_areacliente = new frm_areacliente();
+                                                frm_areacliente.Show();
+                                                this.Close();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Preenchimento da password é obrigatória", "Erro");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Preenchimento da data de nascimento é obrigatório", "Erro");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Preenchimento do NIF é obrigatório", "Erro");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Preenchimento do telefone é obrigatório", "Erro");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Preenchimento da morada é obrigatória", "Erro");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preenchimento do email é obrigatório", "Erro");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Preenchimento do nome é obrigatório", "Erro");
+                }
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void frm_inscricao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
         }
     }
 }

@@ -96,6 +96,7 @@ namespace Proj_M14_BrunoPinheiro
         {
             frm_inscricao frm_inscricao = new frm_inscricao();
             frm_inscricao.Show();
+            this.Hide();
         }
 
         private void pic_close_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace Proj_M14_BrunoPinheiro
         {
             frm_login frm_login = new frm_login();
             frm_login.Show();
+            this.Hide();
         }
     }
 }
