@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_historia = new System.Windows.Forms.Label();
@@ -38,14 +41,11 @@
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_modalidades = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -72,6 +72,40 @@
             this.lbl_name.Size = new System.Drawing.Size(105, 22);
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
+            // 
+            // pic_close
+            // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(716, 17);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(18, 18);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 99;
+            this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
+            this.pic_logo.Location = new System.Drawing.Point(12, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 102;
+            this.pic_logo.TabStop = false;
+            // 
+            // pic_minimize
+            // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.pic_minimize.Location = new System.Drawing.Point(681, 17);
+            this.pic_minimize.Name = "pic_minimize";
+            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
+            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_minimize.TabIndex = 100;
+            this.pic_minimize.TabStop = false;
+            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
             // label1
             // 
@@ -151,6 +185,7 @@
             this.lbl_modalidades.Size = new System.Drawing.Size(141, 24);
             this.lbl_modalidades.TabIndex = 72;
             this.lbl_modalidades.Text = "Modalidades";
+            this.lbl_modalidades.Click += new System.EventHandler(this.lbl_modalidades_Click);
             this.lbl_modalidades.MouseLeave += new System.EventHandler(this.lbl_modalidades_MouseLeave);
             this.lbl_modalidades.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_modalidades_MouseMove);
             // 
@@ -163,40 +198,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
-            // 
-            // pic_close
-            // 
-            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(716, 17);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(18, 18);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 99;
-            this.pic_close.TabStop = false;
-            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
-            this.pic_logo.Location = new System.Drawing.Point(12, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(32, 32);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 102;
-            this.pic_logo.TabStop = false;
-            // 
-            // pic_minimize
-            // 
-            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(681, 17);
-            this.pic_minimize.Name = "pic_minimize";
-            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
-            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_minimize.TabIndex = 100;
-            this.pic_minimize.TabStop = false;
-            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
             // frm_menu
             // 
@@ -221,10 +222,10 @@
             this.Load += new System.EventHandler(this.frm_menu_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

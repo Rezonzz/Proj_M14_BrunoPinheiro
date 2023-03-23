@@ -67,6 +67,18 @@
     <Compile Include="frm_areacliente.Designer.cs">
       <DependentUpon>frm_areacliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_basquetebol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_basquetebol.Designer.cs">
+      <DependentUpon>frm_basquetebol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_futebol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_futebol.Designer.cs">
+      <DependentUpon>frm_futebol.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_historia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_areacliente.resx">
       <DependentUpon>frm_areacliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_basquetebol.resx">
+      <DependentUpon>frm_basquetebol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_futebol.resx">
+      <DependentUpon>frm_futebol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_historia.resx">
       <DependentUpon>frm_historia.cs</DependentUpon>
@@ -211,6 +229,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\badminton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-video-to-gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

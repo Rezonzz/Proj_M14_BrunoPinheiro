@@ -101,7 +101,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)
@@ -113,6 +113,13 @@ namespace Proj_M14_BrunoPinheiro
         {
             frm_login frm_login = new frm_login();
             frm_login.Show();
+            this.Hide();
+        }
+
+        private void lbl_modalidades_Click(object sender, EventArgs e)
+        {
+            frm_modalidades frm_modalidades = new frm_modalidades();
+            frm_modalidades.Show();
             this.Hide();
         }
     }
