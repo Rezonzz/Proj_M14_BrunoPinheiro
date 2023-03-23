@@ -124,5 +124,10 @@ namespace Proj_M14_BrunoPinheiro
                 }
             }
         }
+
+        private void pic_basket_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_basquetebol());
+        }
     }
 }

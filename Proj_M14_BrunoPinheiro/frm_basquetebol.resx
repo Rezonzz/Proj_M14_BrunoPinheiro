@@ -118,14 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>O futebol é um desporto emocionante e popular que é jogado em todo o mundo. Também conhecido como "futebol" em muitos países, o futebol é um jogo de equipa que envolve duas equipas de onze jogadores cada, que tentam marcar golos na baliza adversária utilizando os seus pés, cabeça ou outras partes do corpo, exceto as mãos e os braços.
+    <value>O basquetebol é um desporto de equipa, jogado em um campo retangular com duas cestas de altura igual e posicionadas em lados opostos do campo. O objetivo do jogo é marcar pontos, lançando a bola dentro da cesta adversária, enquanto se defende a própria cesta. A equipa com mais pontos no final do jogo vence.
 
-O objetivo do jogo é marcar mais golos do que a equipa adversária. O jogo começa com um pontapé de saída, onde uma equipa chuta a bola para o campo adversário. A partir daí, os jogadores correm atrás da bola, tentando controlá-la e passá-la para os seus colegas de equipa, enquanto os jogadores da equipa adversária tentam roubar a bola.
+O jogo é jogado com uma bola de basquetebol, que pode ser passada, atirada ou roubada. Os jogadores podem mover-se em qualquer direção dentro do campo, mas não podem correr com a bola na mão, a não ser que estejam a driblar a bola no chão.
 
-O futebol é um desporto que requer habilidade, força, velocidade e estratégia. Os jogadores devem ser capazes de correr durante longos períodos de tempo e trabalhar em conjunto com os seus colegas de equipa para criar oportunidades de golo. Além disso, os jogadores devem seguir regras estritas para garantir que o jogo seja justo e seguro para todos os envolvidos.
+O basquetebol é jogado por duas equipas de cinco jogadores, cada uma, que podem ser substituídos a qualquer momento do jogo. O jogo é dividido em quatro períodos de 10 ou 12 minutos cada, dependendo das regras da competição.
 
-Em resumo, o futebol é um desporto emocionante e competitivo que envolve trabalho em equipa, habilidade e estratégia. É uma paixão para muitos fãs e jogadores em todo o mundo e continua a crescer em popularidade a cada ano.
-</value>
+O basquetebol é um desporto rápido e emocionante, que requer habilidade, velocidade, força e resistência dos jogadores. Além disso, a capacidade de trabalho em equipa, a comunicação e a estratégia são fundamentais para o sucesso no basquetebol.
+
+Este desporto é popular em todo o mundo e é jogado em todos os níveis, desde o amador ao profissional. O basquetebol é uma das modalidades olímpicas mais populares e é também jogado em diversas ligas profissionais ao redor do mundo.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

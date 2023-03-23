@@ -38,10 +38,10 @@
             this.pnl_basquetebol = new System.Windows.Forms.Panel();
             this.pnl_fundo = new System.Windows.Forms.Panel();
             this.pnl_tenis = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pic_tenis = new System.Windows.Forms.PictureBox();
+            this.pic_badminton = new System.Windows.Forms.PictureBox();
+            this.pic_volei = new System.Windows.Forms.PictureBox();
+            this.pic_basket = new System.Windows.Forms.PictureBox();
             this.pic_futebol = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
@@ -53,10 +53,10 @@
             this.pnl_volei.SuspendLayout();
             this.pnl_basquetebol.SuspendLayout();
             this.pnl_tenis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_tenis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_badminton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_volei)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_basket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_futebol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             // pnl_badminton
             // 
-            this.pnl_badminton.Controls.Add(this.pictureBox4);
+            this.pnl_badminton.Controls.Add(this.pic_badminton);
             this.pnl_badminton.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_badminton.Enabled = false;
             this.pnl_badminton.Location = new System.Drawing.Point(0, 300);
@@ -126,7 +126,7 @@
             // 
             // pnl_volei
             // 
-            this.pnl_volei.Controls.Add(this.pictureBox3);
+            this.pnl_volei.Controls.Add(this.pic_volei);
             this.pnl_volei.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_volei.Enabled = false;
             this.pnl_volei.Location = new System.Drawing.Point(0, 200);
@@ -137,7 +137,7 @@
             // 
             // pnl_basquetebol
             // 
-            this.pnl_basquetebol.Controls.Add(this.pictureBox2);
+            this.pnl_basquetebol.Controls.Add(this.pic_basket);
             this.pnl_basquetebol.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_basquetebol.Enabled = false;
             this.pnl_basquetebol.Location = new System.Drawing.Point(0, 100);
@@ -156,7 +156,7 @@
             // 
             // pnl_tenis
             // 
-            this.pnl_tenis.Controls.Add(this.pictureBox5);
+            this.pnl_tenis.Controls.Add(this.pic_tenis);
             this.pnl_tenis.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_tenis.Enabled = false;
             this.pnl_tenis.Location = new System.Drawing.Point(0, 400);
@@ -165,45 +165,46 @@
             this.pnl_tenis.TabIndex = 4;
             this.pnl_tenis.Visible = false;
             // 
-            // pictureBox5
+            // pic_tenis
             // 
-            this.pictureBox5.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.tenis;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(168, 90);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 70;
-            this.pictureBox5.TabStop = false;
+            this.pic_tenis.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.tenis;
+            this.pic_tenis.Location = new System.Drawing.Point(0, 5);
+            this.pic_tenis.Name = "pic_tenis";
+            this.pic_tenis.Size = new System.Drawing.Size(168, 90);
+            this.pic_tenis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_tenis.TabIndex = 70;
+            this.pic_tenis.TabStop = false;
             // 
-            // pictureBox4
+            // pic_badminton
             // 
-            this.pictureBox4.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.badminton;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(168, 90);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 70;
-            this.pictureBox4.TabStop = false;
+            this.pic_badminton.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.badminton;
+            this.pic_badminton.Location = new System.Drawing.Point(0, 5);
+            this.pic_badminton.Name = "pic_badminton";
+            this.pic_badminton.Size = new System.Drawing.Size(168, 90);
+            this.pic_badminton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_badminton.TabIndex = 70;
+            this.pic_badminton.TabStop = false;
             // 
-            // pictureBox3
+            // pic_volei
             // 
-            this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources._5496234;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(168, 90);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 70;
-            this.pictureBox3.TabStop = false;
+            this.pic_volei.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources._5496234;
+            this.pic_volei.Location = new System.Drawing.Point(0, 5);
+            this.pic_volei.Name = "pic_volei";
+            this.pic_volei.Size = new System.Drawing.Size(168, 90);
+            this.pic_volei.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_volei.TabIndex = 70;
+            this.pic_volei.TabStop = false;
             // 
-            // pictureBox2
+            // pic_basket
             // 
-            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.basquetebol;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(168, 90);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 70;
-            this.pictureBox2.TabStop = false;
+            this.pic_basket.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.basquetebol;
+            this.pic_basket.Location = new System.Drawing.Point(0, 5);
+            this.pic_basket.Name = "pic_basket";
+            this.pic_basket.Size = new System.Drawing.Size(168, 90);
+            this.pic_basket.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_basket.TabIndex = 70;
+            this.pic_basket.TabStop = false;
+            this.pic_basket.Click += new System.EventHandler(this.pic_basket_Click);
             // 
             // pic_futebol
             // 
@@ -274,10 +275,10 @@
             this.pnl_volei.ResumeLayout(false);
             this.pnl_basquetebol.ResumeLayout(false);
             this.pnl_tenis.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_tenis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_badminton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_volei)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_basket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_futebol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
@@ -299,11 +300,11 @@
         private System.Windows.Forms.Panel pnl_basquetebol;
         private System.Windows.Forms.Panel pnl_futebol;
         private System.Windows.Forms.PictureBox pic_futebol;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pic_badminton;
+        private System.Windows.Forms.PictureBox pic_volei;
+        private System.Windows.Forms.PictureBox pic_basket;
         private System.Windows.Forms.Panel pnl_fundo;
         private System.Windows.Forms.Panel pnl_tenis;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pic_tenis;
     }
 }

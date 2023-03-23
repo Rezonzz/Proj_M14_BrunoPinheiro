@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_basquetebol));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,19 +50,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.label2.Location = new System.Drawing.Point(51, 325);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(451, 570);
+            this.label2.Size = new System.Drawing.Size(451, 583);
             this.label2.TabIndex = 6;
             this.label2.Text = resources.GetString("label2.Text");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.giphy;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 206);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -75,13 +65,23 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Basquetebol";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.giphy;
+            this.pictureBox1.Location = new System.Drawing.Point(93, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(368, 206);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_basquetebol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(564, 394);
+            this.ClientSize = new System.Drawing.Size(581, 394);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

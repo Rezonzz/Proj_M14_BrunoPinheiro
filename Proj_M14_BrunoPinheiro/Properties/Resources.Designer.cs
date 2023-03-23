@@ -73,6 +73,16 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _49fb0a69d159b821cfa218f27c8a5f7f {
+            get {
+                object obj = ResourceManager.GetObject("49fb0a69d159b821cfa218f27c8a5f7f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5496234 {
             get {
                 object obj = ResourceManager.GetObject("5496234", resourceCulture);
@@ -307,6 +317,16 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap tenis {
             get {
                 object obj = ResourceManager.GetObject("tenis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540 {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

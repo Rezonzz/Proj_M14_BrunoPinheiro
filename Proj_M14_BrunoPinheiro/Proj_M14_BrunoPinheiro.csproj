@@ -67,6 +67,12 @@
     <Compile Include="frm_areacliente.Designer.cs">
       <DependentUpon>frm_areacliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_badminton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_badminton.Designer.cs">
+      <DependentUpon>frm_badminton.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_basquetebol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,18 @@
     <Compile Include="frm_modalidades.Designer.cs">
       <DependentUpon>frm_modalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_tenis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tenis.Designer.cs">
+      <DependentUpon>frm_tenis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_voleibol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_voleibol.Designer.cs">
+      <DependentUpon>frm_voleibol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_administracao.resx">
@@ -116,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_areacliente.resx">
       <DependentUpon>frm_areacliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_badminton.resx">
+      <DependentUpon>frm_badminton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_basquetebol.resx">
       <DependentUpon>frm_basquetebol.cs</DependentUpon>
@@ -137,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_modalidades.resx">
       <DependentUpon>frm_modalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tenis.resx">
+      <DependentUpon>frm_tenis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_voleibol.resx">
+      <DependentUpon>frm_voleibol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -238,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49fb0a69d159b821cfa218f27c8a5f7f.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
