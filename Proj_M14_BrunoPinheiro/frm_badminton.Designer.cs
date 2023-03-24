@@ -39,7 +39,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel1.Location = new System.Drawing.Point(61, 304);
+            this.panel1.Location = new System.Drawing.Point(52, 303);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(446, 1);
             this.panel1.TabIndex = 15;
@@ -48,9 +48,9 @@
             // 
             this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(58, 325);
+            this.label2.Location = new System.Drawing.Point(49, 324);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(451, 583);
+            this.label2.Size = new System.Drawing.Size(451, 499);
             this.label2.TabIndex = 14;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.label1.Location = new System.Drawing.Point(186, 25);
+            this.label1.Location = new System.Drawing.Point(177, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 36);
             this.label1.TabIndex = 12;
@@ -68,7 +68,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540;
-            this.pictureBox1.Location = new System.Drawing.Point(100, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(91, 74);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(368, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,7 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(615, 394);
+            this.ClientSize = new System.Drawing.Size(564, 394);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

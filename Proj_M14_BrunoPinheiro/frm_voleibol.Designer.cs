@@ -50,7 +50,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.label2.Location = new System.Drawing.Point(53, 333);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(451, 583);
+            this.label2.Size = new System.Drawing.Size(451, 641);
             this.label2.TabIndex = 10;
             this.label2.Text = resources.GetString("label2.Text");
             // 

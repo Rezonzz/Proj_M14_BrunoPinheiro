@@ -405,7 +405,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void txt_telefone_TextChanged(object sender, EventArgs e)
         {
-            txt_telefone.MaxLength = 15;
+            txt_telefone.MaxLength = 9;
             if (txt_telefone.Text != "" && txt_telefone.Text != "Telefone")
             {
                 lbl_limpar.Visible = true;

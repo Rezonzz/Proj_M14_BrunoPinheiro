@@ -50,7 +50,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.label2.Location = new System.Drawing.Point(54, 339);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(451, 583);
+            this.label2.Size = new System.Drawing.Size(451, 624);
             this.label2.TabIndex = 18;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -67,7 +67,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540;
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.ezgif_com_video_to_gif__1_;
             this.pictureBox1.Location = new System.Drawing.Point(96, 89);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(368, 206);
@@ -81,7 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(598, 394);
+            this.ClientSize = new System.Drawing.Size(615, 394);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

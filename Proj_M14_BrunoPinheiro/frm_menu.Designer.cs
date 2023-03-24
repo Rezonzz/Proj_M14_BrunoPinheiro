@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -41,6 +42,9 @@
             this.lbl_login = new System.Windows.Forms.Label();
             this.lbl_modalidades = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_horas = new System.Windows.Forms.Label();
+            this.lbl_abertofechado = new System.Windows.Forms.Label();
+            this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -112,7 +116,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.label1.Location = new System.Drawing.Point(272, 75);
+            this.label1.Location = new System.Drawing.Point(272, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 36);
             this.label1.TabIndex = 66;
@@ -123,7 +127,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(47)))), ((int)(((byte)(99)))));
-            this.label2.Location = new System.Drawing.Point(115, 111);
+            this.label2.Location = new System.Drawing.Point(115, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(505, 31);
             this.label2.TabIndex = 68;
@@ -192,12 +196,38 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.blue_lock_anime;
-            this.pictureBox1.Location = new System.Drawing.Point(167, 153);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 138);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(409, 229);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
+            // 
+            // lbl_horas
+            // 
+            this.lbl_horas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_horas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_horas.Location = new System.Drawing.Point(301, 412);
+            this.lbl_horas.Name = "lbl_horas";
+            this.lbl_horas.Size = new System.Drawing.Size(139, 23);
+            this.lbl_horas.TabIndex = 73;
+            this.lbl_horas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_abertofechado
+            // 
+            this.lbl_abertofechado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_abertofechado.ForeColor = System.Drawing.Color.Red;
+            this.lbl_abertofechado.Location = new System.Drawing.Point(304, 389);
+            this.lbl_abertofechado.Name = "lbl_abertofechado";
+            this.lbl_abertofechado.Size = new System.Drawing.Size(136, 23);
+            this.lbl_abertofechado.TabIndex = 74;
+            this.lbl_abertofechado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmr_data
+            // 
+            this.tmr_data.Enabled = true;
+            this.tmr_data.Interval = 1000;
+            this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
             // 
             // frm_menu
             // 
@@ -205,6 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(749, 445);
+            this.Controls.Add(this.lbl_abertofechado);
+            this.Controls.Add(this.lbl_horas);
             this.Controls.Add(this.lbl_modalidades);
             this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.lbl_inscrevase);
@@ -245,5 +277,8 @@
         private System.Windows.Forms.Label lbl_inscrevase;
         private System.Windows.Forms.Label lbl_login;
         private System.Windows.Forms.Label lbl_modalidades;
+        private System.Windows.Forms.Label lbl_horas;
+        private System.Windows.Forms.Label lbl_abertofechado;
+        private System.Windows.Forms.Timer tmr_data;
     }
 }

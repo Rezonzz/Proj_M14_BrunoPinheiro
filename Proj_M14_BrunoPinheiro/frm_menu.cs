@@ -49,7 +49,24 @@ namespace Proj_M14_BrunoPinheiro
 
         private void frm_menu_Load(object sender, EventArgs e)
         {
+            tmr_data.Tick += new EventHandler(tmr_data_Tick);
+            tmr_data.Start();
+        }
 
+        private void AtualizarLabel()
+        {
+            DateTime horaAtual = DateTime.Now;
+
+            if (horaAtual.Hour >= 16 && horaAtual.Hour < 22)
+            {
+                lbl_abertofechado.Text = "Aberto";
+                lbl_abertofechado.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_abertofechado.Text = "Fechado";
+                lbl_abertofechado.ForeColor = Color.Red;
+            }
         }
 
         private void lbl_historia_MouseMove(object sender, MouseEventArgs e)
@@ -121,6 +138,12 @@ namespace Proj_M14_BrunoPinheiro
             frm_modalidades frm_modalidades = new frm_modalidades();
             frm_modalidades.Show();
             this.Hide();
+        }
+
+        private void tmr_data_Tick(object sender, EventArgs e)
+        {
+            lbl_horas.Text = DateTime.Now.ToString("HH:mm:ss");
+            AtualizarLabel();
         }
     }
 }

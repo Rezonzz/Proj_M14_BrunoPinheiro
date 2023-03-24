@@ -85,6 +85,12 @@
     <Compile Include="frm_futebol.Designer.cs">
       <DependentUpon>frm_futebol.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ginastica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ginastica.Designer.cs">
+      <DependentUpon>frm_ginastica.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_historia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     <Compile Include="frm_modalidades.Designer.cs">
       <DependentUpon>frm_modalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_natacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_natacao.Designer.cs">
+      <DependentUpon>frm_natacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_tenis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,9 @@
     <EmbeddedResource Include="frm_futebol.resx">
       <DependentUpon>frm_futebol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_ginastica.resx">
+      <DependentUpon>frm_ginastica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_historia.resx">
       <DependentUpon>frm_historia.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_modalidades.resx">
       <DependentUpon>frm_modalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_natacao.resx">
+      <DependentUpon>frm_natacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_tenis.resx">
       <DependentUpon>frm_tenis.cs</DependentUpon>
@@ -271,6 +289,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tumblr_34525d9e8aeb7fd10e37cae6975670f7_2b07749a_540.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-video-to-gif %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-anime.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gymnastics-balance-beam.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

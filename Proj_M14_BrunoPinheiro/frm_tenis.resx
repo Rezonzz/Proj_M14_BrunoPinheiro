@@ -118,15 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>O voleibol é um desporto de equipa jogado em uma quadra retangular dividida em duas metades por uma rede. O objetivo do jogo é marcar pontos, enviando a bola por cima da rede e fazendo com que ela toque o chão na metade do campo adversário, enquanto se defende a própria metade.
+    <value>O ténis é um desporto praticado em uma quadra retangular dividida por uma rede e jogado com raquetes e uma bola pequena. O objetivo do jogo é acertar a bola por cima da rede para que ela caia dentro da quadra do adversário e impedir que o adversário faça o mesmo.
 
-O jogo é jogado com uma bola de voleibol, que pode ser passada, atirada ou roubada. Cada equipa tem três toques para enviar a bola de volta ao campo adversário, sendo que o jogador que toca na bola pela primeira vez após o saque não pode tocá-la novamente, a não ser que ela toque na rede ou em um jogador adversário.
+O ténis pode ser jogado em simples (um contra um) ou em duplas (dois contra dois) e pode ser jogado em diferentes superfícies, como relva, terra batida ou piso duro. O jogo é composto por sets, sendo que cada set é vencido pelo jogador ou equipa que atingir primeiro seis jogos, desde que haja uma diferença de pelo menos dois jogos em relação ao adversário. Em caso de empate de seis jogos, joga-se um tiebreak para decidir o vencedor do set.
 
-O voleibol é jogado por duas equipas de seis jogadores cada, que podem ser substituídos a qualquer momento do jogo. O jogo é dividido em sets, e a equipa que ganhar três sets primeiro é a vencedora do jogo. Cada set é jogado até 25 pontos, sendo que é necessário ter uma vantagem de pelo menos dois pontos para ganhar o set.
+O ténis é um desporto que requer muita técnica, habilidade, agilidade e resistência física. Os jogadores precisam ser capazes de se mover rapidamente pela quadra, mudar de direção rapidamente e golpear a bola com precisão. A estratégia também é importante no ténis, e os jogadores devem ser capazes de pensar rapidamente e ajustar o seu jogo de acordo com o adversário.
 
-O voleibol é um desporto rápido e emocionante, que requer habilidade, agilidade, força e resistência dos jogadores. Além disso, a capacidade de trabalho em equipa, a comunicação e a estratégia são fundamentais para o sucesso no voleibol.
-
-Este desporto é popular em todo o mundo e é jogado em todos os níveis, desde o amador ao profissional. O voleibol é uma das modalidades olímpicas mais populares e é também jogado em diversas ligas profissionais ao redor do mundo.</value>
+O ténis é um desporto popular em todo o mundo e é jogado em todos os níveis, desde o amador até ao profissional. Existem muitos torneios de ténis importantes, como os Grand Slams, que atraem os melhores jogadores do mundo. O ténis também é um desporto olímpico, com jogadores de muitos países a competir em torneios internacionais.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
