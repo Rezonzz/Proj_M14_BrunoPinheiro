@@ -29,5 +29,10 @@ namespace Proj_M14_BrunoPinheiro
             frm_menu frm_menu = new frm_menu();
             frm_menu.Show();
         }
+
+        private void frm_areacliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -111,6 +111,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Área de Cliente";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_areacliente_FormClosed);
+            this.Load += new System.EventHandler(this.frm_areacliente_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();

@@ -29,5 +29,38 @@ namespace Proj_M14_BrunoPinheiro
             frm_menu frm_menu = new frm_menu();
             frm_menu.Show();
         }
+
+        private Form currentChildForm;
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnl_fundo.Controls.Add(childForm);
+            pnl_fundo.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btn_socios_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_socios());
+        }
+
+        private void btn_treinadores_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_treinadores());
+        }
+
+        private void btn_modalidades_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_modalidades2());
+        }
     }
 }
