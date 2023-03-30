@@ -55,8 +55,12 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbo_estado = new System.Windows.Forms.ComboBox();
             this.dgv_socios = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_idsocio = new System.Windows.Forms.TextBox();
+            this.lbl_obs = new System.Windows.Forms.Label();
+            this.txt_obs = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btn_atualizar = new System.Windows.Forms.Button();
             this.btn_listar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -66,6 +70,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_socios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -282,7 +287,6 @@
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 152;
             this.label2.Text = "Estado";
-            this.label2.Visible = false;
             // 
             // panel6
             // 
@@ -350,36 +354,80 @@
             this.dgv_socios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_socios.Size = new System.Drawing.Size(785, 204);
             this.dgv_socios.TabIndex = 157;
+            this.dgv_socios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_socios_MouseClick);
             // 
-            // button2
+            // txt_idsocio
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.button2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(623, 163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 63);
-            this.button2.TabIndex = 156;
-            this.button2.Text = "Atualizar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.txt_idsocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_idsocio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idsocio.Enabled = false;
+            this.txt_idsocio.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idsocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_idsocio.Location = new System.Drawing.Point(810, 180);
+            this.txt_idsocio.Multiline = true;
+            this.txt_idsocio.Name = "txt_idsocio";
+            this.txt_idsocio.Size = new System.Drawing.Size(38, 27);
+            this.txt_idsocio.TabIndex = 219;
+            this.txt_idsocio.Visible = false;
             // 
-            // button1
+            // lbl_obs
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.button1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(528, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 63);
-            this.button1.TabIndex = 155;
-            this.button1.Text = "Adicionar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.lbl_obs.AutoSize = true;
+            this.lbl_obs.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_obs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.lbl_obs.Location = new System.Drawing.Point(341, 163);
+            this.lbl_obs.Name = "lbl_obs";
+            this.lbl_obs.Size = new System.Drawing.Size(103, 17);
+            this.lbl_obs.TabIndex = 223;
+            this.lbl_obs.Text = "Observações";
+            this.lbl_obs.Visible = false;
+            // 
+            // txt_obs
+            // 
+            this.txt_obs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_obs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_obs.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_obs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_obs.Location = new System.Drawing.Point(345, 179);
+            this.txt_obs.Multiline = true;
+            this.txt_obs.Name = "txt_obs";
+            this.txt_obs.Size = new System.Drawing.Size(191, 27);
+            this.txt_obs.TabIndex = 222;
+            this.txt_obs.Text = "Observações";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel7.Location = new System.Drawing.Point(302, 216);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 1);
+            this.panel7.TabIndex = 221;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.file;
+            this.pictureBox7.Location = new System.Drawing.Point(302, 174);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 220;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btn_atualizar
+            // 
+            this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atualizar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
+            this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_atualizar.Location = new System.Drawing.Point(710, 162);
+            this.btn_atualizar.Name = "btn_atualizar";
+            this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
+            this.btn_atualizar.TabIndex = 156;
+            this.btn_atualizar.Text = "Atualizar";
+            this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
             // btn_listar
             // 
@@ -388,7 +436,7 @@
             this.btn_listar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_listar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lista_de_compras;
             this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_listar.Location = new System.Drawing.Point(433, 163);
+            this.btn_listar.Location = new System.Drawing.Point(602, 162);
             this.btn_listar.Name = "btn_listar";
             this.btn_listar.Size = new System.Drawing.Size(89, 63);
             this.btn_listar.TabIndex = 153;
@@ -473,9 +521,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.lbl_obs);
+            this.Controls.Add(this.txt_obs);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.txt_idsocio);
             this.Controls.Add(this.dgv_socios);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.cbo_estado);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.label2);
@@ -511,7 +563,9 @@
             this.Name = "frm_socios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Sócios";
+            this.Load += new System.EventHandler(this.frm_socios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_socios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -555,8 +609,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.ComboBox cbo_estado;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.DataGridView dgv_socios;
+        private System.Windows.Forms.TextBox txt_idsocio;
+        private System.Windows.Forms.Label lbl_obs;
+        private System.Windows.Forms.TextBox txt_obs;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

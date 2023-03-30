@@ -109,36 +109,101 @@ namespace Proj_M14_BrunoPinheiro
 
                             if (count > 0)
                             {
-                                switch (modalidade)
+                                using (var cmdEstado = new MySqlCommand("SELECT Estado FROM modalidades WHERE nomeModalidade = @nomeModalidade", con))
                                 {
-                                    case "Futebol":
-                                        pnl_futebol.Visible = true;
-                                        pnl_futebol.Enabled = true;
-                                        break;
-                                    case "Voleibol":
-                                        pnl_volei.Visible = true;
-                                        pnl_volei.Enabled = true;
-                                        break;
-                                    case "Basquetebol":
-                                        pnl_basquetebol.Visible = true;
-                                        pnl_basquetebol.Enabled = true;
-                                        break;
-                                    case "Tênis":
-                                        pnl_tenis.Visible = true;
-                                        pnl_tenis.Enabled = true;
-                                        break;
-                                    case "Badminton":
-                                        pnl_badminton.Visible = true;
-                                        pnl_badminton.Enabled = true;
-                                        break;
-                                    case "Natação":
-                                        pnl_natacao.Visible = true;
-                                        pnl_natacao.Enabled = true;
-                                        break;
-                                    case "Ginástica":
-                                        pnl_ginastica.Visible = true;
-                                        pnl_ginastica.Enabled = true;
-                                        break;
+                                    cmdEstado.Parameters.AddWithValue("@nomeModalidade", modalidade);
+                                    var estado = cmdEstado.ExecuteScalar();
+
+                                    if (estado != null)
+                                    {
+                                        switch (modalidade)
+                                        {
+                                            case "Futebol":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_futebol.Visible = true;
+                                                    pnl_futebol.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_futebol.Visible = false;
+                                                    pnl_futebol.Enabled = false;
+                                                }
+                                                break;
+                                            case "Voleibol":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_volei.Visible = true;
+                                                    pnl_volei.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_volei.Visible = false;
+                                                    pnl_volei.Enabled = false;
+                                                }
+                                                break;
+                                            case "Basquetebol":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_basquetebol.Visible = true;
+                                                    pnl_basquetebol.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_basquetebol.Visible = false;
+                                                    pnl_basquetebol.Enabled = false;
+                                                }
+                                                break;
+                                            case "Tênis":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_tenis.Visible = true;
+                                                    pnl_tenis.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_tenis.Visible = false;
+                                                    pnl_tenis.Enabled = false;
+                                                }
+                                                break;
+                                            case "Badminton":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_badminton.Visible = true;
+                                                    pnl_badminton.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_badminton.Visible = false;
+                                                    pnl_badminton.Enabled = false;
+                                                }
+                                                break;
+                                            case "Natação":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_natacao.Visible = true;
+                                                    pnl_natacao.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_natacao.Visible = false;
+                                                    pnl_natacao.Enabled = false;
+                                                }
+                                                break;
+                                            case "Ginástica":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_ginastica.Visible = true;
+                                                    pnl_ginastica.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_ginastica.Visible = false;
+                                                    pnl_ginastica.Enabled = false;
+                                                }
+                                                break;
+                                        }
+                                    }
                                 }
                             }
                         }
