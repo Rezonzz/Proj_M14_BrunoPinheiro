@@ -33,12 +33,8 @@
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_ginastica = new System.Windows.Forms.Panel();
-            this.pic_ginastica = new System.Windows.Forms.PictureBox();
             this.pnl_instalacoes = new System.Windows.Forms.Panel();
             this.btn_instalacoes = new System.Windows.Forms.Button();
             this.pnl_modalidades = new System.Windows.Forms.Panel();
@@ -51,17 +47,24 @@
             this.lbl_abertofechado = new System.Windows.Forms.Label();
             this.lbl_horas = new System.Windows.Forms.Label();
             this.tmr_data = new System.Windows.Forms.Timer(this.components);
+            this.pic_ginastica = new System.Windows.Forms.PictureBox();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.btn_turmas = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnl_ginastica.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).BeginInit();
             this.pnl_instalacoes.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
             this.pnl_socios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -104,43 +107,10 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
-            // pic_close
-            // 
-            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(1015, 16);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(18, 18);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 99;
-            this.pic_close.TabStop = false;
-            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
-            this.pic_logo.Location = new System.Drawing.Point(12, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(32, 32);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 102;
-            this.pic_logo.TabStop = false;
-            // 
-            // pic_minimize
-            // 
-            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(980, 16);
-            this.pic_minimize.Name = "pic_minimize";
-            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
-            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_minimize.TabIndex = 100;
-            this.pic_minimize.TabStop = false;
-            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnl_ginastica);
             this.panel1.Controls.Add(this.pnl_instalacoes);
             this.panel1.Controls.Add(this.pnl_modalidades);
@@ -162,20 +132,9 @@
             this.pnl_ginastica.TabIndex = 6;
             this.pnl_ginastica.Visible = false;
             // 
-            // pic_ginastica
-            // 
-            this.pic_ginastica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_ginastica.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.acrobat;
-            this.pic_ginastica.Location = new System.Drawing.Point(0, 5);
-            this.pic_ginastica.Name = "pic_ginastica";
-            this.pic_ginastica.Size = new System.Drawing.Size(168, 90);
-            this.pic_ginastica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ginastica.TabIndex = 70;
-            this.pic_ginastica.TabStop = false;
-            // 
             // pnl_instalacoes
             // 
-            this.pnl_instalacoes.Controls.Add(this.btn_instalacoes);
+            this.pnl_instalacoes.Controls.Add(this.btn_turmas);
             this.pnl_instalacoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_instalacoes.Location = new System.Drawing.Point(0, 300);
             this.pnl_instalacoes.Name = "pnl_instalacoes";
@@ -188,7 +147,7 @@
             this.btn_instalacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_instalacoes.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_instalacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_instalacoes.Location = new System.Drawing.Point(3, 2);
+            this.btn_instalacoes.Location = new System.Drawing.Point(3, -1);
             this.btn_instalacoes.Name = "btn_instalacoes";
             this.btn_instalacoes.Size = new System.Drawing.Size(165, 98);
             this.btn_instalacoes.TabIndex = 1;
@@ -299,6 +258,73 @@
             this.tmr_data.Interval = 1000;
             this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
             // 
+            // pic_ginastica
+            // 
+            this.pic_ginastica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_ginastica.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.acrobat;
+            this.pic_ginastica.Location = new System.Drawing.Point(0, 5);
+            this.pic_ginastica.Name = "pic_ginastica";
+            this.pic_ginastica.Size = new System.Drawing.Size(168, 90);
+            this.pic_ginastica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ginastica.TabIndex = 70;
+            this.pic_ginastica.TabStop = false;
+            // 
+            // pic_close
+            // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(1015, 16);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(18, 18);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 99;
+            this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
+            this.pic_logo.Location = new System.Drawing.Point(12, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 102;
+            this.pic_logo.TabStop = false;
+            // 
+            // pic_minimize
+            // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.pic_minimize.Location = new System.Drawing.Point(980, 16);
+            this.pic_minimize.Name = "pic_minimize";
+            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
+            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_minimize.TabIndex = 100;
+            this.pic_minimize.TabStop = false;
+            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
+            // 
+            // btn_turmas
+            // 
+            this.btn_turmas.FlatAppearance.BorderSize = 0;
+            this.btn_turmas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_turmas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_turmas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_turmas.Location = new System.Drawing.Point(2, 1);
+            this.btn_turmas.Name = "btn_turmas";
+            this.btn_turmas.Size = new System.Drawing.Size(165, 98);
+            this.btn_turmas.TabIndex = 7;
+            this.btn_turmas.Text = "Turmas";
+            this.btn_turmas.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_instalacoes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(168, 100);
+            this.panel2.TabIndex = 7;
+            // 
             // frm_administracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,18 +341,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Administração";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_administracao_FormClosed);
+            this.Load += new System.EventHandler(this.frm_administracao_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnl_ginastica.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).EndInit();
             this.pnl_instalacoes.ResumeLayout(false);
             this.pnl_modalidades.ResumeLayout(false);
             this.pnl_treinadores.ResumeLayout(false);
             this.pnl_socios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -354,5 +382,7 @@
         private System.Windows.Forms.Label lbl_abertofechado;
         private System.Windows.Forms.Label lbl_horas;
         private System.Windows.Forms.Timer tmr_data;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_turmas;
     }
 }

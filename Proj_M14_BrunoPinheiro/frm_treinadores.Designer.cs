@@ -137,6 +137,9 @@
             this.txt_nif.Size = new System.Drawing.Size(191, 27);
             this.txt_nif.TabIndex = 176;
             this.txt_nif.Text = "NIF";
+            this.txt_nif.Click += new System.EventHandler(this.txt_nif_Click);
+            this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
+            this.txt_nif.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_nif_KeyDown);
             // 
             // panel4
             // 
@@ -170,6 +173,8 @@
             this.txt_telefone.Size = new System.Drawing.Size(191, 27);
             this.txt_telefone.TabIndex = 172;
             this.txt_telefone.Text = "Telefone";
+            this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
+            this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
             // 
             // panel3
             // 
@@ -203,6 +208,9 @@
             this.txt_morada.Size = new System.Drawing.Size(191, 27);
             this.txt_morada.TabIndex = 168;
             this.txt_morada.Text = "Morada";
+            this.txt_morada.Click += new System.EventHandler(this.txt_morada_Click);
+            this.txt_morada.TextChanged += new System.EventHandler(this.txt_morada_TextChanged);
+            this.txt_morada.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_morada_KeyDown);
             // 
             // panel2
             // 
@@ -236,6 +244,9 @@
             this.txt_nome.Size = new System.Drawing.Size(191, 27);
             this.txt_nome.TabIndex = 164;
             this.txt_nome.Text = "Nome";
+            this.txt_nome.Click += new System.EventHandler(this.txt_nome_Click);
+            this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
+            this.txt_nome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_nome_KeyDown);
             // 
             // panel1
             // 
@@ -269,6 +280,9 @@
             this.txt_email.Size = new System.Drawing.Size(213, 27);
             this.txt_email.TabIndex = 160;
             this.txt_email.Text = "Email";
+            this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_email_KeyDown);
             // 
             // pnl_1
             // 
@@ -308,6 +322,7 @@
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_adicionar.UseVisualStyleBackColor = true;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // btn_listar
             // 

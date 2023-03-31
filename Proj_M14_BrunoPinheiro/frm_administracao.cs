@@ -121,5 +121,10 @@ namespace Proj_M14_BrunoPinheiro
         {
 
         }
+
+        private void frm_administracao_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_socios());
+        }
     }
 }
