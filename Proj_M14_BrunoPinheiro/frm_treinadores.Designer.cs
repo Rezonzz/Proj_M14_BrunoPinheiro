@@ -49,6 +49,8 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.pnl_1 = new System.Windows.Forms.Panel();
+            this.txt_idtreinador = new System.Windows.Forms.TextBox();
+            this.btn_apagar = new System.Windows.Forms.Button();
             this.btn_atualizar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_listar = new System.Windows.Forms.Button();
@@ -57,7 +59,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
-            this.txt_idtreinador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_treinadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -292,6 +293,36 @@
             this.pnl_1.Size = new System.Drawing.Size(256, 1);
             this.pnl_1.TabIndex = 159;
             // 
+            // txt_idtreinador
+            // 
+            this.txt_idtreinador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_idtreinador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idtreinador.Enabled = false;
+            this.txt_idtreinador.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idtreinador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_idtreinador.Location = new System.Drawing.Point(578, 108);
+            this.txt_idtreinador.Multiline = true;
+            this.txt_idtreinador.Name = "txt_idtreinador";
+            this.txt_idtreinador.Size = new System.Drawing.Size(38, 27);
+            this.txt_idtreinador.TabIndex = 220;
+            this.txt_idtreinador.Visible = false;
+            // 
+            // btn_apagar
+            // 
+            this.btn_apagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_apagar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_apagar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_apagar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lixo__1_;
+            this.btn_apagar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_apagar.Location = new System.Drawing.Point(530, 165);
+            this.btn_apagar.Name = "btn_apagar";
+            this.btn_apagar.Size = new System.Drawing.Size(89, 63);
+            this.btn_apagar.TabIndex = 221;
+            this.btn_apagar.Text = "Apagar";
+            this.btn_apagar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_apagar.UseVisualStyleBackColor = true;
+            this.btn_apagar.Click += new System.EventHandler(this.btn_apagar_Click);
+            // 
             // btn_atualizar
             // 
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -299,7 +330,7 @@
             this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(473, 165);
+            this.btn_atualizar.Location = new System.Drawing.Point(435, 165);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
             this.btn_atualizar.TabIndex = 188;
@@ -315,7 +346,7 @@
             this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
             this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(378, 165);
+            this.btn_adicionar.Location = new System.Drawing.Point(340, 165);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
             this.btn_adicionar.TabIndex = 187;
@@ -331,7 +362,7 @@
             this.btn_listar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_listar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lista_de_compras;
             this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_listar.Location = new System.Drawing.Point(283, 165);
+            this.btn_listar.Location = new System.Drawing.Point(245, 165);
             this.btn_listar.Name = "btn_listar";
             this.btn_listar.Size = new System.Drawing.Size(89, 63);
             this.btn_listar.TabIndex = 185;
@@ -390,26 +421,13 @@
             this.pic_username.TabIndex = 158;
             this.pic_username.TabStop = false;
             // 
-            // txt_idtreinador
-            // 
-            this.txt_idtreinador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.txt_idtreinador.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_idtreinador.Enabled = false;
-            this.txt_idtreinador.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idtreinador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_idtreinador.Location = new System.Drawing.Point(579, 108);
-            this.txt_idtreinador.Multiline = true;
-            this.txt_idtreinador.Name = "txt_idtreinador";
-            this.txt_idtreinador.Size = new System.Drawing.Size(38, 27);
-            this.txt_idtreinador.TabIndex = 220;
-            this.txt_idtreinador.Visible = false;
-            // 
             // frm_treinadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.btn_apagar);
             this.Controls.Add(this.txt_idtreinador);
             this.Controls.Add(this.dgv_treinadores);
             this.Controls.Add(this.btn_atualizar);
@@ -480,5 +498,6 @@
         private System.Windows.Forms.Panel pnl_1;
         private System.Windows.Forms.PictureBox pic_username;
         private System.Windows.Forms.TextBox txt_idtreinador;
+        private System.Windows.Forms.Button btn_apagar;
     }
 }

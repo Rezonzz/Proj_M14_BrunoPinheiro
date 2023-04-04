@@ -68,16 +68,46 @@ namespace Proj_M14_BrunoPinheiro
         private void btn_socios_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_socios());
+            pnl_selected1.Visible = true;
+            pnl_selected1.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
         }
 
         private void btn_treinadores_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_treinadores());
+            pnl_selected2.Visible = true;
+            pnl_selected2.Enabled = true;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
         }
 
         private void btn_modalidades_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_modalidades2());
+            pnl_selected3.Visible = true;
+            pnl_selected3.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
         }
 
         private void pnl_top_MouseDown(object sender, MouseEventArgs e)
@@ -125,6 +155,35 @@ namespace Proj_M14_BrunoPinheiro
         private void frm_administracao_Load(object sender, EventArgs e)
         {
             OpenChildForm(new frm_socios());
+        }
+
+        private void btn_turmas_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_turmas());
+            pnl_selected4.Visible = true;
+            pnl_selected4.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+        }
+
+        private void btn_instalacoes_Click(object sender, EventArgs e)
+        {
+            pnl_selected5.Visible = true;
+            pnl_selected5.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
         }
     }
 }

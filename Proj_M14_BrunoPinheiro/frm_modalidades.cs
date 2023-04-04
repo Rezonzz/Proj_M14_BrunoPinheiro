@@ -50,20 +50,20 @@ namespace Proj_M14_BrunoPinheiro
         private void pic_futebol_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frm_futebol());
-            pnl_futebol.BackColor = Color.FromArgb(2, 6, 60);
-            pic_futebol.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
+            pnl_selected1.Visible = true;
+            pnl_selected1.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -214,116 +214,116 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_basket_Click(object sender, EventArgs e)
         {
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(2, 6, 60);
-            pic_basket.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             OpenChildForm(new frm_basquetebol());
+            pnl_selected2.Visible = true;
+            pnl_selected2.Enabled = true;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         private void pic_volei_Click(object sender, EventArgs e)
         { 
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(2, 6, 60);
-            pic_volei.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             OpenChildForm(new frm_voleibol());
+            pnl_selected3.Visible = true;
+            pnl_selected3.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         private void pic_badminton_Click(object sender, EventArgs e)
         {
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(2, 6, 60);
-            pic_badminton.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             OpenChildForm(new frm_badminton());
+            pnl_selected4.Visible = true;
+            pnl_selected4.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         private void pic_tenis_Click(object sender, EventArgs e)
         {
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(2, 6, 60);
-            pic_tenis.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             OpenChildForm(new frm_tenis());
+            pnl_selected5.Visible = true;
+            pnl_selected5.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         private void pic_natacao_Click(object sender, EventArgs e)
         {
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(2, 6, 60);
-            pic_natacao.BackColor = Color.FromArgb(2, 6, 60);
-            pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
-            pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             OpenChildForm(new frm_natacao());
+            pnl_selected6.Visible = true;
+            pnl_selected6.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
         }
 
         private void pic_ginastica_Click(object sender, EventArgs e)
         {
-            pnl_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_futebol.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_basquetebol.BackColor = Color.FromArgb(1, 3, 29);
-            pic_basket.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pic_volei.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pic_badminton.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pic_tenis.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pic_natacao.BackColor = Color.FromArgb(1, 3, 29);
-            pnl_ginastica.BackColor = Color.FromArgb(2, 6, 60);
-            pic_ginastica.BackColor = Color.FromArgb(2, 6, 60);
             OpenChildForm(new frm_ginastica());
+            pnl_selected7.Visible = true;
+            pnl_selected7.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
         }
 
         private void pic_futebol_MouseMove(object sender, MouseEventArgs e)
@@ -408,6 +408,11 @@ namespace Proj_M14_BrunoPinheiro
         {
             pnl_ginastica.BackColor = Color.FromArgb(1, 3, 29);
             pic_ginastica.BackColor = Color.FromArgb(1, 3, 29);
+        }
+
+        private void pnl_futebol_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

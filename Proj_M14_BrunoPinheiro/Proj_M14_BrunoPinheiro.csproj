@@ -151,6 +151,12 @@
     <Compile Include="frm_treinadores.Designer.cs">
       <DependentUpon>frm_treinadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_turmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_turmas.Designer.cs">
+      <DependentUpon>frm_turmas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_voleibol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_treinadores.resx">
       <DependentUpon>frm_treinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_turmas.resx">
+      <DependentUpon>frm_turmas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_voleibol.resx">
       <DependentUpon>frm_voleibol.cs</DependentUpon>
@@ -355,6 +364,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jogos-de-desporto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treinador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotacao-no-sentido-horario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixo %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

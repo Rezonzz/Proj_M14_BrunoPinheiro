@@ -31,12 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_administracao));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.lbl_abertofechado = new System.Windows.Forms.Label();
+            this.lbl_horas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_instalacoes = new System.Windows.Forms.Button();
             this.pnl_ginastica = new System.Windows.Forms.Panel();
             this.pnl_instalacoes = new System.Windows.Forms.Panel();
-            this.btn_instalacoes = new System.Windows.Forms.Button();
+            this.btn_turmas = new System.Windows.Forms.Button();
             this.pnl_modalidades = new System.Windows.Forms.Panel();
             this.btn_modalidades = new System.Windows.Forms.Button();
             this.pnl_treinadores = new System.Windows.Forms.Panel();
@@ -44,17 +48,25 @@
             this.pnl_socios = new System.Windows.Forms.Panel();
             this.btn_socios = new System.Windows.Forms.Button();
             this.pnl_fundo = new System.Windows.Forms.Panel();
-            this.lbl_abertofechado = new System.Windows.Forms.Label();
-            this.lbl_horas = new System.Windows.Forms.Label();
             this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.pic_ginastica = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_turmas = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_selected1 = new System.Windows.Forms.Panel();
+            this.pnl_selected2 = new System.Windows.Forms.Panel();
+            this.pnl_selected3 = new System.Windows.Forms.Panel();
+            this.pnl_selected4 = new System.Windows.Forms.Panel();
+            this.pnl_selected5 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_top.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnl_ginastica.SuspendLayout();
             this.pnl_instalacoes.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
@@ -64,7 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -84,6 +97,27 @@
             this.pnl_top.TabIndex = 67;
             this.pnl_top.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_top_Paint);
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
+            // lbl_abertofechado
+            // 
+            this.lbl_abertofechado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_abertofechado.ForeColor = System.Drawing.Color.Red;
+            this.lbl_abertofechado.Location = new System.Drawing.Point(823, 3);
+            this.lbl_abertofechado.Name = "lbl_abertofechado";
+            this.lbl_abertofechado.Size = new System.Drawing.Size(136, 23);
+            this.lbl_abertofechado.TabIndex = 105;
+            this.lbl_abertofechado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_abertofechado.Click += new System.EventHandler(this.lbl_abertofechado_Click);
+            // 
+            // lbl_horas
+            // 
+            this.lbl_horas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_horas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_horas.Location = new System.Drawing.Point(822, 28);
+            this.lbl_horas.Name = "lbl_horas";
+            this.lbl_horas.Size = new System.Drawing.Size(139, 23);
+            this.lbl_horas.TabIndex = 104;
+            this.lbl_horas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -110,6 +144,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnl_ginastica);
             this.panel1.Controls.Add(this.pnl_instalacoes);
@@ -122,24 +158,15 @@
             this.panel1.Size = new System.Drawing.Size(185, 465);
             this.panel1.TabIndex = 69;
             // 
-            // pnl_ginastica
+            // panel2
             // 
-            this.pnl_ginastica.Controls.Add(this.pic_ginastica);
-            this.pnl_ginastica.Enabled = false;
-            this.pnl_ginastica.Location = new System.Drawing.Point(0, 906);
-            this.pnl_ginastica.Name = "pnl_ginastica";
-            this.pnl_ginastica.Size = new System.Drawing.Size(165, 97);
-            this.pnl_ginastica.TabIndex = 6;
-            this.pnl_ginastica.Visible = false;
-            // 
-            // pnl_instalacoes
-            // 
-            this.pnl_instalacoes.Controls.Add(this.btn_turmas);
-            this.pnl_instalacoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_instalacoes.Location = new System.Drawing.Point(0, 300);
-            this.pnl_instalacoes.Name = "pnl_instalacoes";
-            this.pnl_instalacoes.Size = new System.Drawing.Size(168, 100);
-            this.pnl_instalacoes.TabIndex = 3;
+            this.panel2.Controls.Add(this.pnl_selected5);
+            this.panel2.Controls.Add(this.btn_instalacoes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(168, 100);
+            this.panel2.TabIndex = 7;
             // 
             // btn_instalacoes
             // 
@@ -149,13 +176,49 @@
             this.btn_instalacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_instalacoes.Location = new System.Drawing.Point(3, -1);
             this.btn_instalacoes.Name = "btn_instalacoes";
-            this.btn_instalacoes.Size = new System.Drawing.Size(165, 98);
+            this.btn_instalacoes.Size = new System.Drawing.Size(165, 101);
             this.btn_instalacoes.TabIndex = 1;
             this.btn_instalacoes.Text = "Instalações";
             this.btn_instalacoes.UseVisualStyleBackColor = true;
+            this.btn_instalacoes.Click += new System.EventHandler(this.btn_instalacoes_Click);
+            // 
+            // pnl_ginastica
+            // 
+            this.pnl_ginastica.Controls.Add(this.pic_ginastica);
+            this.pnl_ginastica.Enabled = false;
+            this.pnl_ginastica.Location = new System.Drawing.Point(0, 2346);
+            this.pnl_ginastica.Name = "pnl_ginastica";
+            this.pnl_ginastica.Size = new System.Drawing.Size(165, 97);
+            this.pnl_ginastica.TabIndex = 6;
+            this.pnl_ginastica.Visible = false;
+            // 
+            // pnl_instalacoes
+            // 
+            this.pnl_instalacoes.Controls.Add(this.pnl_selected4);
+            this.pnl_instalacoes.Controls.Add(this.btn_turmas);
+            this.pnl_instalacoes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_instalacoes.Location = new System.Drawing.Point(0, 300);
+            this.pnl_instalacoes.Name = "pnl_instalacoes";
+            this.pnl_instalacoes.Size = new System.Drawing.Size(168, 100);
+            this.pnl_instalacoes.TabIndex = 3;
+            // 
+            // btn_turmas
+            // 
+            this.btn_turmas.FlatAppearance.BorderSize = 0;
+            this.btn_turmas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_turmas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_turmas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_turmas.Location = new System.Drawing.Point(2, 1);
+            this.btn_turmas.Name = "btn_turmas";
+            this.btn_turmas.Size = new System.Drawing.Size(165, 98);
+            this.btn_turmas.TabIndex = 7;
+            this.btn_turmas.Text = "Turmas";
+            this.btn_turmas.UseVisualStyleBackColor = true;
+            this.btn_turmas.Click += new System.EventHandler(this.btn_turmas_Click);
             // 
             // pnl_modalidades
             // 
+            this.pnl_modalidades.Controls.Add(this.pnl_selected3);
             this.pnl_modalidades.Controls.Add(this.btn_modalidades);
             this.pnl_modalidades.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_modalidades.Location = new System.Drawing.Point(0, 200);
@@ -179,6 +242,7 @@
             // 
             // pnl_treinadores
             // 
+            this.pnl_treinadores.Controls.Add(this.pnl_selected2);
             this.pnl_treinadores.Controls.Add(this.btn_treinadores);
             this.pnl_treinadores.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_treinadores.Location = new System.Drawing.Point(0, 100);
@@ -202,6 +266,7 @@
             // 
             // pnl_socios
             // 
+            this.pnl_socios.Controls.Add(this.pnl_selected1);
             this.pnl_socios.Controls.Add(this.btn_socios);
             this.pnl_socios.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_socios.Location = new System.Drawing.Point(0, 0);
@@ -230,27 +295,6 @@
             this.pnl_fundo.Name = "pnl_fundo";
             this.pnl_fundo.Size = new System.Drawing.Size(860, 465);
             this.pnl_fundo.TabIndex = 70;
-            // 
-            // lbl_abertofechado
-            // 
-            this.lbl_abertofechado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_abertofechado.ForeColor = System.Drawing.Color.Red;
-            this.lbl_abertofechado.Location = new System.Drawing.Point(823, 3);
-            this.lbl_abertofechado.Name = "lbl_abertofechado";
-            this.lbl_abertofechado.Size = new System.Drawing.Size(136, 23);
-            this.lbl_abertofechado.TabIndex = 105;
-            this.lbl_abertofechado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_abertofechado.Click += new System.EventHandler(this.lbl_abertofechado_Click);
-            // 
-            // lbl_horas
-            // 
-            this.lbl_horas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_horas.Location = new System.Drawing.Point(822, 28);
-            this.lbl_horas.Name = "lbl_horas";
-            this.lbl_horas.Size = new System.Drawing.Size(139, 23);
-            this.lbl_horas.TabIndex = 104;
-            this.lbl_horas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tmr_data
             // 
@@ -303,27 +347,135 @@
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
-            // btn_turmas
+            // pnl_selected1
             // 
-            this.btn_turmas.FlatAppearance.BorderSize = 0;
-            this.btn_turmas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_turmas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_turmas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_turmas.Location = new System.Drawing.Point(2, 1);
-            this.btn_turmas.Name = "btn_turmas";
-            this.btn_turmas.Size = new System.Drawing.Size(165, 98);
-            this.btn_turmas.TabIndex = 7;
-            this.btn_turmas.Text = "Turmas";
-            this.btn_turmas.UseVisualStyleBackColor = true;
+            this.pnl_selected1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected1.Enabled = false;
+            this.pnl_selected1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected1.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected1.Name = "pnl_selected1";
+            this.pnl_selected1.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected1.TabIndex = 1;
+            this.pnl_selected1.Visible = false;
             // 
-            // panel2
+            // pnl_selected2
             // 
-            this.panel2.Controls.Add(this.btn_instalacoes);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(168, 100);
-            this.panel2.TabIndex = 7;
+            this.pnl_selected2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected2.Enabled = false;
+            this.pnl_selected2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected2.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected2.Name = "pnl_selected2";
+            this.pnl_selected2.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected2.TabIndex = 2;
+            this.pnl_selected2.Visible = false;
+            // 
+            // pnl_selected3
+            // 
+            this.pnl_selected3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected3.Enabled = false;
+            this.pnl_selected3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected3.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected3.Name = "pnl_selected3";
+            this.pnl_selected3.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected3.TabIndex = 2;
+            this.pnl_selected3.Visible = false;
+            // 
+            // pnl_selected4
+            // 
+            this.pnl_selected4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected4.Enabled = false;
+            this.pnl_selected4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected4.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected4.Name = "pnl_selected4";
+            this.pnl_selected4.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected4.TabIndex = 8;
+            this.pnl_selected4.Visible = false;
+            // 
+            // pnl_selected5
+            // 
+            this.pnl_selected5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected5.Enabled = false;
+            this.pnl_selected5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected5.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected5.Name = "pnl_selected5";
+            this.pnl_selected5.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected5.TabIndex = 2;
+            this.pnl_selected5.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 500);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(168, 100);
+            this.panel5.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Enabled = false;
+            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 100);
+            this.panel6.TabIndex = 2;
+            this.panel6.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.button2.Location = new System.Drawing.Point(3, -1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 101);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Quotas";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 600);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(168, 100);
+            this.panel3.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Enabled = false;
+            this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 100);
+            this.panel4.TabIndex = 2;
+            this.panel4.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.button1.Location = new System.Drawing.Point(3, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 100);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Consultas";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_administracao
             // 
@@ -345,6 +497,7 @@
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnl_ginastica.ResumeLayout(false);
             this.pnl_instalacoes.ResumeLayout(false);
             this.pnl_modalidades.ResumeLayout(false);
@@ -354,7 +507,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -384,5 +538,16 @@
         private System.Windows.Forms.Timer tmr_data;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_turmas;
+        private System.Windows.Forms.Panel pnl_selected1;
+        private System.Windows.Forms.Panel pnl_selected5;
+        private System.Windows.Forms.Panel pnl_selected4;
+        private System.Windows.Forms.Panel pnl_selected3;
+        private System.Windows.Forms.Panel pnl_selected2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
     }
 }

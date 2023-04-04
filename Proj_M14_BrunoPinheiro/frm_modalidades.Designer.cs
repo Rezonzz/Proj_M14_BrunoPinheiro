@@ -50,6 +50,13 @@
             this.pnl_futebol = new System.Windows.Forms.Panel();
             this.pic_futebol = new System.Windows.Forms.PictureBox();
             this.pnl_fundo = new System.Windows.Forms.Panel();
+            this.pnl_selected1 = new System.Windows.Forms.Panel();
+            this.pnl_selected2 = new System.Windows.Forms.Panel();
+            this.pnl_selected3 = new System.Windows.Forms.Panel();
+            this.pnl_selected4 = new System.Windows.Forms.Panel();
+            this.pnl_selected5 = new System.Windows.Forms.Panel();
+            this.pnl_selected6 = new System.Windows.Forms.Panel();
+            this.pnl_selected7 = new System.Windows.Forms.Panel();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -148,6 +155,7 @@
             // 
             // pnl_ginastica
             // 
+            this.pnl_ginastica.Controls.Add(this.pnl_selected7);
             this.pnl_ginastica.Controls.Add(this.pic_ginastica);
             this.pnl_ginastica.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_ginastica.Enabled = false;
@@ -173,6 +181,7 @@
             // 
             // pnl_natacao
             // 
+            this.pnl_natacao.Controls.Add(this.pnl_selected6);
             this.pnl_natacao.Controls.Add(this.pic_natacao);
             this.pnl_natacao.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_natacao.Enabled = false;
@@ -198,6 +207,7 @@
             // 
             // pnl_tenis
             // 
+            this.pnl_tenis.Controls.Add(this.pnl_selected5);
             this.pnl_tenis.Controls.Add(this.pic_tenis);
             this.pnl_tenis.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_tenis.Enabled = false;
@@ -223,6 +233,7 @@
             // 
             // pnl_badminton
             // 
+            this.pnl_badminton.Controls.Add(this.pnl_selected4);
             this.pnl_badminton.Controls.Add(this.pic_badminton);
             this.pnl_badminton.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_badminton.Enabled = false;
@@ -248,6 +259,7 @@
             // 
             // pnl_volei
             // 
+            this.pnl_volei.Controls.Add(this.pnl_selected3);
             this.pnl_volei.Controls.Add(this.pic_volei);
             this.pnl_volei.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_volei.Enabled = false;
@@ -273,6 +285,7 @@
             // 
             // pnl_basquetebol
             // 
+            this.pnl_basquetebol.Controls.Add(this.pnl_selected2);
             this.pnl_basquetebol.Controls.Add(this.pic_basket);
             this.pnl_basquetebol.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_basquetebol.Enabled = false;
@@ -298,6 +311,7 @@
             // 
             // pnl_futebol
             // 
+            this.pnl_futebol.Controls.Add(this.pnl_selected1);
             this.pnl_futebol.Controls.Add(this.pic_futebol);
             this.pnl_futebol.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_futebol.Enabled = false;
@@ -306,6 +320,7 @@
             this.pnl_futebol.Size = new System.Drawing.Size(168, 100);
             this.pnl_futebol.TabIndex = 0;
             this.pnl_futebol.Visible = false;
+            this.pnl_futebol.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_futebol_Paint);
             // 
             // pic_futebol
             // 
@@ -326,8 +341,92 @@
             this.pnl_fundo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_fundo.Location = new System.Drawing.Point(185, 51);
             this.pnl_fundo.Name = "pnl_fundo";
-            this.pnl_fundo.Size = new System.Drawing.Size(564, 347);
+            this.pnl_fundo.Size = new System.Drawing.Size(564, 394);
             this.pnl_fundo.TabIndex = 69;
+            // 
+            // pnl_selected1
+            // 
+            this.pnl_selected1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected1.Enabled = false;
+            this.pnl_selected1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected1.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected1.Name = "pnl_selected1";
+            this.pnl_selected1.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected1.TabIndex = 70;
+            this.pnl_selected1.Visible = false;
+            // 
+            // pnl_selected2
+            // 
+            this.pnl_selected2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected2.Enabled = false;
+            this.pnl_selected2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected2.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected2.Name = "pnl_selected2";
+            this.pnl_selected2.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected2.TabIndex = 71;
+            this.pnl_selected2.Visible = false;
+            // 
+            // pnl_selected3
+            // 
+            this.pnl_selected3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected3.Enabled = false;
+            this.pnl_selected3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected3.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected3.Name = "pnl_selected3";
+            this.pnl_selected3.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected3.TabIndex = 71;
+            this.pnl_selected3.Visible = false;
+            // 
+            // pnl_selected4
+            // 
+            this.pnl_selected4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected4.Enabled = false;
+            this.pnl_selected4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected4.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected4.Name = "pnl_selected4";
+            this.pnl_selected4.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected4.TabIndex = 71;
+            this.pnl_selected4.Visible = false;
+            // 
+            // pnl_selected5
+            // 
+            this.pnl_selected5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected5.Enabled = false;
+            this.pnl_selected5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected5.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected5.Name = "pnl_selected5";
+            this.pnl_selected5.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected5.TabIndex = 71;
+            this.pnl_selected5.Visible = false;
+            // 
+            // pnl_selected6
+            // 
+            this.pnl_selected6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected6.Enabled = false;
+            this.pnl_selected6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected6.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected6.Name = "pnl_selected6";
+            this.pnl_selected6.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected6.TabIndex = 71;
+            this.pnl_selected6.Visible = false;
+            // 
+            // pnl_selected7
+            // 
+            this.pnl_selected7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected7.Enabled = false;
+            this.pnl_selected7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected7.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected7.Name = "pnl_selected7";
+            this.pnl_selected7.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected7.TabIndex = 71;
+            this.pnl_selected7.Visible = false;
             // 
             // frm_modalidades
             // 
@@ -392,5 +491,12 @@
         private System.Windows.Forms.PictureBox pic_natacao;
         private System.Windows.Forms.Panel pnl_ginastica;
         private System.Windows.Forms.PictureBox pic_ginastica;
+        private System.Windows.Forms.Panel pnl_selected7;
+        private System.Windows.Forms.Panel pnl_selected6;
+        private System.Windows.Forms.Panel pnl_selected5;
+        private System.Windows.Forms.Panel pnl_selected4;
+        private System.Windows.Forms.Panel pnl_selected3;
+        private System.Windows.Forms.Panel pnl_selected2;
+        private System.Windows.Forms.Panel pnl_selected1;
     }
 }

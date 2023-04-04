@@ -64,18 +64,18 @@ namespace Proj_M14_BrunoPinheiro
             MySqlConnection con = conn.GetConnection();
             try
             {
-                if (txt_idtreinador.Text.Length > 0)
+                if (txt_idtreinador.Text != "")
                 {
                     con.Open();
 
-                    MySqlCommand atualizartreinador = new MySqlCommand("update treinadores set nomeTreinador=@nomeTreinador, morada = @morada, NIF = @NIF, email=@email, telefone = @telefone where idTreinador = @idTreinador", con);
+                    MySqlCommand atualizartreinador = new MySqlCommand("update treinadores set nomeTreinador=@nomeTreinador, morada=@morada, NIF=@NIF, email=@email, telefone=@telefone where idTreinador=@idTreinador", con);
 
                     atualizartreinador.Parameters.AddWithValue("@nomeTreinador", txt_nome.Text);
                     atualizartreinador.Parameters.AddWithValue("@morada", txt_morada.Text);
                     atualizartreinador.Parameters.AddWithValue("@NIF", txt_nif.Text);
                     atualizartreinador.Parameters.AddWithValue("@email", txt_email.Text);
                     atualizartreinador.Parameters.AddWithValue("@telefone", txt_telefone.Text);
-                    atualizartreinador.Parameters.AddWithValue("@idCliente", Convert.ToInt32(txt_idtreinador.Text));
+                    atualizartreinador.Parameters.AddWithValue("@idTreinador", Convert.ToInt32(txt_idtreinador.Text));
 
                     atualizartreinador.ExecuteNonQuery();
                     MessageBox.Show("Treinador atualizado!", "Atualizar Treinador");
@@ -89,9 +89,9 @@ namespace Proj_M14_BrunoPinheiro
                     txt_nome.Focus();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Erro: Não Estabeleceu Ligação!!!", "Ligar Base Dados MySQL");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -408,7 +408,99 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                if (txt_nome.Text != "")
+                {
+                    if (txt_morada.Text != "")
+                    {
+                        if (txt_nif.Text != "")
+                        {
+                            if (txt_email.Text != "")
+                            {
+                                if (txt_telefone.Text != "")
+                                {
+                                    con.Open();
 
+                                    MySqlCommand inserirTreinador = new MySqlCommand("INSERT INTO treinadores(nomeTreinador, morada, NIF, email, telefone) VALUES (@nomeTreinador, @morada, @NIF, @email, @telefone)", con);
+
+                                    inserirTreinador.Parameters.AddWithValue("@nomeTreinador", txt_nome.Text);
+                                    inserirTreinador.Parameters.AddWithValue("@morada", txt_morada.Text);
+                                    inserirTreinador.Parameters.AddWithValue("@NIF", txt_nif.Text);
+                                    inserirTreinador.Parameters.AddWithValue("@email", txt_email.Text);
+                                    inserirTreinador.Parameters.AddWithValue("@telefone", txt_telefone.Text);
+
+                                    inserirTreinador.ExecuteNonQuery();
+                                    MessageBox.Show("Treinador adicionado!", "Adicionar Treinador");
+                                    ListarTreinadores();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Digite o telefone do treinador!", "Adicionar Treinador");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Digite o email do treinador!", "Adicionar Treinador");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Digite o nif do treinador!", "Adicionar Treinador");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Digite a morada do treinador!", "Adicionar Treinador");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Digite o nome do treinador!", "Adicionar Treinador");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void btn_apagar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                if (txt_idtreinador.Text != "")
+                {
+                    string nomeTreinador = txt_nome.Text;
+                    DialogResult result = MessageBox.Show("Tem a certeza que quer apagar o treinador " + nomeTreinador + "?", "Apagar Treinador", MessageBoxButtons.YesNo);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        con.Open();
+
+                        MySqlCommand apagartreinador = new MySqlCommand("delete from treinadores where idTreinador=@idTreinador", con);
+
+                        apagartreinador.Parameters.AddWithValue("@idTreinador", Convert.ToInt32(txt_idtreinador.Text));
+
+                        apagartreinador.ExecuteNonQuery();
+                        MessageBox.Show("Treinador apagado!", "Apagar Treinador");
+                        ListarTreinadores();
+
+                        con.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Deve clicar num Treinador!!!", "Apagar Treinador");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
