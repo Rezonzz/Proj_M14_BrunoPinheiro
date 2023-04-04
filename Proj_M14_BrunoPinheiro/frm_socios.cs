@@ -37,14 +37,11 @@ namespace Proj_M14_BrunoPinheiro
             }
             con.Close();
         }
-        private void btn_listar_Click(object sender, EventArgs e)
-        {
-            ListarSocios();
-        }
 
         private void frm_socios_Load(object sender, EventArgs e)
         {
             cbo_estado.SelectedIndex = 0;
+            ListarSocios();
         }
 
         private void dgv_socios_MouseClick(object sender, MouseEventArgs e)

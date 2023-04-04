@@ -36,10 +36,6 @@ namespace Proj_M14_BrunoPinheiro
             frm_menu.Show();
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void pic_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -78,6 +74,12 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected4.Enabled = false;
             pnl_selected5.Visible = false;
             pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void btn_treinadores_Click(object sender, EventArgs e)
@@ -93,6 +95,12 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected4.Enabled = false;
             pnl_selected5.Visible = false;
             pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void btn_modalidades_Click(object sender, EventArgs e)
@@ -108,8 +116,18 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected4.Enabled = false;
             pnl_selected5.Visible = false;
             pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void pnl_top_MouseDown(object sender, MouseEventArgs e)
         {
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -170,6 +188,12 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected1.Enabled = false;
             pnl_selected5.Visible = false;
             pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void btn_instalacoes_Click(object sender, EventArgs e)
@@ -184,6 +208,72 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected4.Enabled = false;
             pnl_selected1.Visible = false;
             pnl_selected1.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+        }
+
+        private void btn_quotas_Click(object sender, EventArgs e)
+        {
+            pnl_selected6.Visible = true;
+            pnl_selected6.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+        }
+
+        private void btn_consultas_Click(object sender, EventArgs e)
+        {
+            pnl_selected7.Visible = true;
+            pnl_selected7.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+        }
+
+        private void btn_reservas_Click(object sender, EventArgs e)
+        {
+            pnl_selected8.Visible = true;
+            pnl_selected8.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
         }
     }
 }

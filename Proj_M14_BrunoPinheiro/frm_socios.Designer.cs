@@ -39,7 +39,6 @@
             this.dgv_socios = new System.Windows.Forms.DataGridView();
             this.txt_idsocio = new System.Windows.Forms.TextBox();
             this.btn_atualizar = new System.Windows.Forms.Button();
-            this.btn_listar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -150,30 +149,14 @@
             this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(659, 26);
+            this.btn_atualizar.Location = new System.Drawing.Point(582, 26);
             this.btn_atualizar.Name = "btn_atualizar";
-            this.btn_atualizar.Size = new System.Drawing.Size(157, 63);
+            this.btn_atualizar.Size = new System.Drawing.Size(234, 63);
             this.btn_atualizar.TabIndex = 156;
             this.btn_atualizar.Text = "Atualizar Estado";
             this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_atualizar.UseVisualStyleBackColor = true;
             this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
-            // 
-            // btn_listar
-            // 
-            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_listar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lista_de_compras;
-            this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_listar.Location = new System.Drawing.Point(564, 26);
-            this.btn_listar.Name = "btn_listar";
-            this.btn_listar.Size = new System.Drawing.Size(89, 63);
-            this.btn_listar.TabIndex = 153;
-            this.btn_listar.Text = "Listar";
-            this.btn_listar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_listar.UseVisualStyleBackColor = true;
-            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             // 
             // pictureBox1
             // 
@@ -240,7 +223,6 @@
             this.Controls.Add(this.dgv_socios);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.cbo_estado);
-            this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox1);
@@ -267,7 +249,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.ComboBox cbo_estado;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.DataGridView dgv_socios;

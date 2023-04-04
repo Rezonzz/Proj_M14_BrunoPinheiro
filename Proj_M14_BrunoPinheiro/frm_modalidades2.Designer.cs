@@ -40,12 +40,11 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_idmodalidade = new System.Windows.Forms.TextBox();
             this.btn_atualizar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
-            this.btn_listar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txt_idmodalidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modalidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -166,6 +165,20 @@
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 195;
             // 
+            // txt_idmodalidade
+            // 
+            this.txt_idmodalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_idmodalidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idmodalidade.Enabled = false;
+            this.txt_idmodalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_idmodalidade.Location = new System.Drawing.Point(17, 12);
+            this.txt_idmodalidade.Multiline = true;
+            this.txt_idmodalidade.Name = "txt_idmodalidade";
+            this.txt_idmodalidade.Size = new System.Drawing.Size(191, 27);
+            this.txt_idmodalidade.TabIndex = 218;
+            this.txt_idmodalidade.Visible = false;
+            // 
             // btn_atualizar
             // 
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -173,7 +186,7 @@
             this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(469, 152);
+            this.btn_atualizar.Location = new System.Drawing.Point(424, 152);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
             this.btn_atualizar.TabIndex = 216;
@@ -189,7 +202,7 @@
             this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
             this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(374, 152);
+            this.btn_adicionar.Location = new System.Drawing.Point(329, 152);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
             this.btn_adicionar.TabIndex = 215;
@@ -197,22 +210,6 @@
             this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_adicionar.UseVisualStyleBackColor = true;
             this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
-            // 
-            // btn_listar
-            // 
-            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_listar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lista_de_compras;
-            this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_listar.Location = new System.Drawing.Point(279, 152);
-            this.btn_listar.Name = "btn_listar";
-            this.btn_listar.Size = new System.Drawing.Size(89, 63);
-            this.btn_listar.TabIndex = 213;
-            this.btn_listar.Text = "Listar";
-            this.btn_listar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_listar.UseVisualStyleBackColor = true;
-            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             // 
             // pictureBox1
             // 
@@ -234,20 +231,6 @@
             this.pictureBox2.TabIndex = 194;
             this.pictureBox2.TabStop = false;
             // 
-            // txt_idmodalidade
-            // 
-            this.txt_idmodalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.txt_idmodalidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_idmodalidade.Enabled = false;
-            this.txt_idmodalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idmodalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_idmodalidade.Location = new System.Drawing.Point(17, 12);
-            this.txt_idmodalidade.Multiline = true;
-            this.txt_idmodalidade.Name = "txt_idmodalidade";
-            this.txt_idmodalidade.Size = new System.Drawing.Size(191, 27);
-            this.txt_idmodalidade.TabIndex = 218;
-            this.txt_idmodalidade.Visible = false;
-            // 
             // frm_modalidades2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,7 +242,6 @@
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.btn_adicionar);
             this.Controls.Add(this.cbo_estado);
-            this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox1);
@@ -288,7 +270,6 @@
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Button btn_adicionar;
         private System.Windows.Forms.ComboBox cbo_estado;
-        private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;

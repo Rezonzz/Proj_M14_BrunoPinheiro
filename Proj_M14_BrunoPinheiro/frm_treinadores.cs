@@ -38,14 +38,75 @@ namespace Proj_M14_BrunoPinheiro
             con.Close();
         }
 
-        private void btn_listar_Click(object sender, EventArgs e)
+        public void ListarDetalheTreinador()
         {
-            ListarTreinadores();
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand listarDetalheTreinadores = new MySqlCommand("SELECT detalhetreinador.idModalidade, modalidades.nomeModalidade, detalhetreinador.idTreinador, treinadores.nomeTreinador FROM detalhetreinador, treinadores, modalidades WHERE detalhetreinador.idTreinador = treinadores.idTreinador AND detalhetreinador.idModalidade = modalidades.idModalidade", con);
+                MySqlDataAdapter grelha = new MySqlDataAdapter(listarDetalheTreinadores);
+                DataTable dt = new DataTable();
+                grelha.Fill(dt);
+                dgv_detalhetreinador.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
         }
 
+        public void carregaComboboxModalidades()
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand carregarModalidades = new MySqlCommand("select * from modalidades " + "order by nomeModalidade", con);
+                MySqlDataReader dr = carregarModalidades.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbo_modalidade.DisplayMember = "nomeModalidade";
+                cbo_modalidade.ValueMember = "idModalidade";
+                cbo_modalidade.DataSource = dt;
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Erro: Não Carregou Modalidades!", "Lista Modalidades");
+            }
+        }
+
+        public void carregaComboboxTreinador()
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand carregarTreinadores = new MySqlCommand("select * from treinadores " + "order by nomeTreinador", con);
+                MySqlDataReader dr = carregarTreinadores.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbo_treinadores.DisplayMember = "nomeTreinador";
+                cbo_treinadores.ValueMember = "idTreinador";
+                cbo_treinadores.DataSource = dt;
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Erro: Não Carregou Treinadores!", "Lista Treinadores");
+            }
+        }
         private void frm_treinadores_Load(object sender, EventArgs e)
         {
-
+            carregaComboboxTreinador();
+            carregaComboboxModalidades();
+            ListarTreinadores();
+            ListarDetalheTreinador();
         }
 
         private void dgv_treinadores_MouseClick(object sender, MouseEventArgs e)
@@ -423,7 +484,8 @@ namespace Proj_M14_BrunoPinheiro
                                 {
                                     con.Open();
 
-                                    MySqlCommand inserirTreinador = new MySqlCommand("INSERT INTO treinadores(nomeTreinador, morada, NIF, email, telefone) VALUES (@nomeTreinador, @morada, @NIF, @email, @telefone)", con);
+                                    MySqlCommand inserirTreinador = new MySqlCommand("INSERT INTO treinadores(nomeTreinador, morada, NIF, email, telefone) SELECT @nomeTreinador, @morada, @NIF, @email, @telefone FROM dual WHERE NOT EXISTS (SELECT 1 FROM treinadores WHERE nomeTreinador = @nomeTreinador AND telefone = @telefone)", con);
+
 
                                     inserirTreinador.Parameters.AddWithValue("@nomeTreinador", txt_nome.Text);
                                     inserirTreinador.Parameters.AddWithValue("@morada", txt_morada.Text);
@@ -501,6 +563,11 @@ namespace Proj_M14_BrunoPinheiro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_associar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

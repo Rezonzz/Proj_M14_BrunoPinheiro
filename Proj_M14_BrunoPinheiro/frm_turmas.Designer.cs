@@ -42,16 +42,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_diasemana = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
+            this.cbo_modalidade = new System.Windows.Forms.ComboBox();
+            this.cbo_treinadores = new System.Windows.Forms.ComboBox();
+            this.cbo_diasemana = new System.Windows.Forms.ComboBox();
+            this.dtp_hora = new System.Windows.Forms.DateTimePicker();
+            this.txt_idturma = new System.Windows.Forms.TextBox();
+            this.btn_apagar = new System.Windows.Forms.Button();
             this.btn_atualizar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
-            this.btn_listar = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
-            this.cbo_modalidade = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -104,6 +106,7 @@
             this.dgv_turmas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_turmas.Size = new System.Drawing.Size(785, 204);
             this.dgv_turmas.TabIndex = 244;
+            this.dgv_turmas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_turmas_MouseClick);
             // 
             // lbl_treinador
             // 
@@ -181,6 +184,97 @@
             this.pnl_1.Size = new System.Drawing.Size(234, 1);
             this.pnl_1.TabIndex = 222;
             // 
+            // cbo_modalidade
+            // 
+            this.cbo_modalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_modalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_modalidade.FormattingEnabled = true;
+            this.cbo_modalidade.Location = new System.Drawing.Point(77, 39);
+            this.cbo_modalidade.Name = "cbo_modalidade";
+            this.cbo_modalidade.Size = new System.Drawing.Size(193, 23);
+            this.cbo_modalidade.TabIndex = 245;
+            // 
+            // cbo_treinadores
+            // 
+            this.cbo_treinadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_treinadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_treinadores.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_treinadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_treinadores.FormattingEnabled = true;
+            this.cbo_treinadores.Location = new System.Drawing.Point(343, 39);
+            this.cbo_treinadores.Name = "cbo_treinadores";
+            this.cbo_treinadores.Size = new System.Drawing.Size(193, 23);
+            this.cbo_treinadores.TabIndex = 246;
+            // 
+            // cbo_diasemana
+            // 
+            this.cbo_diasemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_diasemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_diasemana.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_diasemana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_diasemana.FormattingEnabled = true;
+            this.cbo_diasemana.Items.AddRange(new object[] {
+            "Segunda-Feira",
+            "Terça-Feira",
+            "Quarta-Feira",
+            "Quinta-Feira",
+            "Sexta-Feira",
+            "Sábado",
+            "Domingo"});
+            this.cbo_diasemana.Location = new System.Drawing.Point(605, 39);
+            this.cbo_diasemana.Name = "cbo_diasemana";
+            this.cbo_diasemana.Size = new System.Drawing.Size(193, 23);
+            this.cbo_diasemana.TabIndex = 247;
+            // 
+            // dtp_hora
+            // 
+            this.dtp_hora.CalendarFont = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_hora.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_hora.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_hora.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_hora.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_hora.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_hora.CustomFormat = "HH:mm";
+            this.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_hora.Location = new System.Drawing.Point(343, 114);
+            this.dtp_hora.Name = "dtp_hora";
+            this.dtp_hora.ShowUpDown = true;
+            this.dtp_hora.Size = new System.Drawing.Size(193, 20);
+            this.dtp_hora.TabIndex = 248;
+            this.dtp_hora.Value = new System.DateTime(2023, 4, 4, 0, 0, 0, 0);
+            // 
+            // txt_idturma
+            // 
+            this.txt_idturma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_idturma.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idturma.Enabled = false;
+            this.txt_idturma.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idturma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_idturma.Location = new System.Drawing.Point(561, 107);
+            this.txt_idturma.Multiline = true;
+            this.txt_idturma.Name = "txt_idturma";
+            this.txt_idturma.Size = new System.Drawing.Size(38, 27);
+            this.txt_idturma.TabIndex = 250;
+            this.txt_idturma.Visible = false;
+            // 
+            // btn_apagar
+            // 
+            this.btn_apagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_apagar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_apagar.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_apagar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.trash;
+            this.btn_apagar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_apagar.Location = new System.Drawing.Point(469, 165);
+            this.btn_apagar.Name = "btn_apagar";
+            this.btn_apagar.Size = new System.Drawing.Size(89, 63);
+            this.btn_apagar.TabIndex = 249;
+            this.btn_apagar.Text = "Apagar";
+            this.btn_apagar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_apagar.UseVisualStyleBackColor = true;
+            this.btn_apagar.Click += new System.EventHandler(this.btn_apagar_Click);
+            // 
             // btn_atualizar
             // 
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -188,13 +282,14 @@
             this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(473, 165);
+            this.btn_atualizar.Location = new System.Drawing.Point(374, 165);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
             this.btn_atualizar.TabIndex = 243;
             this.btn_atualizar.Text = "Atualizar";
             this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
             // btn_adicionar
             // 
@@ -203,29 +298,14 @@
             this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
             this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(378, 165);
+            this.btn_adicionar.Location = new System.Drawing.Point(279, 165);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
             this.btn_adicionar.TabIndex = 242;
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_adicionar.UseVisualStyleBackColor = true;
-            // 
-            // btn_listar
-            // 
-            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_listar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_listar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.lista_de_compras;
-            this.btn_listar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_listar.Location = new System.Drawing.Point(283, 165);
-            this.btn_listar.Name = "btn_listar";
-            this.btn_listar.Size = new System.Drawing.Size(89, 63);
-            this.btn_listar.TabIndex = 241;
-            this.btn_listar.Text = "Listar";
-            this.btn_listar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_listar.UseVisualStyleBackColor = true;
-            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // pictureBox5
             // 
@@ -267,55 +347,21 @@
             this.pic_username.TabIndex = 221;
             this.pic_username.TabStop = false;
             // 
-            // cbo_modalidade
-            // 
-            this.cbo_modalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.cbo_modalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.cbo_modalidade.FormattingEnabled = true;
-            this.cbo_modalidade.Location = new System.Drawing.Point(77, 39);
-            this.cbo_modalidade.Name = "cbo_modalidade";
-            this.cbo_modalidade.Size = new System.Drawing.Size(193, 23);
-            this.cbo_modalidade.TabIndex = 245;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(343, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 23);
-            this.comboBox1.TabIndex = 246;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(605, 39);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(193, 23);
-            this.comboBox2.TabIndex = 247;
-            // 
             // frm_turmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txt_idturma);
+            this.Controls.Add(this.btn_apagar);
+            this.Controls.Add(this.dtp_hora);
+            this.Controls.Add(this.cbo_diasemana);
+            this.Controls.Add(this.cbo_treinadores);
             this.Controls.Add(this.cbo_modalidade);
             this.Controls.Add(this.dgv_turmas);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.btn_adicionar);
-            this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.lbl_treinador);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox5);
@@ -349,7 +395,6 @@
         private System.Windows.Forms.DataGridView dgv_turmas;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Button btn_adicionar;
-        private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.Label lbl_treinador;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -363,7 +408,10 @@
         private System.Windows.Forms.Panel pnl_1;
         private System.Windows.Forms.PictureBox pic_username;
         private System.Windows.Forms.ComboBox cbo_modalidade;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_treinadores;
+        private System.Windows.Forms.ComboBox cbo_diasemana;
+        private System.Windows.Forms.DateTimePicker dtp_hora;
+        private System.Windows.Forms.Button btn_apagar;
+        private System.Windows.Forms.TextBox txt_idturma;
     }
 }

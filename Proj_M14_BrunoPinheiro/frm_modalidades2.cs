@@ -37,10 +37,6 @@ namespace Proj_M14_BrunoPinheiro
             }
             con.Close();
         }
-        private void btn_listar_Click(object sender, EventArgs e)
-        {
-            ListarModalidades();
-        }
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
@@ -88,6 +84,7 @@ namespace Proj_M14_BrunoPinheiro
         private void frm_modalidades2_Load(object sender, EventArgs e)
         {
             cbo_estado.SelectedIndex = 0;
+            ListarModalidades();
         }
 
         private void txt_nome_TextChanged(object sender, EventArgs e)
