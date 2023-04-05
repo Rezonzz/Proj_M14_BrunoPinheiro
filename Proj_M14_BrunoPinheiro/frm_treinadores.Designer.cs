@@ -195,6 +195,7 @@
             this.txt_telefone.Text = "Telefone";
             this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
             this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
+            this.txt_telefone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_telefone_KeyDown);
             // 
             // panel3
             // 
@@ -380,6 +381,7 @@
             this.dgv_detalhetreinador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_detalhetreinador.Size = new System.Drawing.Size(261, 204);
             this.dgv_detalhetreinador.TabIndex = 223;
+            this.dgv_detalhetreinador.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_detalhetreinador_MouseClick);
             // 
             // cbo_modalidade
             // 

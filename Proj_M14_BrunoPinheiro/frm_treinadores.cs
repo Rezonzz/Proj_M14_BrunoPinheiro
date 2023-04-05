@@ -140,6 +140,8 @@ namespace Proj_M14_BrunoPinheiro
 
                     atualizartreinador.ExecuteNonQuery();
                     MessageBox.Show("Treinador atualizado!", "Atualizar Treinador");
+                    ListarDetalheTreinador();
+                    carregaComboboxTreinador();
                     ListarTreinadores();
 
                     con.Close();
@@ -497,6 +499,8 @@ namespace Proj_M14_BrunoPinheiro
                                     {
                                         MessageBox.Show("Treinador adicionado!", "Adicionar Treinador");
                                         ListarTreinadores();
+                                        ListarDetalheTreinador();
+                                        carregaComboboxTreinador();
                                     }
                                     else
                                     {
@@ -556,6 +560,8 @@ namespace Proj_M14_BrunoPinheiro
 
                         apagartreinador.ExecuteNonQuery();
                         MessageBox.Show("Treinador apagado!", "Apagar Treinador");
+                        carregaComboboxTreinador();
+                        ListarDetalheTreinador();
                         ListarTreinadores();
 
                         con.Close();
@@ -566,9 +572,9 @@ namespace Proj_M14_BrunoPinheiro
                     MessageBox.Show("Deve clicar num Treinador!!!", "Apagar Treinador");
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+               MessageBox.Show("Deve desassociar o treinador das suas modalidades ou da turma antes de apagar!", "Apagar Treinador");
             }
         }
 
@@ -618,7 +624,7 @@ namespace Proj_M14_BrunoPinheiro
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Treinador " + cbo_treinadores.Text + " desassociado da modalidade " + cbo_modalidade.Text + "!", "Desassociar Treinador/Modalidade");
-                    ListarTreinadores();
+                    ListarDetalheTreinador();
                 }
                 else
                 {
@@ -630,6 +636,36 @@ namespace Proj_M14_BrunoPinheiro
                 MessageBox.Show(ex.Message);
             }
             con.Close();
+        }
+
+        private void dgv_detalhetreinador_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbo_modalidade.SelectedValue = dgv_detalhetreinador.SelectedRows[0].Cells[0].Value.ToString();
+            cbo_treinadores.SelectedValue = dgv_detalhetreinador.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void txt_telefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_nif.Text == "NIF")
+                {
+                    txt_nif.ResetText();
+                    txt_nif.Focus();
+                    lbl_nif.Visible = true;
+                    if (txt_telefone.Text == "")
+                    {
+                        txt_telefone.Text = "Telefone";
+                        lbl_telefone.Visible = false;
+                    }
+                }
+                else
+                {
+                    txt_nif.Focus();
+                    lbl_nif.Visible = true;
+                }
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
