@@ -91,6 +91,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dgv_modalidades.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_modalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_modalidades.Size = new System.Drawing.Size(785, 204);
             this.dgv_modalidades.TabIndex = 217;
             this.dgv_modalidades.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_modalidades_MouseClick);

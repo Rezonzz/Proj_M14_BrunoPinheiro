@@ -128,6 +128,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dgv_treinadores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_treinadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_treinadores.Size = new System.Drawing.Size(539, 204);
             this.dgv_treinadores.TabIndex = 189;
             this.dgv_treinadores.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_treinadores_MouseClick);
@@ -376,6 +377,7 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dgv_detalhetreinador.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_detalhetreinador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_detalhetreinador.Size = new System.Drawing.Size(261, 204);
             this.dgv_detalhetreinador.TabIndex = 223;
             // 
@@ -455,6 +457,7 @@
             this.btn_desassociar.Text = "Desassociar";
             this.btn_desassociar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_desassociar.UseVisualStyleBackColor = true;
+            this.btn_desassociar.Click += new System.EventHandler(this.btn_desassociar_Click);
             // 
             // btn_associar
             // 

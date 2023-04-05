@@ -124,6 +124,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dgv_socios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_socios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_socios.Size = new System.Drawing.Size(785, 318);
             this.dgv_socios.TabIndex = 157;
             this.dgv_socios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_socios_MouseClick);

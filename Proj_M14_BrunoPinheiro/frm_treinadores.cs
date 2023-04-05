@@ -484,8 +484,7 @@ namespace Proj_M14_BrunoPinheiro
                                 {
                                     con.Open();
 
-                                    MySqlCommand inserirTreinador = new MySqlCommand("INSERT INTO treinadores(nomeTreinador, morada, NIF, email, telefone) SELECT @nomeTreinador, @morada, @NIF, @email, @telefone FROM dual WHERE NOT EXISTS (SELECT 1 FROM treinadores WHERE nomeTreinador = @nomeTreinador AND telefone = @telefone)", con);
-
+                                    MySqlCommand inserirTreinador = new MySqlCommand("INSERT INTO treinadores(nomeTreinador, morada, NIF, email, telefone) SELECT @nomeTreinador, @morada, @NIF, @email, @telefone FROM dual WHERE NOT EXISTS (SELECT 1 FROM treinadores WHERE (nomeTreinador = @nomeTreinador AND telefone = @telefone) OR NIF = @NIF)", con);
 
                                     inserirTreinador.Parameters.AddWithValue("@nomeTreinador", txt_nome.Text);
                                     inserirTreinador.Parameters.AddWithValue("@morada", txt_morada.Text);
@@ -493,9 +492,17 @@ namespace Proj_M14_BrunoPinheiro
                                     inserirTreinador.Parameters.AddWithValue("@email", txt_email.Text);
                                     inserirTreinador.Parameters.AddWithValue("@telefone", txt_telefone.Text);
 
-                                    inserirTreinador.ExecuteNonQuery();
-                                    MessageBox.Show("Treinador adicionado!", "Adicionar Treinador");
-                                    ListarTreinadores();
+                                    int rowsAffected = inserirTreinador.ExecuteNonQuery();
+                                    if (rowsAffected > 0)
+                                    {
+                                        MessageBox.Show("Treinador adicionado!", "Adicionar Treinador");
+                                        ListarTreinadores();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Já existe um treinador com o mesmo nome e número de telefone ou com o mesmo NIF!", "Erro");
+                                    }
+                                    con.Close();
                                 }
                                 else
                                 {
@@ -567,7 +574,62 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_associar_Click(object sender, EventArgs e)
         {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
 
+                MySqlCommand associarTreinador = new MySqlCommand("INSERT INTO detalhetreinador (idTreinador, idModalidade) SELECT @idTreinador, @idModalidade WHERE NOT EXISTS (SELECT * FROM detalhetreinador WHERE idTreinador = @idTreinador AND idModalidade = @idModalidade)", con);
+
+                associarTreinador.Parameters.AddWithValue("@idTreinador", cbo_treinadores.SelectedValue);
+                associarTreinador.Parameters.AddWithValue("@idModalidade", cbo_modalidade.SelectedValue);
+
+                int rowsAffected = associarTreinador.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Treinador " + cbo_treinadores.Text + " associado com a modalidade " + cbo_modalidade.Text + "!", "Associar Treinador/Modalidade");
+                    ListarDetalheTreinador();
+                }
+                else
+                {
+                    MessageBox.Show("Já existe um registro com o mesmo treinador e modalidade!", "Associar Treinador/Modalidade");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void btn_desassociar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand desassociarTreinador = new MySqlCommand("DELETE FROM detalhetreinador WHERE idTreinador = @idTreinador AND idModalidade = @idModalidade", con);
+
+                desassociarTreinador.Parameters.AddWithValue("@idTreinador", cbo_treinadores.SelectedValue);
+                desassociarTreinador.Parameters.AddWithValue("@idModalidade", cbo_modalidade.SelectedValue);
+
+                int rowsAffected = desassociarTreinador.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Treinador " + cbo_treinadores.Text + " desassociado da modalidade " + cbo_modalidade.Text + "!", "Desassociar Treinador/Modalidade");
+                    ListarTreinadores();
+                }
+                else
+                {
+                    MessageBox.Show("Não foi encontrado nenhum registro com o treinador e modalidade selecionados!", "Desassociar Treinador/Modalidade");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
         }
     }
 }
