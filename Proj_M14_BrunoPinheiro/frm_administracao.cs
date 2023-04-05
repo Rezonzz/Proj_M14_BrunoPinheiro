@@ -198,6 +198,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_instalacoes_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frm_instalacoes());
             pnl_selected5.Visible = true;
             pnl_selected5.Enabled = true;
             pnl_selected2.Visible = false;
@@ -238,6 +239,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_consultas_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frm_consultas());
             pnl_selected7.Visible = true;
             pnl_selected7.Enabled = true;
             pnl_selected2.Visible = false;

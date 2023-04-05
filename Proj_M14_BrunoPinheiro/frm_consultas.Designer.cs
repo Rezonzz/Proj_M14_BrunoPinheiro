@@ -91,6 +91,7 @@
             this.txt_telefone.Size = new System.Drawing.Size(191, 27);
             this.txt_telefone.TabIndex = 188;
             this.txt_telefone.Text = "Telefone";
+            this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
             this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
             // 
             // panel3
@@ -135,6 +136,7 @@
             this.txt_modalidade.Size = new System.Drawing.Size(191, 27);
             this.txt_modalidade.TabIndex = 184;
             this.txt_modalidade.Text = "Nome Modalidade";
+            this.txt_modalidade.Click += new System.EventHandler(this.txt_modalidade_Click);
             this.txt_modalidade.TextChanged += new System.EventHandler(this.txt_modalidade_TextChanged);
             // 
             // panel2
@@ -179,6 +181,7 @@
             this.txt_socio.Size = new System.Drawing.Size(191, 27);
             this.txt_socio.TabIndex = 180;
             this.txt_socio.Text = "Nome Sócio";
+            this.txt_socio.Click += new System.EventHandler(this.txt_socio_Click);
             this.txt_socio.TextChanged += new System.EventHandler(this.txt_socio_TextChanged);
             // 
             // panel1
@@ -223,6 +226,7 @@
             this.txt_nif.Size = new System.Drawing.Size(213, 27);
             this.txt_nif.TabIndex = 176;
             this.txt_nif.Text = "NIF";
+            this.txt_nif.Click += new System.EventHandler(this.txt_nif_Click);
             this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
             // 
             // pnl_1
@@ -311,6 +315,7 @@
             this.txt_treinador.Size = new System.Drawing.Size(191, 27);
             this.txt_treinador.TabIndex = 192;
             this.txt_treinador.Text = "Nome Treinador";
+            this.txt_treinador.Click += new System.EventHandler(this.txt_treinador_Click);
             this.txt_treinador.TextChanged += new System.EventHandler(this.txt_treinador_TextChanged);
             // 
             // panel5
