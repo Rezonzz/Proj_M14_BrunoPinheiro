@@ -363,6 +363,36 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
+            if (txt_socio.Text == "")
+            {
+                txt_socio.Text = "Nome Sócio";
+                lbl_socio.Visible = false;
+            }
+            if (txt_modalidade.Text == "")
+            {
+                txt_modalidade.Text = "Nome Modalidade";
+                lbl_modalidade.Visible = false;
+            }
+            if (txt_treinador.Text == "")
+            {
+                txt_treinador.Text = "Nome Treinador";
+                lbl_treinador.Visible = false;
+            }
+            if (txt_nif.Text == "")
+            {
+                txt_nif.Text = "NIF";
+                lbl_nif.Visible = false;
+            }
+            if (txt_telefone.Text == "")
+            {
+                txt_telefone.Text = "Telefone";
+                lbl_telefone.Visible = false;
+            }
+            if (txt_email.Text == "")
+            {
+                txt_email.Text = "Email";
+                lbl_email.Visible = false;
+            }
             MySqlConnection con = conn.GetConnection();
             try
             {
@@ -379,6 +409,45 @@ namespace Proj_M14_BrunoPinheiro
                 MessageBox.Show(ex.Message);
             }
             con.Close();
+        }
+
+        private void frm_consultas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_consultas_Click(object sender, EventArgs e)
+        {
+            if (txt_socio.Text == "")
+            {
+                txt_socio.Text = "Nome Sócio";
+                lbl_socio.Visible = false;
+            }
+            if (txt_modalidade.Text == "")
+            {
+                txt_modalidade.Text = "Nome Modalidade";
+                lbl_modalidade.Visible = false;
+            }
+            if (txt_treinador.Text == "")
+            {
+                txt_treinador.Text = "Nome Treinador";
+                lbl_treinador.Visible = false;
+            }
+            if (txt_nif.Text == "")
+            {
+                txt_nif.Text = "NIF";
+                lbl_nif.Visible = false;
+            }
+            if (txt_telefone.Text == "")
+            {
+                txt_telefone.Text = "Telefone";
+                lbl_telefone.Visible = false;
+            }
+            if (txt_email.Text == "")
+            {
+                txt_email.Text = "Email";
+                lbl_email.Visible = false;
+            }
         }
     }
 }

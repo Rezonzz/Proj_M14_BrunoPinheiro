@@ -145,6 +145,12 @@
     <Compile Include="frm_natacao.Designer.cs">
       <DependentUpon>frm_natacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reservas.Designer.cs">
+      <DependentUpon>frm_reservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_socios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_natacao.resx">
       <DependentUpon>frm_natacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reservas.resx">
+      <DependentUpon>frm_reservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_socios.resx">
       <DependentUpon>frm_socios.cs</DependentUpon>

@@ -442,6 +442,8 @@
             this.Name = "frm_consultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Consultas";
+            this.Load += new System.EventHandler(this.frm_consultas_Load);
+            this.Click += new System.EventHandler(this.frm_consultas_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

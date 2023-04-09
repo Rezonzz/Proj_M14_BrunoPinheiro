@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_turmas));
             this.dgv_turmas = new System.Windows.Forms.DataGridView();
             this.lbl_treinador = new System.Windows.Forms.Label();
@@ -54,11 +58,26 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
+            this.btn_desassociar = new System.Windows.Forms.Button();
+            this.btn_associar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgv_detalhetreinador = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhetreinador)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_turmas
@@ -89,7 +108,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_turmas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_turmas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dgv_turmas.Location = new System.Drawing.Point(29, 249);
+            this.dgv_turmas.Location = new System.Drawing.Point(12, 249);
             this.dgv_turmas.Name = "dgv_turmas";
             this.dgv_turmas.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -105,7 +124,7 @@
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dgv_turmas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_turmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_turmas.Size = new System.Drawing.Size(785, 204);
+            this.dgv_turmas.Size = new System.Drawing.Size(507, 204);
             this.dgv_turmas.TabIndex = 244;
             this.dgv_turmas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_turmas_MouseClick);
             // 
@@ -114,7 +133,7 @@
             this.lbl_treinador.AutoSize = true;
             this.lbl_treinador.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_treinador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_treinador.Location = new System.Drawing.Point(339, 19);
+            this.lbl_treinador.Location = new System.Drawing.Point(322, 19);
             this.lbl_treinador.Name = "lbl_treinador";
             this.lbl_treinador.Size = new System.Drawing.Size(79, 17);
             this.lbl_treinador.TabIndex = 240;
@@ -123,7 +142,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel4.Location = new System.Drawing.Point(300, 72);
+            this.panel4.Location = new System.Drawing.Point(283, 72);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
             this.panel4.TabIndex = 238;
@@ -133,7 +152,7 @@
             this.lbl_horaexc.AutoSize = true;
             this.lbl_horaexc.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_horaexc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_horaexc.Location = new System.Drawing.Point(339, 90);
+            this.lbl_horaexc.Location = new System.Drawing.Point(322, 90);
             this.lbl_horaexc.Name = "lbl_horaexc";
             this.lbl_horaexc.Size = new System.Drawing.Size(138, 17);
             this.lbl_horaexc.TabIndex = 236;
@@ -142,7 +161,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel3.Location = new System.Drawing.Point(300, 143);
+            this.panel3.Location = new System.Drawing.Point(283, 143);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 234;
@@ -152,7 +171,7 @@
             this.lbl_modalidade.AutoSize = true;
             this.lbl_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_modalidade.Location = new System.Drawing.Point(74, 19);
+            this.lbl_modalidade.Location = new System.Drawing.Point(57, 19);
             this.lbl_modalidade.Name = "lbl_modalidade";
             this.lbl_modalidade.Size = new System.Drawing.Size(91, 17);
             this.lbl_modalidade.TabIndex = 232;
@@ -161,7 +180,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel2.Location = new System.Drawing.Point(35, 72);
+            this.panel2.Location = new System.Drawing.Point(18, 72);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 230;
@@ -171,7 +190,7 @@
             this.lbl_diasemana.AutoSize = true;
             this.lbl_diasemana.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_diasemana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.lbl_diasemana.Location = new System.Drawing.Point(601, 19);
+            this.lbl_diasemana.Location = new System.Drawing.Point(56, 90);
             this.lbl_diasemana.Name = "lbl_diasemana";
             this.lbl_diasemana.Size = new System.Drawing.Size(116, 17);
             this.lbl_diasemana.TabIndex = 224;
@@ -180,7 +199,7 @@
             // pnl_1
             // 
             this.pnl_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.pnl_1.Location = new System.Drawing.Point(562, 72);
+            this.pnl_1.Location = new System.Drawing.Point(17, 143);
             this.pnl_1.Name = "pnl_1";
             this.pnl_1.Size = new System.Drawing.Size(234, 1);
             this.pnl_1.TabIndex = 222;
@@ -192,7 +211,7 @@
             this.cbo_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.cbo_modalidade.FormattingEnabled = true;
-            this.cbo_modalidade.Location = new System.Drawing.Point(77, 39);
+            this.cbo_modalidade.Location = new System.Drawing.Point(60, 39);
             this.cbo_modalidade.Name = "cbo_modalidade";
             this.cbo_modalidade.Size = new System.Drawing.Size(193, 23);
             this.cbo_modalidade.TabIndex = 245;
@@ -204,7 +223,7 @@
             this.cbo_treinadores.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_treinadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.cbo_treinadores.FormattingEnabled = true;
-            this.cbo_treinadores.Location = new System.Drawing.Point(343, 39);
+            this.cbo_treinadores.Location = new System.Drawing.Point(326, 39);
             this.cbo_treinadores.Name = "cbo_treinadores";
             this.cbo_treinadores.Size = new System.Drawing.Size(193, 23);
             this.cbo_treinadores.TabIndex = 246;
@@ -224,7 +243,7 @@
             "Sexta-Feira",
             "Sábado",
             "Domingo"});
-            this.cbo_diasemana.Location = new System.Drawing.Point(605, 39);
+            this.cbo_diasemana.Location = new System.Drawing.Point(60, 110);
             this.cbo_diasemana.Name = "cbo_diasemana";
             this.cbo_diasemana.Size = new System.Drawing.Size(193, 23);
             this.cbo_diasemana.TabIndex = 247;
@@ -239,7 +258,7 @@
             this.dtp_hora.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.dtp_hora.CustomFormat = "HH:mm";
             this.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_hora.Location = new System.Drawing.Point(343, 114);
+            this.dtp_hora.Location = new System.Drawing.Point(326, 114);
             this.dtp_hora.Name = "dtp_hora";
             this.dtp_hora.ShowUpDown = true;
             this.dtp_hora.Size = new System.Drawing.Size(193, 20);
@@ -253,7 +272,7 @@
             this.txt_idturma.Enabled = false;
             this.txt_idturma.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_idturma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_idturma.Location = new System.Drawing.Point(561, 107);
+            this.txt_idturma.Location = new System.Drawing.Point(12, 165);
             this.txt_idturma.Multiline = true;
             this.txt_idturma.Name = "txt_idturma";
             this.txt_idturma.Size = new System.Drawing.Size(38, 27);
@@ -267,7 +286,7 @@
             this.btn_apagar.ForeColor = System.Drawing.Color.Maroon;
             this.btn_apagar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.trash;
             this.btn_apagar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_apagar.Location = new System.Drawing.Point(469, 165);
+            this.btn_apagar.Location = new System.Drawing.Point(317, 165);
             this.btn_apagar.Name = "btn_apagar";
             this.btn_apagar.Size = new System.Drawing.Size(89, 63);
             this.btn_apagar.TabIndex = 249;
@@ -283,7 +302,7 @@
             this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(374, 165);
+            this.btn_atualizar.Location = new System.Drawing.Point(222, 165);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
             this.btn_atualizar.TabIndex = 243;
@@ -299,7 +318,7 @@
             this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
             this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(279, 165);
+            this.btn_adicionar.Location = new System.Drawing.Point(127, 165);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
             this.btn_adicionar.TabIndex = 242;
@@ -311,7 +330,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.treinador;
-            this.pictureBox5.Location = new System.Drawing.Point(300, 30);
+            this.pictureBox5.Location = new System.Drawing.Point(283, 30);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(37, 36);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -321,7 +340,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.rotacao_no_sentido_horario;
-            this.pictureBox4.Location = new System.Drawing.Point(300, 101);
+            this.pictureBox4.Location = new System.Drawing.Point(283, 101);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 36);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,7 +350,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.jogos_de_desporto;
-            this.pictureBox3.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 30);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -341,12 +360,179 @@
             // pic_username
             // 
             this.pic_username.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.calendario;
-            this.pic_username.Location = new System.Drawing.Point(562, 30);
+            this.pic_username.Location = new System.Drawing.Point(17, 101);
             this.pic_username.Name = "pic_username";
             this.pic_username.Size = new System.Drawing.Size(37, 36);
             this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_username.TabIndex = 221;
             this.pic_username.TabStop = false;
+            // 
+            // btn_desassociar
+            // 
+            this.btn_desassociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_desassociar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_desassociar.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_desassociar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.cancel;
+            this.btn_desassociar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_desassociar.Location = new System.Drawing.Point(704, 165);
+            this.btn_desassociar.Name = "btn_desassociar";
+            this.btn_desassociar.Size = new System.Drawing.Size(114, 63);
+            this.btn_desassociar.TabIndex = 267;
+            this.btn_desassociar.Text = "Eliminar";
+            this.btn_desassociar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_desassociar.UseVisualStyleBackColor = true;
+            // 
+            // btn_associar
+            // 
+            this.btn_associar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_associar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_associar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_associar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
+            this.btn_associar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_associar.Location = new System.Drawing.Point(582, 165);
+            this.btn_associar.Name = "btn_associar";
+            this.btn_associar.Size = new System.Drawing.Size(114, 63);
+            this.btn_associar.TabIndex = 266;
+            this.btn_associar.Text = "Adicionar";
+            this.btn_associar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_associar.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(625, 111);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(193, 23);
+            this.comboBox1.TabIndex = 265;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label1.Location = new System.Drawing.Point(621, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 17);
+            this.label1.TabIndex = 264;
+            this.label1.Text = "Turma";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel7.Location = new System.Drawing.Point(582, 144);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 1);
+            this.panel7.TabIndex = 263;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.classe;
+            this.pictureBox6.Location = new System.Drawing.Point(582, 102);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 262;
+            this.pictureBox6.TabStop = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(624, 43);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(193, 23);
+            this.comboBox2.TabIndex = 261;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(621, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.TabIndex = 260;
+            this.label2.Text = "Sócio";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel6.Location = new System.Drawing.Point(582, 76);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 1);
+            this.panel6.TabIndex = 259;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 258;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dgv_detalhetreinador
+            // 
+            this.dgv_detalhetreinador.AllowUserToAddRows = false;
+            this.dgv_detalhetreinador.AllowUserToDeleteRows = false;
+            this.dgv_detalhetreinador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_detalhetreinador.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_detalhetreinador.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dgv_detalhetreinador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_detalhetreinador.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_detalhetreinador.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalhetreinador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_detalhetreinador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_detalhetreinador.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_detalhetreinador.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dgv_detalhetreinador.Location = new System.Drawing.Point(552, 249);
+            this.dgv_detalhetreinador.Name = "dgv_detalhetreinador";
+            this.dgv_detalhetreinador.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_detalhetreinador.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dgv_detalhetreinador.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_detalhetreinador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_detalhetreinador.Size = new System.Drawing.Size(296, 204);
+            this.dgv_detalhetreinador.TabIndex = 257;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel5.Location = new System.Drawing.Point(538, 16);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 430);
+            this.panel5.TabIndex = 256;
             // 
             // frm_turmas
             // 
@@ -354,6 +540,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.btn_desassociar);
+            this.Controls.Add(this.btn_associar);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dgv_detalhetreinador);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.txt_idturma);
             this.Controls.Add(this.btn_apagar);
             this.Controls.Add(this.dtp_hora);
@@ -387,6 +585,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhetreinador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +615,17 @@
         private System.Windows.Forms.DateTimePicker dtp_hora;
         private System.Windows.Forms.Button btn_apagar;
         private System.Windows.Forms.TextBox txt_idturma;
+        private System.Windows.Forms.Button btn_desassociar;
+        private System.Windows.Forms.Button btn_associar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgv_detalhetreinador;
+        private System.Windows.Forms.Panel panel5;
     }
 }
