@@ -57,14 +57,15 @@
             this.txt_treinador = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.dgv_treinadores = new System.Windows.Forms.DataGridView();
+            this.dgv_consulta = new System.Windows.Forms.DataGridView();
+            this.btn_pesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_treinadores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_consulta)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_telefone
@@ -93,6 +94,7 @@
             this.txt_telefone.Text = "Telefone";
             this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);
             this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
+            this.txt_telefone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_telefone_KeyDown);
             // 
             // panel3
             // 
@@ -138,6 +140,7 @@
             this.txt_modalidade.Text = "Nome Modalidade";
             this.txt_modalidade.Click += new System.EventHandler(this.txt_modalidade_Click);
             this.txt_modalidade.TextChanged += new System.EventHandler(this.txt_modalidade_TextChanged);
+            this.txt_modalidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_modalidade_KeyDown);
             // 
             // panel2
             // 
@@ -183,6 +186,7 @@
             this.txt_socio.Text = "Nome Sócio";
             this.txt_socio.Click += new System.EventHandler(this.txt_socio_Click);
             this.txt_socio.TextChanged += new System.EventHandler(this.txt_socio_TextChanged);
+            this.txt_socio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_socio_KeyDown);
             // 
             // panel1
             // 
@@ -228,6 +232,7 @@
             this.txt_nif.Text = "NIF";
             this.txt_nif.Click += new System.EventHandler(this.txt_nif_Click);
             this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
+            this.txt_nif.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_nif_KeyDown);
             // 
             // pnl_1
             // 
@@ -271,7 +276,9 @@
             this.txt_email.Size = new System.Drawing.Size(191, 27);
             this.txt_email.TabIndex = 196;
             this.txt_email.Text = "Email";
+            this.txt_email.Click += new System.EventHandler(this.txt_email_Click);
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_email_KeyDown);
             // 
             // panel4
             // 
@@ -317,6 +324,7 @@
             this.txt_treinador.Text = "Nome Treinador";
             this.txt_treinador.Click += new System.EventHandler(this.txt_treinador_Click);
             this.txt_treinador.TextChanged += new System.EventHandler(this.txt_treinador_TextChanged);
+            this.txt_treinador.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_treinador_KeyDown);
             // 
             // panel5
             // 
@@ -336,16 +344,16 @@
             this.pictureBox5.TabIndex = 190;
             this.pictureBox5.TabStop = false;
             // 
-            // dgv_treinadores
+            // dgv_consulta
             // 
-            this.dgv_treinadores.AllowUserToAddRows = false;
-            this.dgv_treinadores.AllowUserToDeleteRows = false;
-            this.dgv_treinadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_treinadores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_treinadores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dgv_treinadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_treinadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_treinadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_consulta.AllowUserToAddRows = false;
+            this.dgv_consulta.AllowUserToDeleteRows = false;
+            this.dgv_consulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_consulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_consulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dgv_consulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_consulta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_consulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,8 +361,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_treinadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_treinadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_consulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_consulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,11 +370,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_treinadores.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_treinadores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dgv_treinadores.Location = new System.Drawing.Point(43, 214);
-            this.dgv_treinadores.Name = "dgv_treinadores";
-            this.dgv_treinadores.ReadOnly = true;
+            this.dgv_consulta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_consulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dgv_consulta.Location = new System.Drawing.Point(43, 228);
+            this.dgv_consulta.Name = "dgv_consulta";
+            this.dgv_consulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,14 +382,27 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_treinadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_consulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dgv_treinadores.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_treinadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_treinadores.Size = new System.Drawing.Size(783, 220);
-            this.dgv_treinadores.TabIndex = 198;
+            this.dgv_consulta.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_consulta.Size = new System.Drawing.Size(783, 225);
+            this.dgv_consulta.TabIndex = 198;
+            // 
+            // btn_pesquisar
+            // 
+            this.btn_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pesquisar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_pesquisar.Location = new System.Drawing.Point(43, 163);
+            this.btn_pesquisar.Name = "btn_pesquisar";
+            this.btn_pesquisar.Size = new System.Drawing.Size(783, 45);
+            this.btn_pesquisar.TabIndex = 199;
+            this.btn_pesquisar.Text = "Pesquisar";
+            this.btn_pesquisar.UseVisualStyleBackColor = true;
+            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // frm_consultas
             // 
@@ -389,7 +410,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
-            this.Controls.Add(this.dgv_treinadores);
+            this.Controls.Add(this.btn_pesquisar);
+            this.Controls.Add(this.dgv_consulta);
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.panel4);
@@ -426,7 +448,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_treinadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_consulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,6 +480,7 @@
         private System.Windows.Forms.TextBox txt_treinador;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dgv_treinadores;
+        private System.Windows.Forms.DataGridView dgv_consulta;
+        private System.Windows.Forms.Button btn_pesquisar;
     }
 }

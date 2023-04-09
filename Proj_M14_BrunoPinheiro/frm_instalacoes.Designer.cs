@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_instalacoes));
-            this.txt_idtreinador = new System.Windows.Forms.TextBox();
+            this.txt_idinstalacao = new System.Windows.Forms.TextBox();
             this.dgv_instalacao = new System.Windows.Forms.DataGridView();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
@@ -55,19 +55,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_idtreinador
+            // txt_idinstalacao
             // 
-            this.txt_idtreinador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.txt_idtreinador.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_idtreinador.Enabled = false;
-            this.txt_idtreinador.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_idtreinador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_idtreinador.Location = new System.Drawing.Point(541, 126);
-            this.txt_idtreinador.Multiline = true;
-            this.txt_idtreinador.Name = "txt_idtreinador";
-            this.txt_idtreinador.Size = new System.Drawing.Size(38, 27);
-            this.txt_idtreinador.TabIndex = 279;
-            this.txt_idtreinador.Visible = false;
+            this.txt_idinstalacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_idinstalacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_idinstalacao.Enabled = false;
+            this.txt_idinstalacao.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_idinstalacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_idinstalacao.Location = new System.Drawing.Point(541, 126);
+            this.txt_idinstalacao.Multiline = true;
+            this.txt_idinstalacao.Name = "txt_idinstalacao";
+            this.txt_idinstalacao.Size = new System.Drawing.Size(38, 27);
+            this.txt_idinstalacao.TabIndex = 279;
+            this.txt_idinstalacao.Visible = false;
             // 
             // dgv_instalacao
             // 
@@ -115,6 +115,7 @@
             this.dgv_instalacao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_instalacao.Size = new System.Drawing.Size(768, 248);
             this.dgv_instalacao.TabIndex = 278;
+            this.dgv_instalacao.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_instalacao_MouseClick);
             // 
             // lbl_nome
             // 
@@ -206,6 +207,7 @@
             this.btn_atualizar.Text = "Atualizar";
             this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
             // btn_adicionar
             // 
@@ -221,6 +223,7 @@
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_adicionar.UseVisualStyleBackColor = true;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // pictureBox2
             // 
@@ -290,7 +293,7 @@
             this.Controls.Add(this.lbl_modalidade);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txt_idtreinador);
+            this.Controls.Add(this.txt_idinstalacao);
             this.Controls.Add(this.dgv_instalacao);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.btn_adicionar);
@@ -315,7 +318,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_idtreinador;
+        private System.Windows.Forms.TextBox txt_idinstalacao;
         private System.Windows.Forms.DataGridView dgv_instalacao;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Button btn_adicionar;

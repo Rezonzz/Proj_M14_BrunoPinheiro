@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Proj_M14_BrunoPinheiro
 {
@@ -269,6 +271,114 @@ namespace Proj_M14_BrunoPinheiro
                 txt_email.Text = "Email";
                 lbl_email.Visible = false;
             }
+        }
+
+        private void txt_socio_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_modalidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_treinador_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_nif_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_telefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_email_Click(object sender, EventArgs e)
+        {
+            if (txt_email.Text == "Email")
+            {
+                txt_email.ResetText();
+                txt_email.Focus();
+                lbl_email.Visible = true;
+            }
+
+            if (txt_telefone.Text == "")
+            {
+                txt_telefone.Text = "Telefone";
+                lbl_telefone.Visible = false;
+            }
+
+            if (txt_nif.Text == "")
+            {
+                txt_nif.Text = "NIF";
+                lbl_nif.Visible = false;
+            }
+
+            if (txt_treinador.Text == "")
+            {
+                txt_treinador.Text = "Nome Treinador";
+                lbl_treinador.Visible = false;
+            }
+
+            if (txt_modalidade.Text == "")
+            {
+                txt_modalidade.Text = "Nome Modalidade";
+                lbl_modalidade.Visible = false;
+            }
+
+            if (txt_socio.Text == "")
+            {
+                txt_socio.Text = "Nome Sócio";
+                lbl_socio.Visible = false;
+            }
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand pesquisar = new MySqlCommand("SELECT nomeCliente AS Nome, NIF, Telefone, Email, Estado FROM socios WHERE nomeCliente LIKE '%" + txt_socio.Text + "%' OR NIF LIKE '%" + txt_nif.Text + "%' OR Telefone LIKE '%" + txt_telefone.Text + "%' OR Email LIKE '%" + txt_email.Text + "%' UNION SELECT nomeModalidade AS Nome, NULL AS NIF, NULL AS Telefone, NULL AS Email, Estado FROM modalidades WHERE nomeModalidade LIKE '%" + txt_modalidade.Text + "%' UNION SELECT nomeTreinador AS Nome, NIF, Telefone, Email, NULL AS Estado FROM treinadores WHERE nomeTreinador LIKE '%" + txt_treinador.Text + "%' OR NIF LIKE '%" + txt_nif.Text + "%' OR Telefone LIKE '%" + txt_telefone.Text + "%' OR Email LIKE '%" + txt_email.Text + "%'", con);
+                MySqlDataAdapter grelha = new MySqlDataAdapter(pesquisar);
+                DataTable dt = new DataTable();
+                grelha.Fill(dt);
+                dgv_consulta.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
         }
     }
 }
