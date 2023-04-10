@@ -260,6 +260,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_reservas_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frm_reservas());
             pnl_selected8.Visible = true;
             pnl_selected8.Enabled = true;
             pnl_selected2.Visible = false;

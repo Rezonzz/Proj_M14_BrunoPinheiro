@@ -60,6 +60,9 @@
             this.dgv_ocupacao = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dtp_nasc = new System.Windows.Forms.DateTimePicker();
+            this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fim = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhereserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
@@ -389,12 +392,62 @@
             this.panel4.Size = new System.Drawing.Size(831, 1);
             this.panel4.TabIndex = 317;
             // 
+            // dtp_nasc
+            // 
+            this.dtp_nasc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_nasc.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_nasc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_nasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_nasc.Location = new System.Drawing.Point(328, 33);
+            this.dtp_nasc.Name = "dtp_nasc";
+            this.dtp_nasc.Size = new System.Drawing.Size(191, 20);
+            this.dtp_nasc.TabIndex = 318;
+            // 
+            // dtp_inicio
+            // 
+            this.dtp_inicio.CalendarFont = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_inicio.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_inicio.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_inicio.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_inicio.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_inicio.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_inicio.CustomFormat = "HH:mm";
+            this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_inicio.Location = new System.Drawing.Point(284, 100);
+            this.dtp_inicio.Name = "dtp_inicio";
+            this.dtp_inicio.ShowUpDown = true;
+            this.dtp_inicio.Size = new System.Drawing.Size(108, 20);
+            this.dtp_inicio.TabIndex = 319;
+            this.dtp_inicio.Value = new System.DateTime(2023, 4, 4, 0, 0, 0, 0);
+            // 
+            // dtp_fim
+            // 
+            this.dtp_fim.CalendarFont = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fim.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_fim.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_fim.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_fim.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_fim.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_fim.CustomFormat = "HH:mm";
+            this.dtp_fim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_fim.Location = new System.Drawing.Point(414, 101);
+            this.dtp_fim.Name = "dtp_fim";
+            this.dtp_fim.ShowUpDown = true;
+            this.dtp_fim.Size = new System.Drawing.Size(108, 20);
+            this.dtp_fim.TabIndex = 320;
+            this.dtp_fim.Value = new System.DateTime(2023, 4, 4, 0, 0, 0, 0);
+            // 
             // frm_reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.dtp_fim);
+            this.Controls.Add(this.dtp_inicio);
+            this.Controls.Add(this.dtp_nasc);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgv_ocupacao);
@@ -460,5 +513,8 @@
         private System.Windows.Forms.DataGridView dgv_ocupacao;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DateTimePicker dtp_nasc;
+        private System.Windows.Forms.DateTimePicker dtp_inicio;
+        private System.Windows.Forms.DateTimePicker dtp_fim;
     }
 }

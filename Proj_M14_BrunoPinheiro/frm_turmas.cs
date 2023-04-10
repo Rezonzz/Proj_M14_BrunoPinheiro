@@ -37,7 +37,7 @@ namespace Proj_M14_BrunoPinheiro
             {
                 con.Open();
 
-                MySqlCommand carregarModalidades = new MySqlCommand("select * from modalidades " + "order by nomeModalidade", con);
+                MySqlCommand carregarModalidades = new MySqlCommand("select * from modalidades " + "where Estado = 'Ativo'" + "order by nomeModalidade", con);
                 MySqlDataReader dr = carregarModalidades.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
@@ -263,6 +263,21 @@ namespace Proj_M14_BrunoPinheiro
                 {
                     con.Open();
 
+                    MySqlCommand verificaTreinadorModalidade = new MySqlCommand("SELECT * FROM detalheturma WHERE idTurma IN (SELECT idTurma FROM turmas WHERE idModalidade = @idModalidade) AND idCliente = @idTreinador", con);
+                    verificaTreinadorModalidade.Parameters.AddWithValue("@idModalidade", cbo_modalidade.SelectedValue);
+                    verificaTreinadorModalidade.Parameters.AddWithValue("@idTreinador", cbo_treinadores.SelectedValue);
+
+                    MySqlDataReader reader = verificaTreinadorModalidade.ExecuteReader();
+
+                    if (!reader.HasRows)
+                    {
+                        MessageBox.Show("O treinador selecionado não está associado com a modalidade escolhida!", "Inserir Turma");
+                        con.Close();
+                        return;
+                    }
+
+                    reader.Close();
+
                     MySqlCommand inserirTurma = new MySqlCommand("insert into turmas (idModalidade, idTreinador, diaSemana, hora) values (@idModalidade, @idTreinador, @diaSemana, @hora)", con);
                     inserirTurma.Parameters.AddWithValue("@idModalidade", cbo_modalidade.SelectedValue);
                     inserirTurma.Parameters.AddWithValue("@idTreinador", cbo_treinadores.SelectedValue);
@@ -286,6 +301,7 @@ namespace Proj_M14_BrunoPinheiro
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
         private void btn_associar_Click(object sender, EventArgs e)
