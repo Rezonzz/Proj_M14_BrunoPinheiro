@@ -64,7 +64,7 @@ namespace Proj_M14_BrunoPinheiro
             MySqlConnection con = conn.GetConnection();
             try
             {
-                if (txt_idsocio.Text.Length > 0)
+                if (txt_idsocio.Text != "")
                 {
                     con.Open();
 

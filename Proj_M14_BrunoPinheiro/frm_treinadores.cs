@@ -65,7 +65,7 @@ namespace Proj_M14_BrunoPinheiro
             {
                 con.Open();
 
-                MySqlCommand carregarModalidades = new MySqlCommand("select * from modalidades " + "order by nomeModalidade", con);
+                MySqlCommand carregarModalidades = new MySqlCommand("select * from modalidades " + "where Estado = 'Ativo'" + "order by nomeModalidade ", con);
                 MySqlDataReader dr = carregarModalidades.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);

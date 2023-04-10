@@ -43,9 +43,9 @@ namespace Proj_M14_BrunoPinheiro
             MySqlConnection con = conn.GetConnection();
             try
             {
-                if (txt_nome.Text.Length > 0)
+                if (txt_nome.Text != "")
                 {
-                    if (cbo_estado.Text.Length > 0)
+                    if (cbo_estado.Text != "")
                     {
                         con.Open();
 
@@ -140,7 +140,7 @@ namespace Proj_M14_BrunoPinheiro
             MySqlConnection con = conn.GetConnection();
             try
             {
-                if (txt_idmodalidade.Text.Length > 0)
+                if (txt_idmodalidade.Text != "")
                 {
                     con.Open();
 

@@ -23,8 +23,11 @@ namespace Proj_M14_BrunoPinheiro
         {
             carregaComboboxTreinador();
             carregaComboboxModalidades();
+            carregaComboboxSocios();
+            carregaComboboxTurmas();
             cbo_diasemana.SelectedIndex = 0;
             ListarTurmas();
+            ListarDetalheTurmas();
         }
 
         public void carregaComboboxModalidades()
@@ -46,6 +49,50 @@ namespace Proj_M14_BrunoPinheiro
             catch
             {
                 MessageBox.Show("Erro: Não Carregou Modalidades!", "Lista Modalidades");
+            }
+        }
+
+        public void carregaComboboxSocios()
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand carregarSocios = new MySqlCommand("select * from socios " + "order by nomeCliente", con);
+                MySqlDataReader dr = carregarSocios.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbo_socios.DisplayMember = "nomeCliente";
+                cbo_socios.ValueMember = "idCliente";
+                cbo_socios.DataSource = dt;
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Erro: Não Carregou Sócios!", "Lista Sócios");
+            }
+        }
+
+        public void carregaComboboxTurmas()
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand carregarTurmas = new MySqlCommand("select * from turmas " + "order by idTurma", con);
+                MySqlDataReader dr = carregarTurmas.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbo_turma.DisplayMember = "idTurma";
+                cbo_turma.ValueMember = "idTurma";
+                cbo_turma.DataSource = dt;
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Erro: Não Carregou Turmas!", "Lista Turmas");
             }
         }
 
@@ -83,6 +130,26 @@ namespace Proj_M14_BrunoPinheiro
                 DataTable dt = new DataTable();
                 grelha.Fill(dt);
                 dgv_turmas.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        public void ListarDetalheTurmas()
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand listarDetalheTurmas = new MySqlCommand("SELECT turmas.idTurma, detalheturma.idCliente, socios.nomeCliente FROM turmas, detalheturma, socios WHERE turmas.idTurma = detalheturma.idTurma AND detalheturma.idCliente = socios.idCliente AND socios.Estado = 'Ativo'", con);
+                MySqlDataAdapter grelha = new MySqlDataAdapter(listarDetalheTurmas);
+                DataTable dt = new DataTable();
+                grelha.Fill(dt);
+                dgv_detalheturmas.DataSource = dt;
             }
             catch (Exception ex)
             {
@@ -132,7 +199,9 @@ namespace Proj_M14_BrunoPinheiro
 
                         apagarturma.ExecuteNonQuery();
                         MessageBox.Show("Turma apagada!", "Apagar Turma");
+                        carregaComboboxTurmas();
                         ListarTurmas();
+                        ListarDetalheTurmas();
 
                         con.Close();
                     }
@@ -142,9 +211,9 @@ namespace Proj_M14_BrunoPinheiro
                     MessageBox.Show("Deve clicar numa Turma!!!", "Apagar Turma");
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Deve eliminar os alunos dessa turma antes de apagar!", "Apagar Turma");
             }
         }
 
@@ -167,7 +236,9 @@ namespace Proj_M14_BrunoPinheiro
 
                     atualizarturma.ExecuteNonQuery();
                     MessageBox.Show("Turma atualizada!", "Atualizar Turma");
+                    carregaComboboxTurmas();
                     ListarTurmas();
+                    ListarDetalheTurmas();
 
                     con.Close();
                 }
@@ -200,7 +271,9 @@ namespace Proj_M14_BrunoPinheiro
 
                     inserirTurma.ExecuteNonQuery();
                     MessageBox.Show("Turma inserida!", "Inserir Turma");
+                    carregaComboboxTurmas();
                     ListarTurmas();
+                    ListarDetalheTurmas();
 
                     con.Close();
                 }
@@ -213,6 +286,105 @@ namespace Proj_M14_BrunoPinheiro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_associar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand associarTurma = new MySqlCommand("INSERT INTO detalheturma (idTurma, idCliente) SELECT @idTurma, @idCliente WHERE NOT EXISTS (SELECT * FROM detalheturma WHERE idTurma = @idTurma AND idCliente = @idCliente)", con);
+
+                associarTurma.Parameters.AddWithValue("@idTurma", cbo_turma.SelectedValue);
+                associarTurma.Parameters.AddWithValue("@idCliente", cbo_socios.SelectedValue);
+
+                int rowsAffected = associarTurma.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    string sqlContarSociosTurma = "SELECT COUNT(idTurma) from detalheturma where idTurma=" + cbo_turma.Text;
+
+                    MySqlCommand commandTotalTurma = new MySqlCommand(sqlContarSociosTurma, con);
+
+                    int TotalAlunos = Convert.ToInt32(commandTotalTurma.ExecuteScalar());
+
+                    txt_totalsocios.Text = TotalAlunos.ToString();
+
+                    string sqlUpdateTurma = "update turmas set totalAlunos = @totalSocios where idTurma=" + cbo_turma.Text;
+
+                    MySqlCommand commandUpdateTurma = new MySqlCommand(sqlUpdateTurma, con);
+
+                    commandUpdateTurma.Parameters.AddWithValue("@totalSocios", txt_totalsocios.Text);
+
+                    commandUpdateTurma.ExecuteNonQuery();
+
+                    MessageBox.Show("Sócio " + cbo_socios.Text + " adicionado à turma " + cbo_turma.Text + "!", "Associar Sócio/Turma");
+                    ListarDetalheTurmas();
+                    ListarTurmas();
+                }
+                else
+                {
+                    MessageBox.Show("Já existe um registro com o mesmo sócio e turma!", "Associar Sócio/Turma");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void btn_desassociar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = conn.GetConnection();
+            try
+            {
+                con.Open();
+
+                MySqlCommand desassociarSocios = new MySqlCommand("DELETE FROM detalheturma WHERE idTurma = @idTurma AND idCliente = @idCliente", con);
+
+                desassociarSocios.Parameters.AddWithValue("@idTurma", cbo_turma.SelectedValue);
+                desassociarSocios.Parameters.AddWithValue("@idCliente", cbo_socios.SelectedValue);
+
+                int rowsAffected = desassociarSocios.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    string sqlContarSociosTurma = "SELECT COUNT(idTurma) from detalheturma where idTurma=" + cbo_turma.Text;
+
+                    MySqlCommand commandTotalTurma = new MySqlCommand(sqlContarSociosTurma, con);
+
+                    int TotalAlunos = Convert.ToInt32(commandTotalTurma.ExecuteScalar());
+
+                    txt_totalsocios.Text = TotalAlunos.ToString();
+
+                    string sqlUpdateTurma = "update turmas set totalAlunos = @totalSocios where idTurma=" + cbo_turma.Text;
+
+                    MySqlCommand commandUpdateTurma = new MySqlCommand(sqlUpdateTurma, con);
+
+                    commandUpdateTurma.Parameters.AddWithValue("@totalSocios", txt_totalsocios.Text);
+
+                    commandUpdateTurma.ExecuteNonQuery();
+                    MessageBox.Show("Sócio " + cbo_socios.Text + " eliminado da turma " + cbo_turma.Text + "!", "Desassociar Sócio/Turma");
+                    ListarDetalheTurmas();
+                    ListarTurmas();
+                }
+                else
+                {
+                    MessageBox.Show("Não foi encontrado nenhum registro com o Sócio e Turma selecionados!", "Desassociar Sócio/Turma");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con.Close();
+        }
+
+        private void dgv_detalheturmas_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbo_turma.SelectedValue = dgv_detalheturmas.SelectedRows[0].Cells[0].Value.ToString();
+            cbo_socios.SelectedValue = dgv_detalheturmas.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }

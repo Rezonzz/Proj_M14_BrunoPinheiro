@@ -16,5 +16,20 @@ namespace Proj_M14_BrunoPinheiro
         {
             InitializeComponent();
         }
+
+        private void frm_reservas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_criar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_totalsocios_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

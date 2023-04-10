@@ -110,7 +110,7 @@
             this.btn_modalidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_modalidades.Location = new System.Drawing.Point(3, 2);
             this.btn_modalidades.Name = "btn_modalidades";
-            this.btn_modalidades.Size = new System.Drawing.Size(165, 98);
+            this.btn_modalidades.Size = new System.Drawing.Size(182, 98);
             this.btn_modalidades.TabIndex = 1;
             this.btn_modalidades.Text = "Modalidades";
             this.btn_modalidades.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             this.btn_pagamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_pagamentos.Location = new System.Drawing.Point(3, 2);
             this.btn_pagamentos.Name = "btn_pagamentos";
-            this.btn_pagamentos.Size = new System.Drawing.Size(165, 98);
+            this.btn_pagamentos.Size = new System.Drawing.Size(182, 98);
             this.btn_pagamentos.TabIndex = 1;
             this.btn_pagamentos.Text = "Pagamentos";
             this.btn_pagamentos.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             this.btn_dados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
             this.btn_dados.Location = new System.Drawing.Point(3, 0);
             this.btn_dados.Name = "btn_dados";
-            this.btn_dados.Size = new System.Drawing.Size(165, 100);
+            this.btn_dados.Size = new System.Drawing.Size(182, 100);
             this.btn_dados.TabIndex = 0;
             this.btn_dados.Text = "Dados Pessoais";
             this.btn_dados.UseVisualStyleBackColor = true;

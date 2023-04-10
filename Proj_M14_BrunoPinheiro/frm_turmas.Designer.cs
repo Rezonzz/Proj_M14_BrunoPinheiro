@@ -60,16 +60,17 @@
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.btn_desassociar = new System.Windows.Forms.Button();
             this.btn_associar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_turma = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbo_socios = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgv_detalhetreinador = new System.Windows.Forms.DataGridView();
+            this.dgv_detalheturmas = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_totalsocios = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_turmas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -77,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhetreinador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheturmas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_turmas
@@ -381,6 +382,7 @@
             this.btn_desassociar.Text = "Eliminar";
             this.btn_desassociar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_desassociar.UseVisualStyleBackColor = true;
+            this.btn_desassociar.Click += new System.EventHandler(this.btn_desassociar_Click);
             // 
             // btn_associar
             // 
@@ -396,18 +398,19 @@
             this.btn_associar.Text = "Adicionar";
             this.btn_associar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_associar.UseVisualStyleBackColor = true;
+            this.btn_associar.Click += new System.EventHandler(this.btn_associar_Click);
             // 
-            // comboBox1
+            // cbo_turma
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(625, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 23);
-            this.comboBox1.TabIndex = 265;
+            this.cbo_turma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_turma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_turma.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_turma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_turma.FormattingEnabled = true;
+            this.cbo_turma.Location = new System.Drawing.Point(625, 111);
+            this.cbo_turma.Name = "cbo_turma";
+            this.cbo_turma.Size = new System.Drawing.Size(193, 23);
+            this.cbo_turma.TabIndex = 265;
             // 
             // label1
             // 
@@ -438,17 +441,17 @@
             this.pictureBox6.TabIndex = 262;
             this.pictureBox6.TabStop = false;
             // 
-            // comboBox2
+            // cbo_socios
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(624, 43);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(193, 23);
-            this.comboBox2.TabIndex = 261;
+            this.cbo_socios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_socios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_socios.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_socios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_socios.FormattingEnabled = true;
+            this.cbo_socios.Location = new System.Drawing.Point(624, 43);
+            this.cbo_socios.Name = "cbo_socios";
+            this.cbo_socios.Size = new System.Drawing.Size(193, 23);
+            this.cbo_socios.TabIndex = 261;
             // 
             // label2
             // 
@@ -479,16 +482,16 @@
             this.pictureBox1.TabIndex = 258;
             this.pictureBox1.TabStop = false;
             // 
-            // dgv_detalhetreinador
+            // dgv_detalheturmas
             // 
-            this.dgv_detalhetreinador.AllowUserToAddRows = false;
-            this.dgv_detalhetreinador.AllowUserToDeleteRows = false;
-            this.dgv_detalhetreinador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv_detalhetreinador.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_detalhetreinador.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dgv_detalhetreinador.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_detalhetreinador.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_detalhetreinador.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_detalheturmas.AllowUserToAddRows = false;
+            this.dgv_detalheturmas.AllowUserToDeleteRows = false;
+            this.dgv_detalheturmas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_detalheturmas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_detalheturmas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dgv_detalheturmas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_detalheturmas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_detalheturmas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -496,8 +499,8 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_detalhetreinador.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_detalhetreinador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_detalheturmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_detalheturmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -505,11 +508,11 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_detalhetreinador.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_detalhetreinador.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dgv_detalhetreinador.Location = new System.Drawing.Point(552, 249);
-            this.dgv_detalhetreinador.Name = "dgv_detalhetreinador";
-            this.dgv_detalhetreinador.ReadOnly = true;
+            this.dgv_detalheturmas.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_detalheturmas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dgv_detalheturmas.Location = new System.Drawing.Point(552, 249);
+            this.dgv_detalheturmas.Name = "dgv_detalheturmas";
+            this.dgv_detalheturmas.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -517,14 +520,15 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_detalhetreinador.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_detalheturmas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dgv_detalhetreinador.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_detalhetreinador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_detalhetreinador.Size = new System.Drawing.Size(296, 204);
-            this.dgv_detalhetreinador.TabIndex = 257;
+            this.dgv_detalheturmas.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_detalheturmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_detalheturmas.Size = new System.Drawing.Size(296, 204);
+            this.dgv_detalheturmas.TabIndex = 257;
+            this.dgv_detalheturmas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_detalheturmas_MouseClick);
             // 
             // panel5
             // 
@@ -534,23 +538,38 @@
             this.panel5.Size = new System.Drawing.Size(1, 430);
             this.panel5.TabIndex = 256;
             // 
+            // txt_totalsocios
+            // 
+            this.txt_totalsocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.txt_totalsocios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_totalsocios.Enabled = false;
+            this.txt_totalsocios.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_totalsocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.txt_totalsocios.Location = new System.Drawing.Point(541, 186);
+            this.txt_totalsocios.Multiline = true;
+            this.txt_totalsocios.Name = "txt_totalsocios";
+            this.txt_totalsocios.Size = new System.Drawing.Size(38, 27);
+            this.txt_totalsocios.TabIndex = 268;
+            this.txt_totalsocios.Visible = false;
+            // 
             // frm_turmas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.txt_totalsocios);
             this.Controls.Add(this.btn_desassociar);
             this.Controls.Add(this.btn_associar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbo_turma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbo_socios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgv_detalhetreinador);
+            this.Controls.Add(this.dgv_detalheturmas);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txt_idturma);
             this.Controls.Add(this.btn_apagar);
@@ -587,7 +606,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhetreinador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheturmas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,15 +636,16 @@
         private System.Windows.Forms.TextBox txt_idturma;
         private System.Windows.Forms.Button btn_desassociar;
         private System.Windows.Forms.Button btn_associar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_turma;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_socios;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dgv_detalhetreinador;
+        private System.Windows.Forms.DataGridView dgv_detalheturmas;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txt_totalsocios;
     }
 }
