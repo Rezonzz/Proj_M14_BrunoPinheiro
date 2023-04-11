@@ -51,8 +51,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_selected5 = new System.Windows.Forms.Panel();
             this.btn_instalacoes = new System.Windows.Forms.Button();
-            this.pnl_ginastica = new System.Windows.Forms.Panel();
-            this.pic_ginastica = new System.Windows.Forms.PictureBox();
             this.pnl_instalacoes = new System.Windows.Forms.Panel();
             this.pnl_selected4 = new System.Windows.Forms.Panel();
             this.btn_turmas = new System.Windows.Forms.Button();
@@ -76,8 +74,6 @@
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnl_ginastica.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).BeginInit();
             this.pnl_instalacoes.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
@@ -186,7 +182,6 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pnl_ginastica);
             this.panel1.Controls.Add(this.pnl_instalacoes);
             this.panel1.Controls.Add(this.pnl_modalidades);
             this.panel1.Controls.Add(this.pnl_treinadores);
@@ -340,27 +335,6 @@
             this.btn_instalacoes.Text = "Instalações";
             this.btn_instalacoes.UseVisualStyleBackColor = true;
             this.btn_instalacoes.Click += new System.EventHandler(this.btn_instalacoes_Click);
-            // 
-            // pnl_ginastica
-            // 
-            this.pnl_ginastica.Controls.Add(this.pic_ginastica);
-            this.pnl_ginastica.Enabled = false;
-            this.pnl_ginastica.Location = new System.Drawing.Point(0, 2586);
-            this.pnl_ginastica.Name = "pnl_ginastica";
-            this.pnl_ginastica.Size = new System.Drawing.Size(165, 97);
-            this.pnl_ginastica.TabIndex = 6;
-            this.pnl_ginastica.Visible = false;
-            // 
-            // pic_ginastica
-            // 
-            this.pic_ginastica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_ginastica.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.acrobat;
-            this.pic_ginastica.Location = new System.Drawing.Point(0, 5);
-            this.pic_ginastica.Name = "pic_ginastica";
-            this.pic_ginastica.Size = new System.Drawing.Size(168, 90);
-            this.pic_ginastica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ginastica.TabIndex = 70;
-            this.pic_ginastica.TabStop = false;
             // 
             // pnl_instalacoes
             // 
@@ -545,8 +519,6 @@
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pnl_ginastica.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ginastica)).EndInit();
             this.pnl_instalacoes.ResumeLayout(false);
             this.pnl_modalidades.ResumeLayout(false);
             this.pnl_treinadores.ResumeLayout(false);
@@ -563,8 +535,6 @@
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnl_ginastica;
-        private System.Windows.Forms.PictureBox pic_ginastica;
         private System.Windows.Forms.Panel pnl_instalacoes;
         private System.Windows.Forms.Panel pnl_modalidades;
         private System.Windows.Forms.Panel pnl_treinadores;

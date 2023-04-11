@@ -588,15 +588,15 @@ namespace Proj_M14_BrunoPinheiro
             MySqlConnection con = conn.GetConnection();
             try
             {
-                if (txt_nome.Text != "")
+                if (txt_nome.Text != "" && txt_nome.Text != "Nome")
                 {
-                    if (txt_email.Text != "")
+                    if (txt_email.Text != "" && txt_email.Text != "Email")
                     {
-                        if (txt_morada.Text != "")
+                        if (txt_morada.Text != "" && txt_morada.Text != "Morada")
                         {
-                            if (txt_telefone.Text != "")
+                            if (txt_telefone.Text != "" && txt_telefone.Text != "Telefone")
                             {
-                                if (txt_nif.Text != "")
+                                if (txt_nif.Text != "" && txt_nif.Text != "NIF")
                                 {
                                     if (dtp_nasc.Value.Date <= DateTime.Today)
                                     {
@@ -633,7 +633,7 @@ namespace Proj_M14_BrunoPinheiro
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Preenchimento da data de nascimento é obrigatório", "Erro");
+                                        MessageBox.Show("Preencha uma data de nascimento válida", "Erro");
                                     }
                                 }
                                 else

@@ -219,6 +219,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_quotas_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frm_quotas());
             pnl_selected6.Visible = true;
             pnl_selected6.Enabled = true;
             pnl_selected2.Visible = false;

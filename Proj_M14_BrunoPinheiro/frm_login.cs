@@ -217,9 +217,9 @@ namespace Proj_M14_BrunoPinheiro
         private void btn_login_Click(object sender, EventArgs e)
         {
             MySqlConnection con = conn.GetConnection();
-            if(txt_email.Text != "")
+            if(txt_email.Text != "" && txt_email.Text != "Email")
             {
-                if(txt_password.Text != "")
+                if(txt_password.Text != "" && txt_password.Text != "Password")
                 {
                     con.Open();
                     string senhaHash = GerarHashSenha(txt_password.Text);

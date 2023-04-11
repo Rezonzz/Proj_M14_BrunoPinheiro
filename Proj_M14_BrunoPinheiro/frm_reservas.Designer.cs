@@ -37,20 +37,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_reservas));
-            this.txt_totalsocios = new System.Windows.Forms.TextBox();
             this.lbl_datareserva = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_detalhereserva = new System.Windows.Forms.DataGridView();
+            this.idInstalacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalHoras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_idturma = new System.Windows.Forms.TextBox();
-            this.cbo_diasemana = new System.Windows.Forms.ComboBox();
+            this.cbo_socio = new System.Windows.Forms.ComboBox();
             this.lbl_socio = new System.Windows.Forms.Label();
             this.pnl_1 = new System.Windows.Forms.Panel();
-            this.pic_username = new System.Windows.Forms.PictureBox();
             this.cbo_instalacao = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbl_inicio = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_fim = new System.Windows.Forms.Label();
@@ -60,30 +64,18 @@
             this.dgv_ocupacao = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dtp_nasc = new System.Windows.Forms.DateTimePicker();
+            this.dtp_reserva = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.dtp_fim = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_username = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhereserva)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ocupacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txt_totalsocios
-            // 
-            this.txt_totalsocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.txt_totalsocios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_totalsocios.Enabled = false;
-            this.txt_totalsocios.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_totalsocios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_totalsocios.Location = new System.Drawing.Point(517, 23);
-            this.txt_totalsocios.Multiline = true;
-            this.txt_totalsocios.Name = "txt_totalsocios";
-            this.txt_totalsocios.Size = new System.Drawing.Size(38, 27);
-            this.txt_totalsocios.TabIndex = 302;
-            this.txt_totalsocios.Visible = false;
-            this.txt_totalsocios.TextChanged += new System.EventHandler(this.txt_totalsocios_TextChanged);
             // 
             // lbl_datareserva
             // 
@@ -104,16 +96,6 @@
             this.panel6.Size = new System.Drawing.Size(236, 1);
             this.panel6.TabIndex = 293;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.calendario;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 292;
-            this.pictureBox1.TabStop = false;
-            // 
             // dgv_detalhereserva
             // 
             this.dgv_detalhereserva.AllowUserToAddRows = false;
@@ -133,6 +115,15 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_detalhereserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_detalhereserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_detalhereserva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idInstalacao,
+            this.idCliente,
+            this.dataReserva,
+            this.horaInicio,
+            this.horaFim,
+            this.totalHoras,
+            this.valorHora,
+            this.valorPagar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,6 +152,62 @@
             this.dgv_detalhereserva.Size = new System.Drawing.Size(820, 95);
             this.dgv_detalhereserva.TabIndex = 291;
             // 
+            // idInstalacao
+            // 
+            this.idInstalacao.HeaderText = "idInstalacao";
+            this.idInstalacao.Name = "idInstalacao";
+            this.idInstalacao.ReadOnly = true;
+            this.idInstalacao.Width = 130;
+            // 
+            // idCliente
+            // 
+            this.idCliente.HeaderText = "idCliente";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Width = 102;
+            // 
+            // dataReserva
+            // 
+            this.dataReserva.HeaderText = "dataReserva";
+            this.dataReserva.Name = "dataReserva";
+            this.dataReserva.ReadOnly = true;
+            this.dataReserva.Width = 138;
+            // 
+            // horaInicio
+            // 
+            this.horaInicio.HeaderText = "horaInicio";
+            this.horaInicio.Name = "horaInicio";
+            this.horaInicio.ReadOnly = true;
+            this.horaInicio.Width = 110;
+            // 
+            // horaFim
+            // 
+            this.horaFim.HeaderText = "horaFim";
+            this.horaFim.Name = "horaFim";
+            this.horaFim.ReadOnly = true;
+            this.horaFim.Width = 98;
+            // 
+            // totalHoras
+            // 
+            this.totalHoras.HeaderText = "totalHoras";
+            this.totalHoras.Name = "totalHoras";
+            this.totalHoras.ReadOnly = true;
+            this.totalHoras.Width = 120;
+            // 
+            // valorHora
+            // 
+            this.valorHora.HeaderText = "valorHora";
+            this.valorHora.Name = "valorHora";
+            this.valorHora.ReadOnly = true;
+            this.valorHora.Width = 112;
+            // 
+            // valorPagar
+            // 
+            this.valorPagar.HeaderText = "valorPagar";
+            this.valorPagar.Name = "valorPagar";
+            this.valorPagar.ReadOnly = true;
+            this.valorPagar.Width = 121;
+            // 
             // txt_idturma
             // 
             this.txt_idturma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
@@ -175,25 +222,17 @@
             this.txt_idturma.TabIndex = 289;
             this.txt_idturma.Visible = false;
             // 
-            // cbo_diasemana
+            // cbo_socio
             // 
-            this.cbo_diasemana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.cbo_diasemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_diasemana.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_diasemana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.cbo_diasemana.FormattingEnabled = true;
-            this.cbo_diasemana.Items.AddRange(new object[] {
-            "Segunda-Feira",
-            "Terça-Feira",
-            "Quarta-Feira",
-            "Quinta-Feira",
-            "Sexta-Feira",
-            "Sábado",
-            "Domingo"});
-            this.cbo_diasemana.Location = new System.Drawing.Point(59, 32);
-            this.cbo_diasemana.Name = "cbo_diasemana";
-            this.cbo_diasemana.Size = new System.Drawing.Size(193, 23);
-            this.cbo_diasemana.TabIndex = 286;
+            this.cbo_socio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_socio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_socio.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_socio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_socio.FormattingEnabled = true;
+            this.cbo_socio.Location = new System.Drawing.Point(59, 32);
+            this.cbo_socio.Name = "cbo_socio";
+            this.cbo_socio.Size = new System.Drawing.Size(193, 23);
+            this.cbo_socio.TabIndex = 286;
             // 
             // lbl_socio
             // 
@@ -213,16 +252,6 @@
             this.pnl_1.Name = "pnl_1";
             this.pnl_1.Size = new System.Drawing.Size(234, 1);
             this.pnl_1.TabIndex = 270;
-            // 
-            // pic_username
-            // 
-            this.pic_username.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.user;
-            this.pic_username.Location = new System.Drawing.Point(16, 23);
-            this.pic_username.Name = "pic_username";
-            this.pic_username.Size = new System.Drawing.Size(37, 36);
-            this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_username.TabIndex = 269;
-            this.pic_username.TabStop = false;
             // 
             // cbo_instalacao
             // 
@@ -254,16 +283,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 304;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 303;
-            this.pictureBox2.TabStop = false;
             // 
             // lbl_inicio
             // 
@@ -315,9 +334,11 @@
             this.btn_efetuar.TabIndex = 313;
             this.btn_efetuar.Text = "Efetuar Reserva";
             this.btn_efetuar.UseVisualStyleBackColor = true;
+            this.btn_efetuar.Click += new System.EventHandler(this.btn_efetuar_Click);
             // 
             // btn_concluir
             // 
+            this.btn_concluir.Enabled = false;
             this.btn_concluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_concluir.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_concluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -328,6 +349,7 @@
             this.btn_concluir.TabIndex = 314;
             this.btn_concluir.Text = "Concluir Reserva";
             this.btn_concluir.UseVisualStyleBackColor = true;
+            this.btn_concluir.Click += new System.EventHandler(this.btn_concluir_Click);
             // 
             // dgv_ocupacao
             // 
@@ -392,18 +414,19 @@
             this.panel4.Size = new System.Drawing.Size(831, 1);
             this.panel4.TabIndex = 317;
             // 
-            // dtp_nasc
+            // dtp_reserva
             // 
-            this.dtp_nasc.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dtp_nasc.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dtp_nasc.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.dtp_nasc.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dtp_nasc.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.dtp_nasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_nasc.Location = new System.Drawing.Point(328, 33);
-            this.dtp_nasc.Name = "dtp_nasc";
-            this.dtp_nasc.Size = new System.Drawing.Size(191, 20);
-            this.dtp_nasc.TabIndex = 318;
+            this.dtp_reserva.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_reserva.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_reserva.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_reserva.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_reserva.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_reserva.CustomFormat = "dd/MM/yyyy";
+            this.dtp_reserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_reserva.Location = new System.Drawing.Point(328, 33);
+            this.dtp_reserva.Name = "dtp_reserva";
+            this.dtp_reserva.Size = new System.Drawing.Size(191, 20);
+            this.dtp_reserva.TabIndex = 318;
             // 
             // dtp_inicio
             // 
@@ -439,6 +462,36 @@
             this.dtp_fim.TabIndex = 320;
             this.dtp_fim.Value = new System.DateTime(2023, 4, 4, 0, 0, 0, 0);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 85);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 303;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.calendario;
+            this.pictureBox1.Location = new System.Drawing.Point(283, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 292;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pic_username
+            // 
+            this.pic_username.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.user;
+            this.pic_username.Location = new System.Drawing.Point(16, 23);
+            this.pic_username.Name = "pic_username";
+            this.pic_username.Size = new System.Drawing.Size(37, 36);
+            this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_username.TabIndex = 269;
+            this.pic_username.TabStop = false;
+            // 
             // frm_reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,7 +500,7 @@
             this.ClientSize = new System.Drawing.Size(860, 465);
             this.Controls.Add(this.dtp_fim);
             this.Controls.Add(this.dtp_inicio);
-            this.Controls.Add(this.dtp_nasc);
+            this.Controls.Add(this.dtp_reserva);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgv_ocupacao);
@@ -461,13 +514,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txt_totalsocios);
             this.Controls.Add(this.lbl_datareserva);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgv_detalhereserva);
             this.Controls.Add(this.txt_idturma);
-            this.Controls.Add(this.cbo_diasemana);
+            this.Controls.Add(this.cbo_socio);
             this.Controls.Add(this.lbl_socio);
             this.Controls.Add(this.pnl_1);
             this.Controls.Add(this.pic_username);
@@ -478,25 +530,23 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blue Lock - Reservas";
             this.Load += new System.EventHandler(this.frm_reservas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhereserva)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ocupacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txt_totalsocios;
         private System.Windows.Forms.Label lbl_datareserva;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_detalhereserva;
         private System.Windows.Forms.TextBox txt_idturma;
-        private System.Windows.Forms.ComboBox cbo_diasemana;
+        private System.Windows.Forms.ComboBox cbo_socio;
         private System.Windows.Forms.Label lbl_socio;
         private System.Windows.Forms.Panel pnl_1;
         private System.Windows.Forms.PictureBox pic_username;
@@ -513,8 +563,16 @@
         private System.Windows.Forms.DataGridView dgv_ocupacao;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dtp_nasc;
+        private System.Windows.Forms.DateTimePicker dtp_reserva;
         private System.Windows.Forms.DateTimePicker dtp_inicio;
         private System.Windows.Forms.DateTimePicker dtp_fim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idInstalacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataReserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaFim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalHoras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorPagar;
     }
 }
