@@ -26,14 +26,17 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
+            if (dgv_meses.Rows.Count > 0)
+            {
+                dgv_meses.Rows.RemoveAt(0);
+            }
             int idSocio = Convert.ToInt32(cbo_socio.SelectedValue);
-            lbl_socio.Text = cbo_socio.Text; // adiciona o id do sócio à label lblIdSocio
+            lbl_socio.Text = cbo_socio.Text;
             MySqlConnection con = conn.GetConnection();
             try
             {
                 con.Open();
 
-                // Busca a data de inscrição do sócio na tabela "socio"
                 DateTime dataInscricao = DateTime.MinValue;
                 string querySocio = "SELECT dataInscricao, nomeCliente FROM socios WHERE idCliente = @idCliente";
                 MySqlCommand cmd = new MySqlCommand(querySocio, con);
@@ -44,12 +47,10 @@ namespace Proj_M14_BrunoPinheiro
                     dataInscricao = reader.GetDateTime("dataInscricao");
                     string nomeSocio = reader.GetString("nomeCliente");
 
-                    // Exibe a data de inscrição na label
                     lbl_inscricao.Text = dataInscricao.ToString("dd/MM/yyyy");
 
-                    reader.Close(); // Fechar o DataReader antes de executar a próxima consulta
+                    reader.Close();
 
-                    // Preenche a primeira datagridview com os dados da tabela "quota"
                     string queryQuota = "SELECT idQuota, idCliente, dataQuota, valorQuota, dataPagamento FROM quota WHERE idCliente = @idCliente";
                     cmd = new MySqlCommand(queryQuota, con);
                     cmd.Parameters.AddWithValue("@idCliente", idSocio);
@@ -61,17 +62,15 @@ namespace Proj_M14_BrunoPinheiro
                     int anoAtual = dataAtual.Year;
                     int anoInscricao = dataInscricao.Year;
                     int mesInscricao = dataInscricao.Month;
+                    dgv_meses.Rows.Add();
 
                     for (int i = 0; i < dgv_meses.Columns.Count; i++)
                     {
-                        // Obtém o mês referente à coluna atual
                         string nomeMes = dgv_meses.Columns[i].HeaderText;
                         int mesReferencia = DateTime.ParseExact(nomeMes, "MMMM", CultureInfo.CurrentCulture).Month;
 
-                        // Verifica se o mês de referência está dentro do intervalo de inscrição até o mês atual
                         if (mesReferencia >= mesInscricao && mesReferencia <= mesAtual && anoAtual == anoInscricao)
                         {
-                            // Verifica se a quota do mês de referência já foi paga
                             bool quotaPaga = false;
                             foreach (DataRow row in dt.Rows)
                             {
@@ -86,7 +85,6 @@ namespace Proj_M14_BrunoPinheiro
                                 }
                             }
 
-                            // Caso a quota não tenha sido paga, marca a célula em vermelho
                             if (!quotaPaga)
                             {
                                 dgv_meses.Rows[0].Cells[i].Style.BackColor = Color.Red;
@@ -98,21 +96,16 @@ namespace Proj_M14_BrunoPinheiro
                             }
                         }
 
-                        // Marca as células de meses posteriores em cinza
                         else if (anoAtual == anoInscricao && mesReferencia > mesAtual)
                         {
                             dgv_meses.Rows[0].Cells[i].Style.BackColor = Color.Gray;
                         }
-                        // Verifica se o mês atual é anterior à data de inscrição
                         else if (anoAtual == anoInscricao && mesReferencia < mesInscricao)
                         {
-                            // Marca a célula em cinza
                             dgv_meses.Rows[0].Cells[i].Style.BackColor = Color.Gray;
                         }
-                        // Verifica se o mês atual é posterior à data de inscrição + 2 meses
                         else if (anoAtual == anoInscricao && mesReferencia > mesInscricao + 2)
                         {
-                            // Marca a célula em cinza
                             dgv_meses.Rows[0].Cells[i].Style.BackColor = Color.Gray;
                         }
                     }
@@ -125,17 +118,6 @@ namespace Proj_M14_BrunoPinheiro
                     dgv_quotas.Columns["dataPagamento"].HeaderText = "Data do Pagamento";
                     lbl_idsocio.Text = cbo_socio.SelectedValue.ToString();
                     lbl_socio.Text = cbo_socio.Text;
-                    cbo_quota.Items.Clear();
-
-                    // Preenche a combobox com as datas da coluna "dataQuota" da dgv_quota
-                    foreach (DataGridViewRow row in dgv_quotas.Rows)
-                    {
-                        if (row.Cells["dataQuota"].Value != null)
-                        {
-                            DateTime dataQuota = Convert.ToDateTime(row.Cells["dataQuota"].Value);
-                            cbo_quota.Items.Add(dataQuota.ToString("dd/MM/yyyy"));
-                        }
-                    }
 
                     lbl_soc.Visible = true;
                     lbl_socio.Visible = true;
@@ -146,8 +128,13 @@ namespace Proj_M14_BrunoPinheiro
                     btn_pagarquota.Visible = true;
                     btn_pagarquota.Enabled = true;
                     lbl_dataquota.Visible = true;
-                    cbo_quota.Enabled = true;
-                    cbo_quota.Visible = true;
+                    dtp_quota.Enabled = true;
+                    dtp_quota.Visible = true;
+                    DateTime dataAtual2 = DateTime.Now;
+                    int mesAtual2 = dataAtual.Month;
+                    DateTime novaData = new DateTime(dataInscricao.Year, mesAtual2, dataInscricao.Day);
+                    dtp_quota.Value = novaData;
+
                 }
                 else
                 {
@@ -168,6 +155,8 @@ namespace Proj_M14_BrunoPinheiro
         {
             carregaComboboxSocios();
             lbl_datapagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            dgv_meses.TabStop = false;
+            dgv_quotas.TabStop = false;
         }
 
         public void carregaComboboxSocios()
@@ -211,7 +200,7 @@ namespace Proj_M14_BrunoPinheiro
 
                 // Adiciona os parâmetros à query
                 cmd.Parameters.AddWithValue("@idCliente", lbl_idsocio.Text);
-                cmd.Parameters.AddWithValue("@dataQuota", Convert.ToDateTime(cbo_quota.SelectedValue));
+                cmd.Parameters.AddWithValue("@dataQuota", dtp_quota.Value.Date);
                 cmd.Parameters.AddWithValue("@valorQuota", Convert.ToDecimal(lbl_quota.Text));
                 cmd.Parameters.AddWithValue("@dataPagamento", DateTime.Now.Date);
 
@@ -219,7 +208,7 @@ namespace Proj_M14_BrunoPinheiro
                 cmd.ExecuteNonQuery();
 
                 // Identifica o mês correspondente à quota paga
-                int mesPago = Convert.ToDateTime(cbo_quota.SelectedValue).Month;
+                int mesPago = dtp_quota.Value.Month;
 
                 // Percorre as colunas da dgvMeses para encontrar a coluna correspondente ao mês pago
                 foreach (DataGridViewColumn col in dgv_meses.Columns)
@@ -260,8 +249,8 @@ namespace Proj_M14_BrunoPinheiro
                 btn_pagarquota.Visible = false;
                 btn_pagarquota.Enabled = false;
                 lbl_dataquota.Visible = false;
-                cbo_quota.Enabled = false;
-                cbo_quota.Visible = false;
+                dtp_quota.Enabled = false;
+                dtp_quota.Visible = false;
             }
             catch (Exception ex)
             {
@@ -273,6 +262,16 @@ namespace Proj_M14_BrunoPinheiro
                 // Fecha a conexão
                 con.Close();
             }
+        }
+
+        private void dgv_meses_SelectionChanged(object sender, EventArgs e)
+        {
+            dgv_meses.CurrentCell = null;
+        }
+
+        private void dgv_quotas_SelectionChanged(object sender, EventArgs e)
+        {
+            dgv_quotas.CurrentCell = null;
         }
     }
 }

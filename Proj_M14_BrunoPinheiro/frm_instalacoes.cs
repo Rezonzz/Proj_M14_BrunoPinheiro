@@ -25,7 +25,7 @@ namespace Proj_M14_BrunoPinheiro
             {
                 con.Open();
 
-                MySqlCommand listarInstalacao = new MySqlCommand("SELECT instalacao.idInstalacao, instalacao.nomeInstalacao, instalacao.Estado FROM instalacao", con);
+                MySqlCommand listarInstalacao = new MySqlCommand("SELECT instalacao.idInstalacao, instalacao.nomeInstalacao, instalacao.precoHora, instalacao.Estado FROM instalacao", con);
                 MySqlDataAdapter grelha = new MySqlDataAdapter(listarInstalacao);
                 DataTable dt = new DataTable();
                 grelha.Fill(dt);
@@ -140,16 +140,24 @@ namespace Proj_M14_BrunoPinheiro
                 {
                     if (cbo_estado.SelectedItem.ToString() == "Ativo" || cbo_estado.SelectedItem.ToString() == "Inativo")
                     {
-                        con.Open();
+                        if (nud_preco.Value > 0)
+                        {
+                            con.Open();
 
-                        MySqlCommand inserirInstalacao = new MySqlCommand("INSERT INTO instalacao(nomeInstalacao, Estado) VALUES (@nomeInstalacao,@estado)", con);
-                        inserirInstalacao.Parameters.AddWithValue("@nomeInstalacao", txt_nome.Text);
-                        inserirInstalacao.Parameters.AddWithValue("@estado", cbo_estado.SelectedItem.ToString());
-                        inserirInstalacao.ExecuteNonQuery();
-                        MessageBox.Show("Instalação adicionada!!!", "Adicionar Instalação");
-                        ListarInstalacao();
-                        ListarDetalheInstalacao();
-                        carregaComboboxInstalacao();
+                            MySqlCommand inserirInstalacao = new MySqlCommand("INSERT INTO instalacao(nomeInstalacao, precoHora, Estado) VALUES (@nomeInstalacao, @precoHora, @estado)", con);
+                            inserirInstalacao.Parameters.AddWithValue("@nomeInstalacao", txt_nome.Text);
+                            inserirInstalacao.Parameters.AddWithValue("@precoHora", nud_preco.Value);
+                            inserirInstalacao.Parameters.AddWithValue("@estado", cbo_estado.SelectedItem.ToString());
+                            inserirInstalacao.ExecuteNonQuery();
+                            MessageBox.Show("Instalação adicionada!!!", "Adicionar Instalação");
+                            ListarInstalacao();
+                            ListarDetalheInstalacao();
+                            carregaComboboxInstalacao();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Coloque um preço maior que 0!", "Adicionar Instalação");
+                        }
                     }
                     else
                     {
@@ -178,9 +186,7 @@ namespace Proj_M14_BrunoPinheiro
                     con.Open();
 
                     MySqlCommand atualizarinstalacao = new MySqlCommand("update instalacao set nomeInstalacao='" +
-                        txt_nome.Text + "'" + ", Estado='" + cbo_estado.SelectedItem.ToString() + "' where idInstalacao=" + Convert.ToInt32(txt_idinstalacao.Text), con);
-                    atualizarinstalacao.Parameters.AddWithValue("@nomeInstalacao", txt_nome.Text);
-                    atualizarinstalacao.Parameters.AddWithValue("@estado", cbo_estado.SelectedItem.ToString());
+                        txt_nome.Text + "'" + ", precoHora='" + nud_preco.Value + "'" + ", Estado='" + cbo_estado.SelectedItem.ToString() + "' where idInstalacao=" + Convert.ToInt32(txt_idinstalacao.Text), con);
                     atualizarinstalacao.ExecuteNonQuery();
                     MessageBox.Show("Instalação atualizada!", "Atualizar Instalação");
                     ListarInstalacao();
@@ -206,11 +212,12 @@ namespace Proj_M14_BrunoPinheiro
             txt_nome.Focus();
             txt_idinstalacao.Text = dgv_instalacao.SelectedRows[0].Cells[0].Value.ToString();
             txt_nome.Text = dgv_instalacao.SelectedRows[0].Cells[1].Value.ToString();
-            if (dgv_instalacao.SelectedRows[0].Cells[2].Value.ToString() == "Ativo")
+            nud_preco.Value = Convert.ToDecimal(dgv_instalacao.SelectedRows[0].Cells[2].Value);
+            if (dgv_instalacao.SelectedRows[0].Cells[3].Value.ToString() == "Ativo")
             {
                 cbo_estado.SelectedIndex = 0;
             }
-            else if (dgv_instalacao.SelectedRows[0].Cells[2].Value.ToString() == "Inativo")
+            else if (dgv_instalacao.SelectedRows[0].Cells[3].Value.ToString() == "Inativo")
             {
                 cbo_estado.SelectedIndex = 1;
             }

@@ -311,37 +311,43 @@ namespace Proj_M14_BrunoPinheiro
             {
                 con.Open();
 
-                MySqlCommand associarTurma = new MySqlCommand("INSERT INTO detalheturma (idTurma, idCliente) SELECT @idTurma, @idCliente WHERE NOT EXISTS (SELECT * FROM detalheturma WHERE idTurma = @idTurma AND idCliente = @idCliente)", con);
+                string sqlContarSociosTurma = "SELECT COUNT(idTurma) from detalheturma where idTurma=@idTurma";
+                MySqlCommand commandTotalTurma = new MySqlCommand(sqlContarSociosTurma, con);
+                commandTotalTurma.Parameters.AddWithValue("@idTurma", cbo_turma.SelectedValue);
+                int TotalAlunos = Convert.ToInt32(commandTotalTurma.ExecuteScalar());
 
-                associarTurma.Parameters.AddWithValue("@idTurma", cbo_turma.SelectedValue);
-                associarTurma.Parameters.AddWithValue("@idCliente", cbo_socios.SelectedValue);
-
-                int rowsAffected = associarTurma.ExecuteNonQuery();
-                if (rowsAffected > 0)
+                if (TotalAlunos >= 20)
                 {
-                    string sqlContarSociosTurma = "SELECT COUNT(idTurma) from detalheturma where idTurma=" + cbo_turma.Text;
-
-                    MySqlCommand commandTotalTurma = new MySqlCommand(sqlContarSociosTurma, con);
-
-                    int TotalAlunos = Convert.ToInt32(commandTotalTurma.ExecuteScalar());
-
-                    txt_totalsocios.Text = TotalAlunos.ToString();
-
-                    string sqlUpdateTurma = "update turmas set totalAlunos = @totalSocios where idTurma=" + cbo_turma.Text;
-
-                    MySqlCommand commandUpdateTurma = new MySqlCommand(sqlUpdateTurma, con);
-
-                    commandUpdateTurma.Parameters.AddWithValue("@totalSocios", txt_totalsocios.Text);
-
-                    commandUpdateTurma.ExecuteNonQuery();
-
-                    MessageBox.Show("Sócio " + cbo_socios.Text + " adicionado à turma " + cbo_turma.Text + "!", "Associar Sócio/Turma");
-                    ListarDetalheTurmas();
-                    ListarTurmas();
+                    MessageBox.Show("A turma já está cheia!", "Associar Sócio/Turma");
                 }
                 else
                 {
-                    MessageBox.Show("Já existe um registro com o mesmo sócio e turma!", "Associar Sócio/Turma");
+                    MySqlCommand associarTurma = new MySqlCommand("INSERT INTO detalheturma (idTurma, idCliente) SELECT @idTurma, @idCliente WHERE NOT EXISTS (SELECT * FROM detalheturma WHERE idTurma = @idTurma AND idCliente = @idCliente)", con);
+
+                    associarTurma.Parameters.AddWithValue("@idTurma", cbo_turma.SelectedValue);
+                    associarTurma.Parameters.AddWithValue("@idCliente", cbo_socios.SelectedValue);
+
+                    int rowsAffected = associarTurma.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        txt_totalsocios.Text = (TotalAlunos + 1).ToString();
+
+                        string sqlUpdateTurma = "update turmas set totalAlunos = @totalSocios where idTurma=" + cbo_turma.Text;
+
+                        MySqlCommand commandUpdateTurma = new MySqlCommand(sqlUpdateTurma, con);
+
+                        commandUpdateTurma.Parameters.AddWithValue("@totalSocios", txt_totalsocios.Text);
+
+                        commandUpdateTurma.ExecuteNonQuery();
+
+                        MessageBox.Show("Sócio " + cbo_socios.Text + " adicionado à turma " + cbo_turma.Text + "!", "Associar Sócio/Turma");
+                        ListarDetalheTurmas();
+                        ListarTurmas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Já existe um registro com o mesmo sócio e turma!", "Associar Sócio/Turma");
+                    }
                 }
             }
             catch (Exception ex)

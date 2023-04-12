@@ -67,8 +67,9 @@
             this.lbl_datapagamento = new System.Windows.Forms.Label();
             this.lbl_datapag = new System.Windows.Forms.Label();
             this.lbl_idsocio = new System.Windows.Forms.Label();
-            this.cbo_quota = new System.Windows.Forms.ComboBox();
             this.lbl_dataquota = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtp_quota = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_quotas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_meses)).BeginInit();
@@ -181,6 +182,7 @@
             this.dgv_quotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_quotas.Size = new System.Drawing.Size(390, 170);
             this.dgv_quotas.TabIndex = 316;
+            this.dgv_quotas.SelectionChanged += new System.EventHandler(this.dgv_quotas_SelectionChanged);
             // 
             // btn_ok
             // 
@@ -255,6 +257,7 @@
             this.dgv_meses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_meses.Size = new System.Drawing.Size(836, 97);
             this.dgv_meses.TabIndex = 318;
+            this.dgv_meses.SelectionChanged += new System.EventHandler(this.dgv_meses_SelectionChanged);
             // 
             // Janeiro
             // 
@@ -446,20 +449,6 @@
             this.lbl_idsocio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_idsocio.Visible = false;
             // 
-            // cbo_quota
-            // 
-            this.cbo_quota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.cbo_quota.Enabled = false;
-            this.cbo_quota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_quota.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_quota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.cbo_quota.FormattingEnabled = true;
-            this.cbo_quota.Location = new System.Drawing.Point(285, 423);
-            this.cbo_quota.Name = "cbo_quota";
-            this.cbo_quota.Size = new System.Drawing.Size(193, 23);
-            this.cbo_quota.TabIndex = 328;
-            this.cbo_quota.Visible = false;
-            // 
             // lbl_dataquota
             // 
             this.lbl_dataquota.AutoSize = true;
@@ -472,14 +461,44 @@
             this.lbl_dataquota.Text = "Data da Quota";
             this.lbl_dataquota.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(145, 423);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 23);
+            this.label2.TabIndex = 330;
+            this.label2.Text = "€";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Visible = false;
+            // 
+            // dtp_quota
+            // 
+            this.dtp_quota.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_quota.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_quota.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.dtp_quota.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_quota.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.dtp_quota.CustomFormat = "MM/yyyy";
+            this.dtp_quota.Enabled = false;
+            this.dtp_quota.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_quota.Location = new System.Drawing.Point(285, 424);
+            this.dtp_quota.Name = "dtp_quota";
+            this.dtp_quota.ShowUpDown = true;
+            this.dtp_quota.Size = new System.Drawing.Size(191, 20);
+            this.dtp_quota.TabIndex = 331;
+            this.dtp_quota.Visible = false;
+            // 
             // frm_quotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.dtp_quota);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_dataquota);
-            this.Controls.Add(this.cbo_quota);
             this.Controls.Add(this.lbl_idsocio);
             this.Controls.Add(this.lbl_datapagamento);
             this.Controls.Add(this.lbl_datapag);
@@ -545,7 +564,8 @@
         private System.Windows.Forms.Label lbl_datapagamento;
         private System.Windows.Forms.Label lbl_datapag;
         private System.Windows.Forms.Label lbl_idsocio;
-        private System.Windows.Forms.ComboBox cbo_quota;
         private System.Windows.Forms.Label lbl_dataquota;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtp_quota;
     }
 }

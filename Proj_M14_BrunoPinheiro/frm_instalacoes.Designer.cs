@@ -42,31 +42,37 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_atualizar = new System.Windows.Forms.Button();
-            this.btn_adicionar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbo_estado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btn_desassociar = new System.Windows.Forms.Button();
-            this.btn_associar = new System.Windows.Forms.Button();
             this.cbo_modalidade = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cbo_instalacao = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_detalheinstalacao = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_desassociar = new System.Windows.Forms.Button();
+            this.btn_associar = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_atualizar = new System.Windows.Forms.Button();
+            this.btn_adicionar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.nud_preco = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_instalacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheinstalacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheinstalacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preco)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_idinstalacao
@@ -76,7 +82,7 @@
             this.txt_idinstalacao.Enabled = false;
             this.txt_idinstalacao.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_idinstalacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_idinstalacao.Location = new System.Drawing.Point(385, 120);
+            this.txt_idinstalacao.Location = new System.Drawing.Point(268, 118);
             this.txt_idinstalacao.Multiline = true;
             this.txt_idinstalacao.Name = "txt_idinstalacao";
             this.txt_idinstalacao.Size = new System.Drawing.Size(38, 27);
@@ -166,48 +172,6 @@
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 261;
             // 
-            // btn_atualizar
-            // 
-            this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_atualizar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
-            this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_atualizar.Location = new System.Drawing.Point(273, 103);
-            this.btn_atualizar.Name = "btn_atualizar";
-            this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
-            this.btn_atualizar.TabIndex = 277;
-            this.btn_atualizar.Text = "Atualizar";
-            this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_atualizar.UseVisualStyleBackColor = true;
-            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
-            // 
-            // btn_adicionar
-            // 
-            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_adicionar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
-            this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(178, 103);
-            this.btn_adicionar.Name = "btn_adicionar";
-            this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
-            this.btn_adicionar.TabIndex = 276;
-            this.btn_adicionar.Text = "Adicionar";
-            this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_adicionar.UseVisualStyleBackColor = true;
-            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
-            this.pictureBox2.Location = new System.Drawing.Point(22, 42);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 260;
-            this.pictureBox2.TabStop = false;
-            // 
             // cbo_estado
             // 
             this.cbo_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
@@ -218,7 +182,7 @@
             this.cbo_estado.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.cbo_estado.Location = new System.Drawing.Point(332, 52);
+            this.cbo_estado.Location = new System.Drawing.Point(65, 122);
             this.cbo_estado.Name = "cbo_estado";
             this.cbo_estado.Size = new System.Drawing.Size(193, 23);
             this.cbo_estado.TabIndex = 288;
@@ -228,7 +192,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.label2.Location = new System.Drawing.Point(328, 31);
+            this.label2.Location = new System.Drawing.Point(61, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 287;
@@ -237,52 +201,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.panel2.Location = new System.Drawing.Point(289, 84);
+            this.panel2.Location = new System.Drawing.Point(22, 154);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 286;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.atividades;
-            this.pictureBox3.Location = new System.Drawing.Point(289, 42);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 285;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btn_desassociar
-            // 
-            this.btn_desassociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_desassociar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_desassociar.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_desassociar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.cancel;
-            this.btn_desassociar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_desassociar.Location = new System.Drawing.Point(704, 165);
-            this.btn_desassociar.Name = "btn_desassociar";
-            this.btn_desassociar.Size = new System.Drawing.Size(114, 63);
-            this.btn_desassociar.TabIndex = 300;
-            this.btn_desassociar.Text = "Desassociar";
-            this.btn_desassociar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_desassociar.UseVisualStyleBackColor = true;
-            this.btn_desassociar.Click += new System.EventHandler(this.btn_desassociar_Click);
-            // 
-            // btn_associar
-            // 
-            this.btn_associar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_associar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_associar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_associar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
-            this.btn_associar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_associar.Location = new System.Drawing.Point(582, 165);
-            this.btn_associar.Name = "btn_associar";
-            this.btn_associar.Size = new System.Drawing.Size(114, 63);
-            this.btn_associar.TabIndex = 299;
-            this.btn_associar.Text = "Associar";
-            this.btn_associar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_associar.UseVisualStyleBackColor = true;
-            this.btn_associar.Click += new System.EventHandler(this.btn_associar_Click);
             // 
             // cbo_modalidade
             // 
@@ -315,16 +237,6 @@
             this.panel7.Size = new System.Drawing.Size(236, 1);
             this.panel7.TabIndex = 296;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.jogos_de_desporto;
-            this.pictureBox6.Location = new System.Drawing.Point(582, 102);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 295;
-            this.pictureBox6.TabStop = false;
-            // 
             // cbo_instalacao
             // 
             this.cbo_instalacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
@@ -355,16 +267,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(236, 1);
             this.panel6.TabIndex = 292;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
-            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 291;
-            this.pictureBox1.TabStop = false;
             // 
             // dgv_detalheinstalacao
             // 
@@ -422,12 +324,160 @@
             this.panel5.Size = new System.Drawing.Size(1, 430);
             this.panel5.TabIndex = 289;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label4.Location = new System.Drawing.Point(330, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.TabIndex = 304;
+            this.label4.Text = "Preço/Hora";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel3.Location = new System.Drawing.Point(291, 84);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(236, 1);
+            this.panel3.TabIndex = 302;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.euro;
+            this.pictureBox4.Location = new System.Drawing.Point(291, 42);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 301;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btn_desassociar
+            // 
+            this.btn_desassociar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_desassociar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_desassociar.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_desassociar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.cancel;
+            this.btn_desassociar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_desassociar.Location = new System.Drawing.Point(704, 165);
+            this.btn_desassociar.Name = "btn_desassociar";
+            this.btn_desassociar.Size = new System.Drawing.Size(114, 63);
+            this.btn_desassociar.TabIndex = 300;
+            this.btn_desassociar.Text = "Desassociar";
+            this.btn_desassociar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_desassociar.UseVisualStyleBackColor = true;
+            this.btn_desassociar.Click += new System.EventHandler(this.btn_desassociar_Click);
+            // 
+            // btn_associar
+            // 
+            this.btn_associar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_associar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_associar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_associar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
+            this.btn_associar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_associar.Location = new System.Drawing.Point(582, 165);
+            this.btn_associar.Name = "btn_associar";
+            this.btn_associar.Size = new System.Drawing.Size(114, 63);
+            this.btn_associar.TabIndex = 299;
+            this.btn_associar.Text = "Associar";
+            this.btn_associar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_associar.UseVisualStyleBackColor = true;
+            this.btn_associar.Click += new System.EventHandler(this.btn_associar_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.jogos_de_desporto;
+            this.pictureBox6.Location = new System.Drawing.Point(582, 102);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 295;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
+            this.pictureBox1.Location = new System.Drawing.Point(582, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 291;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.atividades;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 112);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 285;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btn_atualizar
+            // 
+            this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atualizar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_atualizar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.refresh;
+            this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_atualizar.Location = new System.Drawing.Point(407, 102);
+            this.btn_atualizar.Name = "btn_atualizar";
+            this.btn_atualizar.Size = new System.Drawing.Size(89, 63);
+            this.btn_atualizar.TabIndex = 277;
+            this.btn_atualizar.Text = "Atualizar";
+            this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
+            // 
+            // btn_adicionar
+            // 
+            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_adicionar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_adicionar.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.add;
+            this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_adicionar.Location = new System.Drawing.Point(312, 102);
+            this.btn_adicionar.Name = "btn_adicionar";
+            this.btn_adicionar.Size = new System.Drawing.Size(89, 63);
+            this.btn_adicionar.TabIndex = 276;
+            this.btn_adicionar.Text = "Adicionar";
+            this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_adicionar.UseVisualStyleBackColor = true;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.campo_de_futebol;
+            this.pictureBox2.Location = new System.Drawing.Point(22, 42);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 260;
+            this.pictureBox2.TabStop = false;
+            // 
+            // nud_preco
+            // 
+            this.nud_preco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.nud_preco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_preco.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nud_preco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.nud_preco.Location = new System.Drawing.Point(333, 50);
+            this.nud_preco.Name = "nud_preco";
+            this.nud_preco.Size = new System.Drawing.Size(191, 25);
+            this.nud_preco.TabIndex = 305;
+            // 
             // frm_instalacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.nud_preco);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btn_desassociar);
             this.Controls.Add(this.btn_associar);
             this.Controls.Add(this.cbo_modalidade);
@@ -460,11 +510,13 @@
             this.Text = "Blue Lock - Instalações";
             this.Load += new System.EventHandler(this.frm_instalacoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_instalacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheinstalacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalheinstalacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,5 +547,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_detalheinstalacao;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.NumericUpDown nud_preco;
     }
 }
