@@ -16,7 +16,7 @@ namespace Proj_M14_BrunoPinheiro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_administracao());
+            Application.Run(new frm_menu());
         }
     }
 }

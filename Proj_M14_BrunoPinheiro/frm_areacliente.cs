@@ -45,7 +45,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void frm_areacliente_Load(object sender, EventArgs e)
         {
-
+            lbl_nome.Text = user.nome_user;
         }
 
         private void AtualizarLabel()

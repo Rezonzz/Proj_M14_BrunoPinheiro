@@ -239,10 +239,23 @@ namespace Proj_M14_BrunoPinheiro
 
                         if (tipoLogin == "Cliente")
                         {
-                            MessageBox.Show("Login feito com Sucesso!", "Login");
-                            frm_areacliente frm_areacliente = new frm_areacliente();
-                            frm_areacliente.Show();
-                            this.Close();
+                            MySqlCommand buscarCliente = new MySqlCommand("SELECT nomeCliente FROM socios WHERE email = @email",
+        con);
+                            buscarCliente.Parameters.AddWithValue("@email", txt_email.Text);
+                            string nomeCliente = buscarCliente.ExecuteScalar() as string;
+
+                            if (nomeCliente != null)
+                            {
+                                user.nome_user = nomeCliente;
+                                MessageBox.Show("Login feito com Sucesso!", "Login");
+                                frm_areacliente frm_areacliente = new frm_areacliente();
+                                frm_areacliente.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cliente não encontrado!", "Login");
+                            }
                         }
                         else if (tipoLogin == "Administrador")
                         {

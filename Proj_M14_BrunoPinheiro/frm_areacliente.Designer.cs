@@ -46,10 +46,11 @@
             this.lbl_horas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
+            this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.tmr_data = new System.Windows.Forms.Timer(this.components);
+            this.lbl_nome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
@@ -65,7 +66,7 @@
             this.pnl_fundo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_fundo.Location = new System.Drawing.Point(185, 51);
             this.pnl_fundo.Name = "pnl_fundo";
-            this.pnl_fundo.Size = new System.Drawing.Size(860, 465);
+            this.pnl_fundo.Size = new System.Drawing.Size(860, 437);
             this.pnl_fundo.TabIndex = 73;
             // 
             // panel1
@@ -186,8 +187,9 @@
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
-            this.pnl_top.Controls.Add(this.lbl_abertofechado);
             this.pnl_top.Controls.Add(this.lbl_horas);
+            this.pnl_top.Controls.Add(this.lbl_abertofechado);
+            this.pnl_top.Controls.Add(this.lbl_nome);
             this.pnl_top.Controls.Add(this.label1);
             this.pnl_top.Controls.Add(this.lbl_name);
             this.pnl_top.Controls.Add(this.pic_close);
@@ -242,6 +244,12 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
+            // tmr_data
+            // 
+            this.tmr_data.Enabled = true;
+            this.tmr_data.Interval = 1000;
+            this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
+            // 
             // pic_close
             // 
             this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -276,11 +284,14 @@
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
-            // tmr_data
+            // lbl_nome
             // 
-            this.tmr_data.Enabled = true;
-            this.tmr_data.Interval = 1000;
-            this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
+            this.lbl_nome.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nome.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_nome.Location = new System.Drawing.Point(647, 15);
+            this.lbl_nome.Name = "lbl_nome";
+            this.lbl_nome.Size = new System.Drawing.Size(312, 22);
+            this.lbl_nome.TabIndex = 106;
             // 
             // frm_areacliente
             // 
@@ -334,5 +345,6 @@
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.Timer tmr_data;
+        private System.Windows.Forms.Label lbl_nome;
     }
 }

@@ -621,6 +621,7 @@ namespace Proj_M14_BrunoPinheiro
                                             inscrever.Parameters.AddWithValue("@password", senhaHash);
                                             inscrever.ExecuteNonQuery();
 
+                                            user.nome_user = txt_nome.Text;
                                             MessageBox.Show("Inscrição feita com Sucesso!", "Inscrição");
                                             frm_areacliente frm_areacliente = new frm_areacliente();
                                             frm_areacliente.Show();
