@@ -148,10 +148,9 @@
             this.txt_nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nome.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_nome.Location = new System.Drawing.Point(214, 81);
-            this.txt_nome.Multiline = true;
+            this.txt_nome.Location = new System.Drawing.Point(214, 84);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(191, 27);
+            this.txt_nome.Size = new System.Drawing.Size(191, 22);
             this.txt_nome.TabIndex = 196;
             this.txt_nome.Text = "Nome";
             this.txt_nome.Click += new System.EventHandler(this.txt_nome_Click);

@@ -123,6 +123,16 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b862fd9ad083a3e46c273b7a147d60cf {
+            get {
+                object obj = ResourceManager.GetObject("b862fd9ad083a3e46c273b7a147d60cf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap badminton {
             get {
                 object obj = ResourceManager.GetObject("badminton", resourceCulture);
@@ -306,6 +316,16 @@ namespace Proj_M14_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap gymnastics_balance_beam {
             get {
                 object obj = ResourceManager.GetObject("gymnastics-balance-beam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap handball {
+            get {
+                object obj = ResourceManager.GetObject("handball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

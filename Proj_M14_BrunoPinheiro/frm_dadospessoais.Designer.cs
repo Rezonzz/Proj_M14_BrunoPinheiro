@@ -32,28 +32,34 @@
             this.lbl_nif = new System.Windows.Forms.Label();
             this.txt_nif = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.txt_telefone = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbl_morada = new System.Windows.Forms.Label();
             this.txt_morada = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbl_email = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.pnl_1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
+            this.cbo_estado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_alterar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_nif
@@ -66,7 +72,6 @@
             this.lbl_nif.Size = new System.Drawing.Size(31, 17);
             this.lbl_nif.TabIndex = 144;
             this.lbl_nif.Text = "NIF";
-            this.lbl_nif.Visible = false;
             // 
             // txt_nif
             // 
@@ -74,12 +79,10 @@
             this.txt_nif.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nif.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_nif.Location = new System.Drawing.Point(350, 193);
-            this.txt_nif.Multiline = true;
+            this.txt_nif.Location = new System.Drawing.Point(350, 196);
             this.txt_nif.Name = "txt_nif";
-            this.txt_nif.Size = new System.Drawing.Size(191, 27);
+            this.txt_nif.Size = new System.Drawing.Size(191, 22);
             this.txt_nif.TabIndex = 143;
-            this.txt_nif.Text = "NIF";
             // 
             // panel4
             // 
@@ -88,16 +91,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
             this.panel4.TabIndex = 142;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.id_card;
-            this.pictureBox5.Location = new System.Drawing.Point(307, 188);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 141;
-            this.pictureBox5.TabStop = false;
             // 
             // lbl_telefone
             // 
@@ -109,7 +102,6 @@
             this.lbl_telefone.Size = new System.Drawing.Size(72, 17);
             this.lbl_telefone.TabIndex = 140;
             this.lbl_telefone.Text = "Telefone";
-            this.lbl_telefone.Visible = false;
             // 
             // txt_telefone
             // 
@@ -117,12 +109,10 @@
             this.txt_telefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefone.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_telefone.Location = new System.Drawing.Point(86, 193);
-            this.txt_telefone.Multiline = true;
+            this.txt_telefone.Location = new System.Drawing.Point(86, 197);
             this.txt_telefone.Name = "txt_telefone";
-            this.txt_telefone.Size = new System.Drawing.Size(191, 27);
+            this.txt_telefone.Size = new System.Drawing.Size(191, 22);
             this.txt_telefone.TabIndex = 139;
-            this.txt_telefone.Text = "Telefone";
             // 
             // panel3
             // 
@@ -131,16 +121,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 138;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.telephone;
-            this.pictureBox4.Location = new System.Drawing.Point(43, 188);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 137;
-            this.pictureBox4.TabStop = false;
             // 
             // lbl_morada
             // 
@@ -152,7 +132,6 @@
             this.lbl_morada.Size = new System.Drawing.Size(63, 17);
             this.lbl_morada.TabIndex = 136;
             this.lbl_morada.Text = "Morada";
-            this.lbl_morada.Visible = false;
             // 
             // txt_morada
             // 
@@ -160,12 +139,10 @@
             this.txt_morada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_morada.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_morada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_morada.Location = new System.Drawing.Point(624, 124);
-            this.txt_morada.Multiline = true;
+            this.txt_morada.Location = new System.Drawing.Point(624, 127);
             this.txt_morada.Name = "txt_morada";
-            this.txt_morada.Size = new System.Drawing.Size(191, 27);
+            this.txt_morada.Size = new System.Drawing.Size(191, 22);
             this.txt_morada.TabIndex = 135;
-            this.txt_morada.Text = "Morada";
             // 
             // panel2
             // 
@@ -174,16 +151,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 134;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.location1;
-            this.pictureBox3.Location = new System.Drawing.Point(581, 119);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 133;
-            this.pictureBox3.TabStop = false;
             // 
             // lbl_nome
             // 
@@ -195,7 +162,6 @@
             this.lbl_nome.Size = new System.Drawing.Size(51, 17);
             this.lbl_nome.TabIndex = 132;
             this.lbl_nome.Text = "Nome";
-            this.lbl_nome.Visible = false;
             // 
             // txt_nome
             // 
@@ -203,12 +169,10 @@
             this.txt_nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nome.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_nome.Location = new System.Drawing.Point(85, 124);
-            this.txt_nome.Multiline = true;
+            this.txt_nome.Location = new System.Drawing.Point(85, 127);
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(191, 27);
+            this.txt_nome.Size = new System.Drawing.Size(191, 22);
             this.txt_nome.TabIndex = 131;
-            this.txt_nome.Text = "Nome";
             // 
             // panel1
             // 
@@ -217,16 +181,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 130;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(42, 119);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 129;
-            this.pictureBox2.TabStop = false;
             // 
             // lbl_email
             // 
@@ -238,7 +192,6 @@
             this.lbl_email.Size = new System.Drawing.Size(47, 17);
             this.lbl_email.TabIndex = 127;
             this.lbl_email.Text = "Email";
-            this.lbl_email.Visible = false;
             // 
             // txt_email
             // 
@@ -246,12 +199,10 @@
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_email.Location = new System.Drawing.Point(349, 124);
-            this.txt_email.Multiline = true;
+            this.txt_email.Location = new System.Drawing.Point(349, 126);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(213, 27);
+            this.txt_email.Size = new System.Drawing.Size(194, 22);
             this.txt_email.TabIndex = 123;
-            this.txt_email.Text = "Email";
             // 
             // pnl_1
             // 
@@ -260,6 +211,46 @@
             this.pnl_1.Name = "pnl_1";
             this.pnl_1.Size = new System.Drawing.Size(236, 1);
             this.pnl_1.TabIndex = 121;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.id_card;
+            this.pictureBox5.Location = new System.Drawing.Point(307, 188);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 141;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.telephone;
+            this.pictureBox4.Location = new System.Drawing.Point(43, 188);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 137;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.location1;
+            this.pictureBox3.Location = new System.Drawing.Point(581, 119);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 133;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(42, 119);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 129;
+            this.pictureBox2.TabStop = false;
             // 
             // pic_username
             // 
@@ -271,12 +262,75 @@
             this.pic_username.TabIndex = 119;
             this.pic_username.TabStop = false;
             // 
+            // cbo_estado
+            // 
+            this.cbo_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_estado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.cbo_estado.FormattingEnabled = true;
+            this.cbo_estado.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.cbo_estado.Location = new System.Drawing.Point(624, 199);
+            this.cbo_estado.Name = "cbo_estado";
+            this.cbo_estado.Size = new System.Drawing.Size(193, 23);
+            this.cbo_estado.TabIndex = 158;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.label2.Location = new System.Drawing.Point(620, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.TabIndex = 157;
+            this.label2.Text = "Estado";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.panel6.Location = new System.Drawing.Point(581, 231);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 1);
+            this.panel6.TabIndex = 156;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.atividades;
+            this.pictureBox1.Location = new System.Drawing.Point(581, 189);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 155;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_alterar
+            // 
+            this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_alterar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_alterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_alterar.Location = new System.Drawing.Point(43, 256);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(774, 37);
+            this.btn_alterar.TabIndex = 315;
+            this.btn_alterar.Text = "Alterar Dados Pessoais";
+            this.btn_alterar.UseVisualStyleBackColor = true;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
+            // 
             // frm_dadospessoais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.btn_alterar);
+            this.Controls.Add(this.cbo_estado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_nif);
             this.Controls.Add(this.txt_nif);
             this.Controls.Add(this.panel4);
@@ -309,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,5 +391,10 @@
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Panel pnl_1;
         private System.Windows.Forms.PictureBox pic_username;
+        private System.Windows.Forms.ComboBox cbo_estado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_alterar;
     }
 }

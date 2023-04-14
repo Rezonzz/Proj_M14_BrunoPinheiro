@@ -35,9 +35,6 @@
             this.lbl_horas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pnl_selected8 = new System.Windows.Forms.Panel();
@@ -65,10 +62,18 @@
             this.btn_socios = new System.Windows.Forms.Button();
             this.pnl_fundo = new System.Windows.Forms.Panel();
             this.tmr_data = new System.Windows.Forms.Timer(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnl_selected9 = new System.Windows.Forms.Panel();
+            this.btn_contacorrente = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnl_selected10 = new System.Windows.Forms.Panel();
+            this.btn_socmod = new System.Windows.Forms.Button();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +83,12 @@
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
             this.pnl_socios.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -141,45 +152,14 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
-            // pic_close
-            // 
-            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(1015, 16);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(18, 18);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 99;
-            this.pic_close.TabStop = false;
-            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
-            this.pic_logo.Location = new System.Drawing.Point(12, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(32, 32);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 102;
-            this.pic_logo.TabStop = false;
-            // 
-            // pic_minimize
-            // 
-            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(980, 16);
-            this.pic_minimize.Name = "pic_minimize";
-            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
-            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_minimize.TabIndex = 100;
-            this.pic_minimize.TabStop = false;
-            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pnl_instalacoes);
@@ -197,7 +177,7 @@
             this.panel7.Controls.Add(this.pnl_selected8);
             this.panel7.Controls.Add(this.btn_reservas);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 700);
+            this.panel7.Location = new System.Drawing.Point(0, 600);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(168, 100);
             this.panel7.TabIndex = 10;
@@ -233,7 +213,7 @@
             this.panel3.Controls.Add(this.pnl_selected7);
             this.panel3.Controls.Add(this.btn_consultas);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 600);
+            this.panel3.Location = new System.Drawing.Point(0, 700);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(168, 100);
             this.panel3.TabIndex = 9;
@@ -292,9 +272,9 @@
             this.btn_quotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_quotas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_quotas.Location = new System.Drawing.Point(3, -1);
+            this.btn_quotas.Location = new System.Drawing.Point(3, 0);
             this.btn_quotas.Name = "btn_quotas";
-            this.btn_quotas.Size = new System.Drawing.Size(165, 101);
+            this.btn_quotas.Size = new System.Drawing.Size(165, 100);
             this.btn_quotas.TabIndex = 1;
             this.btn_quotas.Text = "Quotas";
             this.btn_quotas.UseVisualStyleBackColor = true;
@@ -492,6 +472,135 @@
             this.tmr_data.Interval = 1000;
             this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pnl_selected9);
+            this.panel4.Controls.Add(this.btn_contacorrente);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 800);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(168, 100);
+            this.panel4.TabIndex = 11;
+            // 
+            // pnl_selected9
+            // 
+            this.pnl_selected9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected9.Enabled = false;
+            this.pnl_selected9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected9.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected9.Name = "pnl_selected9";
+            this.pnl_selected9.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected9.TabIndex = 2;
+            this.pnl_selected9.Visible = false;
+            // 
+            // btn_contacorrente
+            // 
+            this.btn_contacorrente.FlatAppearance.BorderSize = 0;
+            this.btn_contacorrente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_contacorrente.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_contacorrente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_contacorrente.Location = new System.Drawing.Point(3, 0);
+            this.btn_contacorrente.Name = "btn_contacorrente";
+            this.btn_contacorrente.Size = new System.Drawing.Size(165, 100);
+            this.btn_contacorrente.TabIndex = 1;
+            this.btn_contacorrente.Text = "Conta Corrente";
+            this.btn_contacorrente.UseVisualStyleBackColor = true;
+            this.btn_contacorrente.Click += new System.EventHandler(this.btn_contacorrente_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btn_logout);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 1000);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(168, 100);
+            this.panel6.TabIndex = 12;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_logout.Location = new System.Drawing.Point(3, 0);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(165, 100);
+            this.btn_logout.TabIndex = 1;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // pic_close
+            // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_close.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(1015, 16);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(18, 18);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 99;
+            this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.logo;
+            this.pic_logo.Location = new System.Drawing.Point(12, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 102;
+            this.pic_logo.TabStop = false;
+            // 
+            // pic_minimize
+            // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_minimize.Image = global::Proj_M14_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.pic_minimize.Location = new System.Drawing.Point(980, 16);
+            this.pic_minimize.Name = "pic_minimize";
+            this.pic_minimize.Size = new System.Drawing.Size(18, 18);
+            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_minimize.TabIndex = 100;
+            this.pic_minimize.TabStop = false;
+            this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pnl_selected10);
+            this.panel8.Controls.Add(this.btn_socmod);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 900);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(168, 100);
+            this.panel8.TabIndex = 13;
+            // 
+            // pnl_selected10
+            // 
+            this.pnl_selected10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(81)))));
+            this.pnl_selected10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_selected10.Enabled = false;
+            this.pnl_selected10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.pnl_selected10.Location = new System.Drawing.Point(0, 0);
+            this.pnl_selected10.Name = "pnl_selected10";
+            this.pnl_selected10.Size = new System.Drawing.Size(10, 100);
+            this.pnl_selected10.TabIndex = 2;
+            this.pnl_selected10.Visible = false;
+            // 
+            // btn_socmod
+            // 
+            this.btn_socmod.FlatAppearance.BorderSize = 0;
+            this.btn_socmod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_socmod.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_socmod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_socmod.Location = new System.Drawing.Point(3, 0);
+            this.btn_socmod.Name = "btn_socmod";
+            this.btn_socmod.Size = new System.Drawing.Size(165, 100);
+            this.btn_socmod.TabIndex = 1;
+            this.btn_socmod.Text = "Sócio/Modalidade";
+            this.btn_socmod.UseVisualStyleBackColor = true;
+            this.btn_socmod.Click += new System.EventHandler(this.btn_socmod_Click);
+            // 
             // frm_administracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,9 +620,6 @@
             this.Load += new System.EventHandler(this.frm_administracao_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -523,6 +629,12 @@
             this.pnl_modalidades.ResumeLayout(false);
             this.pnl_treinadores.ResumeLayout(false);
             this.pnl_socios.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -564,5 +676,13 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnl_selected8;
         private System.Windows.Forms.Button btn_reservas;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnl_selected9;
+        private System.Windows.Forms.Button btn_contacorrente;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel pnl_selected10;
+        private System.Windows.Forms.Button btn_socmod;
     }
 }

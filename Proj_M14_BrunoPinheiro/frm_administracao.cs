@@ -38,9 +38,13 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja fazer logout?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frm_menu frm_menu = new frm_menu();
+                frm_menu.Show();
+            }
         }
 
         private Form currentChildForm;
@@ -80,6 +84,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_treinadores_Click(object sender, EventArgs e)
@@ -101,6 +109,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_modalidades_Click(object sender, EventArgs e)
@@ -122,6 +134,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -194,6 +210,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_instalacoes_Click(object sender, EventArgs e)
@@ -215,6 +235,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_quotas_Click(object sender, EventArgs e)
@@ -236,6 +260,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_consultas_Click(object sender, EventArgs e)
@@ -257,6 +285,10 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected8.Visible = false;
             pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
         }
 
         private void btn_reservas_Click(object sender, EventArgs e)
@@ -278,6 +310,71 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected7.Enabled = false;
             pnl_selected6.Visible = false;
             pnl_selected6.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
+        }
+
+        private void btn_contacorrente_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_contacorrente());
+            pnl_selected9.Visible = true;
+            pnl_selected9.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+            pnl_selected10.Visible = false;
+            pnl_selected10.Enabled = false;
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Tem certeza que deseja fazer logout?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frm_menu frm_menu = new frm_menu();
+                frm_menu.Show();
+            }
+        }
+
+        private void btn_socmod_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_socmod());
+            pnl_selected10.Visible = true;
+            pnl_selected10.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+            pnl_selected9.Visible = false;
+            pnl_selected9.Enabled = false;
         }
     }
 }

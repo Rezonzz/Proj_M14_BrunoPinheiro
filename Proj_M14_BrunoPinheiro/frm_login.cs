@@ -223,7 +223,7 @@ namespace Proj_M14_BrunoPinheiro
                 {
                     con.Open();
                     string senhaHash = GerarHashSenha(txt_password.Text);
-                    MySqlCommand login = new MySqlCommand("SELECT idLogin FROM login WHERE email = @email AND password = @senha", con);
+                    MySqlCommand login = new MySqlCommand("SELECT idLogin FROM login WHERE email = @email AND password = @senha; SELECT LAST_INSERT_ID();", con);
                     login.Parameters.AddWithValue("@email", txt_email.Text);
                     login.Parameters.AddWithValue("@senha", senhaHash);
 
@@ -246,6 +246,7 @@ namespace Proj_M14_BrunoPinheiro
 
                             if (nomeCliente != null)
                             {
+                                user.id_user = login.ExecuteScalar().ToString();
                                 user.nome_user = nomeCliente;
                                 MessageBox.Show("Login feito com Sucesso!", "Login");
                                 frm_areacliente frm_areacliente = new frm_areacliente();

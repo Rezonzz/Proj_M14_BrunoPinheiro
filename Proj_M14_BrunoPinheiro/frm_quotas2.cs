@@ -12,26 +12,21 @@ using System.Windows.Forms;
 
 namespace Proj_M14_BrunoPinheiro
 {
-    public partial class frm_quotas : Form
+    public partial class frm_quotas2 : Form
     {
-        public frm_quotas()
+        public frm_quotas2()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_ok_Click(object sender, EventArgs e)
+        private void frm_quotas2_Load(object sender, EventArgs e)
         {
             if (dgv_meses.Rows.Count > 0)
             {
                 dgv_meses.Rows.RemoveAt(0);
             }
-            int idSocio = Convert.ToInt32(cbo_socio.SelectedValue);
-            lbl_socio.Text = cbo_socio.Text;
+            string idSocio = user.id_user;
+            lbl_socio.Text = user.nome_user;
             MySqlConnection con = conn.GetConnection();
             try
             {
@@ -116,8 +111,8 @@ namespace Proj_M14_BrunoPinheiro
                     dgv_quotas.Columns["dataQuota"].HeaderText = "Data da Quota";
                     dgv_quotas.Columns["valorQuota"].HeaderText = "Valor da Quota";
                     dgv_quotas.Columns["dataPagamento"].HeaderText = "Data do Pagamento";
-                    lbl_idsocio.Text = cbo_socio.SelectedValue.ToString();
-                    lbl_socio.Text = cbo_socio.Text;
+                    lbl_idsocio.Text = user.id_user;
+                    lbl_socio.Text = user.nome_user;
 
                     lbl_soc.Visible = true;
                     lbl_socio.Visible = true;
@@ -148,36 +143,6 @@ namespace Proj_M14_BrunoPinheiro
             finally
             {
                 con.Close();
-            }
-        }
-
-        private void frm_quotas_Load(object sender, EventArgs e)
-        {
-            carregaComboboxSocios();
-            lbl_datapagamento.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            dgv_meses.TabStop = false;
-            dgv_quotas.TabStop = false;
-        }
-
-        public void carregaComboboxSocios()
-        {
-            MySqlConnection con = conn.GetConnection();
-            try
-            {
-                con.Open();
-
-                MySqlCommand carregarSocios = new MySqlCommand("select * from socios " + "order by nomeCliente", con);
-                MySqlDataReader dr = carregarSocios.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-                cbo_socio.DisplayMember = "nomeCliente";
-                cbo_socio.ValueMember = "idCliente";
-                cbo_socio.DataSource = dt;
-                con.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Erro: Não Carregou Sócios!", "Lista Sócios");
             }
         }
 
@@ -250,6 +215,17 @@ namespace Proj_M14_BrunoPinheiro
 
                 // Exibe mensagem de sucesso
                 MessageBox.Show("Quota paga com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lbl_soc.Visible = false;
+                lbl_socio.Visible = false;
+                lbl_vq.Visible = false;
+                lbl_quota.Visible = false;
+                lbl_datapag.Visible = false;
+                lbl_datapagamento.Visible = false;
+                btn_pagarquota.Visible = false;
+                btn_pagarquota.Enabled = false;
+                lbl_dataquota.Visible = false;
+                dtp_quota.Enabled = false;
+                dtp_quota.Visible = false;
             }
             catch (Exception ex)
             {
@@ -263,14 +239,14 @@ namespace Proj_M14_BrunoPinheiro
             }
         }
 
-        private void dgv_meses_SelectionChanged(object sender, EventArgs e)
-        {
-            dgv_meses.CurrentCell = null;
-        }
-
         private void dgv_quotas_SelectionChanged(object sender, EventArgs e)
         {
             dgv_quotas.CurrentCell = null;
+        }
+
+        private void dgv_meses_SelectionChanged(object sender, EventArgs e)
+        {
+            dgv_meses.CurrentCell = null;
         }
     }
 }

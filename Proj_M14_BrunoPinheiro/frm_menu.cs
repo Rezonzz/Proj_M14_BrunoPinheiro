@@ -137,7 +137,6 @@ namespace Proj_M14_BrunoPinheiro
         {
             frm_modalidades frm_modalidades = new frm_modalidades();
             frm_modalidades.Show();
-            this.Hide();
         }
 
         private void tmr_data_Tick(object sender, EventArgs e)

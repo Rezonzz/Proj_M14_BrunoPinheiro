@@ -64,6 +64,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -77,8 +79,6 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
             this.Close();
         }
 
@@ -89,7 +89,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void frm_modalidades_Load(object sender, EventArgs e)
         {
-            var modalidades = new[] { "Futebol", "Voleibol", "Basquetebol", "Tênis", "Badminton", "Natação", "Ginástica" };
+            var modalidades = new[] { "Futebol", "Voleibol", "Basquetebol", "Tênis", "Badminton", "Natação", "Ginástica", "Andebol" };
 
             using (var con = conn.GetConnection())
             {
@@ -202,6 +202,18 @@ namespace Proj_M14_BrunoPinheiro
                                                     pnl_ginastica.Enabled = false;
                                                 }
                                                 break;
+                                            case "Andebol":
+                                                if (estado.ToString() == "Ativo")
+                                                {
+                                                    pnl_andebol.Visible = true;
+                                                    pnl_andebol.Enabled = true;
+                                                }
+                                                else
+                                                {
+                                                    pnl_andebol.Visible = false;
+                                                    pnl_andebol.Enabled = false;
+                                                }
+                                                break;
                                         }
                                     }
                                 }
@@ -229,6 +241,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_volei_Click(object sender, EventArgs e)
@@ -248,6 +262,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_badminton_Click(object sender, EventArgs e)
@@ -267,6 +283,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_tenis_Click(object sender, EventArgs e)
@@ -286,6 +304,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_natacao_Click(object sender, EventArgs e)
@@ -305,6 +325,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected1.Enabled = false;
             pnl_selected7.Visible = false;
             pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_ginastica_Click(object sender, EventArgs e)
@@ -324,6 +346,8 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected6.Enabled = false;
             pnl_selected1.Visible = false;
             pnl_selected1.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
         }
 
         private void pic_futebol_MouseMove(object sender, MouseEventArgs e)
@@ -413,6 +437,39 @@ namespace Proj_M14_BrunoPinheiro
         private void pnl_futebol_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pic_andebol_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frm_andebol());
+            pnl_selected8.Visible = true;
+            pnl_selected8.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+        }
+
+        private void pic_andebol_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_andebol.BackColor = Color.FromArgb(1, 3, 29);
+            pic_andebol.BackColor = Color.FromArgb(1, 3, 29);
+        }
+
+        private void pic_andebol_MouseMove(object sender, MouseEventArgs e)
+        {
+            pnl_andebol.BackColor = Color.FromArgb(2, 6, 60);
+            pic_andebol.BackColor = Color.FromArgb(2, 6, 60);
         }
     }
 }

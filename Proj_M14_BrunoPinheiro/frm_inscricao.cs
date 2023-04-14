@@ -610,7 +610,7 @@ namespace Proj_M14_BrunoPinheiro
 
                                             int idLogin = Convert.ToInt32(login.ExecuteScalar());
 
-                                            MySqlCommand inscrever = new MySqlCommand("INSERT INTO socios(nomeCliente,email,morada,telefone, NIF, idLogin ,dataNascimento, password) VALUES (@nomeCliente,@email,@morada,@telefone, @nif, @idLogin,@dataNascimento, @password)", con);
+                                            MySqlCommand inscrever = new MySqlCommand("INSERT INTO socios(nomeCliente,email,morada,telefone, NIF, idLogin ,dataNascimento, password) VALUES (@nomeCliente,@email,@morada,@telefone, @nif, @idLogin,@dataNascimento, @password); SELECT LAST_INSERT_ID();", con);
                                             inscrever.Parameters.AddWithValue("@nomeCliente", txt_nome.Text);
                                             inscrever.Parameters.AddWithValue("@email", txt_email.Text);
                                             inscrever.Parameters.AddWithValue("@morada", txt_morada.Text);
@@ -621,6 +621,7 @@ namespace Proj_M14_BrunoPinheiro
                                             inscrever.Parameters.AddWithValue("@password", senhaHash);
                                             inscrever.ExecuteNonQuery();
 
+                                            user.id_user = inscrever.ExecuteScalar().ToString();
                                             user.nome_user = txt_nome.Text;
                                             MessageBox.Show("Inscrição feita com Sucesso!", "Inscrição");
                                             frm_areacliente frm_areacliente = new frm_areacliente();

@@ -132,10 +132,9 @@
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_email.Location = new System.Drawing.Point(96, 250);
-            this.txt_email.Multiline = true;
+            this.txt_email.Location = new System.Drawing.Point(96, 253);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(191, 27);
+            this.txt_email.Size = new System.Drawing.Size(191, 22);
             this.txt_email.TabIndex = 73;
             this.txt_email.Text = "Email";
             this.txt_email.Click += new System.EventHandler(this.txt_email_Click);

@@ -25,7 +25,7 @@ namespace Proj_M14_BrunoPinheiro
             {
                 con.Open();
 
-                MySqlCommand listarSocios = new MySqlCommand("select idCliente, nomeCliente, email, morada, telefone, NIF, dataNascimento, estado, observacoes from socios", con);
+                MySqlCommand listarSocios = new MySqlCommand("select idCliente, nomeCliente, email, morada, telefone, NIF, dataNascimento, estado from socios", con);
                 MySqlDataAdapter grelha = new MySqlDataAdapter(listarSocios);
                 DataTable dt = new DataTable();
                 grelha.Fill(dt);

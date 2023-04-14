@@ -37,20 +37,21 @@
             this.btn_modalidades = new System.Windows.Forms.Button();
             this.pnl_treinadores = new System.Windows.Forms.Panel();
             this.pnl_selected2 = new System.Windows.Forms.Panel();
-            this.btn_pagamentos = new System.Windows.Forms.Button();
+            this.btn_quotas = new System.Windows.Forms.Button();
             this.pnl_socios = new System.Windows.Forms.Panel();
             this.pnl_selected1 = new System.Windows.Forms.Panel();
             this.btn_dados = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.lbl_abertofechado = new System.Windows.Forms.Label();
             this.lbl_horas = new System.Windows.Forms.Label();
+            this.lbl_abertofechado = new System.Windows.Forms.Label();
+            this.lbl_nome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.lbl_nome = new System.Windows.Forms.Label();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
@@ -66,12 +67,13 @@
             this.pnl_fundo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_fundo.Location = new System.Drawing.Point(185, 51);
             this.pnl_fundo.Name = "pnl_fundo";
-            this.pnl_fundo.Size = new System.Drawing.Size(860, 437);
+            this.pnl_fundo.Size = new System.Drawing.Size(860, 465);
             this.pnl_fundo.TabIndex = 73;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.pnl_modalidades);
             this.panel1.Controls.Add(this.pnl_treinadores);
             this.panel1.Controls.Add(this.pnl_socios);
@@ -115,11 +117,12 @@
             this.btn_modalidades.TabIndex = 1;
             this.btn_modalidades.Text = "Modalidades";
             this.btn_modalidades.UseVisualStyleBackColor = true;
+            this.btn_modalidades.Click += new System.EventHandler(this.btn_modalidades_Click);
             // 
             // pnl_treinadores
             // 
             this.pnl_treinadores.Controls.Add(this.pnl_selected2);
-            this.pnl_treinadores.Controls.Add(this.btn_pagamentos);
+            this.pnl_treinadores.Controls.Add(this.btn_quotas);
             this.pnl_treinadores.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_treinadores.Location = new System.Drawing.Point(0, 100);
             this.pnl_treinadores.Name = "pnl_treinadores";
@@ -138,18 +141,19 @@
             this.pnl_selected2.TabIndex = 2;
             this.pnl_selected2.Visible = false;
             // 
-            // btn_pagamentos
+            // btn_quotas
             // 
-            this.btn_pagamentos.FlatAppearance.BorderSize = 0;
-            this.btn_pagamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pagamentos.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pagamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.btn_pagamentos.Location = new System.Drawing.Point(3, 2);
-            this.btn_pagamentos.Name = "btn_pagamentos";
-            this.btn_pagamentos.Size = new System.Drawing.Size(182, 98);
-            this.btn_pagamentos.TabIndex = 1;
-            this.btn_pagamentos.Text = "Pagamentos";
-            this.btn_pagamentos.UseVisualStyleBackColor = true;
+            this.btn_quotas.FlatAppearance.BorderSize = 0;
+            this.btn_quotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_quotas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_quotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_quotas.Location = new System.Drawing.Point(3, 2);
+            this.btn_quotas.Name = "btn_quotas";
+            this.btn_quotas.Size = new System.Drawing.Size(182, 98);
+            this.btn_quotas.TabIndex = 1;
+            this.btn_quotas.Text = "Quotas";
+            this.btn_quotas.UseVisualStyleBackColor = true;
+            this.btn_quotas.Click += new System.EventHandler(this.btn_quotas_Click);
             // 
             // pnl_socios
             // 
@@ -183,6 +187,7 @@
             this.btn_dados.TabIndex = 0;
             this.btn_dados.Text = "Dados Pessoais";
             this.btn_dados.UseVisualStyleBackColor = true;
+            this.btn_dados.Click += new System.EventHandler(this.btn_dados_Click);
             // 
             // pnl_top
             // 
@@ -202,6 +207,16 @@
             this.pnl_top.TabIndex = 71;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
             // 
+            // lbl_horas
+            // 
+            this.lbl_horas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_horas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_horas.Location = new System.Drawing.Point(822, 28);
+            this.lbl_horas.Name = "lbl_horas";
+            this.lbl_horas.Size = new System.Drawing.Size(139, 23);
+            this.lbl_horas.TabIndex = 104;
+            this.lbl_horas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbl_abertofechado
             // 
             this.lbl_abertofechado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,15 +227,14 @@
             this.lbl_abertofechado.TabIndex = 105;
             this.lbl_abertofechado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_horas
+            // lbl_nome
             // 
-            this.lbl_horas.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_horas.Location = new System.Drawing.Point(822, 28);
-            this.lbl_horas.Name = "lbl_horas";
-            this.lbl_horas.Size = new System.Drawing.Size(139, 23);
-            this.lbl_horas.TabIndex = 104;
-            this.lbl_horas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_nome.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nome.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lbl_nome.Location = new System.Drawing.Point(647, 15);
+            this.lbl_nome.Name = "lbl_nome";
+            this.lbl_nome.Size = new System.Drawing.Size(312, 22);
+            this.lbl_nome.TabIndex = 106;
             // 
             // label1
             // 
@@ -284,14 +298,20 @@
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
-            // lbl_nome
+            // btn_logout
             // 
-            this.lbl_nome.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_nome.Location = new System.Drawing.Point(647, 15);
-            this.lbl_nome.Name = "lbl_nome";
-            this.lbl_nome.Size = new System.Drawing.Size(312, 22);
-            this.lbl_nome.TabIndex = 106;
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_logout.Location = new System.Drawing.Point(0, 300);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(185, 96);
+            this.btn_logout.TabIndex = 3;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // frm_areacliente
             // 
@@ -332,7 +352,7 @@
         private System.Windows.Forms.Button btn_modalidades;
         private System.Windows.Forms.Panel pnl_treinadores;
         private System.Windows.Forms.Panel pnl_selected2;
-        private System.Windows.Forms.Button btn_pagamentos;
+        private System.Windows.Forms.Button btn_quotas;
         private System.Windows.Forms.Panel pnl_socios;
         private System.Windows.Forms.Panel pnl_selected1;
         private System.Windows.Forms.Button btn_dados;
@@ -346,5 +366,6 @@
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.Timer tmr_data;
         private System.Windows.Forms.Label lbl_nome;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

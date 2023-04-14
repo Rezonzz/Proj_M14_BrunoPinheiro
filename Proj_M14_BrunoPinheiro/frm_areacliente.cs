@@ -46,6 +46,13 @@ namespace Proj_M14_BrunoPinheiro
         private void frm_areacliente_Load(object sender, EventArgs e)
         {
             lbl_nome.Text = user.nome_user;
+            OpenChildForm(new frm_dadospessoais());
+            pnl_selected1.Visible = true;
+            pnl_selected1.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
         }
 
         private void AtualizarLabel()
@@ -71,9 +78,13 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja fazer logout?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frm_menu frm_menu = new frm_menu();
+                frm_menu.Show();
+            }
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)
@@ -88,6 +99,71 @@ namespace Proj_M14_BrunoPinheiro
         private void pnl_top_MouseDown(object sender, MouseEventArgs e)
         {
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private Form currentChildForm;
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnl_fundo.Controls.Add(childForm);
+            pnl_fundo.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btn_dados_Click(object sender, EventArgs e)
+        {
+            lbl_nome.Text = user.nome_user;
+            OpenChildForm(new frm_dadospessoais());
+            pnl_selected1.Visible = true;
+            pnl_selected1.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+        }
+
+        private void btn_quotas_Click(object sender, EventArgs e)
+        {
+            lbl_nome.Text = user.nome_user;
+            OpenChildForm(new frm_quotas2());
+            pnl_selected2.Visible = true;
+            pnl_selected2.Enabled = true;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+        }
+
+        private void btn_modalidades_Click(object sender, EventArgs e)
+        {
+            lbl_nome.Text = user.nome_user;
+            OpenChildForm(new frm_modalidades3());
+            pnl_selected3.Visible = true;
+            pnl_selected3.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected1.Visible = false;
+            pnl_selected1.Enabled = false;
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Tem certeza que deseja fazer logout?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                frm_menu frm_menu = new frm_menu();
+                frm_menu.Show();
+            }
         }
     }
 }
