@@ -142,6 +142,12 @@ namespace Proj_M14_BrunoPinheiro
             txt_email.MaxLength = 50;
             if (txt_email.Text != "" && txt_email.Text != "Email")
             {
+                if (txt_email.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_email.Text = new string(txt_email.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_email.SelectionStart = txt_email.Text.Length;
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
                 lbl_email.Visible = true;
@@ -153,6 +159,12 @@ namespace Proj_M14_BrunoPinheiro
             txt_password.MaxLength = 50;
             if (txt_password.Text != "" && txt_password.Text != "Password")
             {
+                if (txt_password.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_password.Text = new string(txt_password.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_password.SelectionStart = txt_password.Text.Length;
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
                 lbl_password.Visible = true;

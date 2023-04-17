@@ -20,8 +20,14 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_info_Click(object sender, EventArgs e)
         {
-            frm_modalidades frm_modalidades = new frm_modalidades();
-            frm_modalidades.Show();
+            if (Application.OpenForms["frm_modalidades"] as frm_modalidades == null)
+            {
+                new frm_modalidades().Show();
+            }
+            else
+            {
+                MessageBox.Show("Já existe um aberto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         public void carregaComboboxModalidades()

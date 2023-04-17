@@ -96,6 +96,7 @@
             // cbo_modalidade
             // 
             this.cbo_modalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_modalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_modalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -179,7 +180,7 @@
             this.dgv_detalhesocio.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_detalhesocio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_detalhesocio.Size = new System.Drawing.Size(260, 392);
-            this.dgv_detalhesocio.TabIndex = 317;            
+            this.dgv_detalhesocio.TabIndex = 317;
             // 
             // panel5
             // 

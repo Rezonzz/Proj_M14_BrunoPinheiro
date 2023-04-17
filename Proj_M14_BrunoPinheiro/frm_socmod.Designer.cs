@@ -92,6 +92,7 @@
             // cbo_socios
             // 
             this.cbo_socios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_socios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_socios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_socios.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_socios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));

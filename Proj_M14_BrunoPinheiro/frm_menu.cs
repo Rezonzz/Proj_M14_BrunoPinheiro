@@ -26,8 +26,14 @@ namespace Proj_M14_BrunoPinheiro
 
         private void lbl_historia_Click(object sender, EventArgs e)
         {
-            frm_historia frm_historia = new frm_historia();
-            frm_historia.Show();
+            if (Application.OpenForms["frm_historia"] as frm_historia == null)
+            {
+                new frm_historia().Show();
+            }
+            else
+            {
+                MessageBox.Show("Já existe um aberto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void pnl_top_MouseDown(object sender, MouseEventArgs e)
@@ -118,7 +124,11 @@ namespace Proj_M14_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair?", "Sair da Aplicação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)
@@ -134,9 +144,15 @@ namespace Proj_M14_BrunoPinheiro
         }
 
         private void lbl_modalidades_Click(object sender, EventArgs e)
-        {
-            frm_modalidades frm_modalidades = new frm_modalidades();
-            frm_modalidades.Show();
+        {            
+            if (Application.OpenForms["frm_modalidades"] as frm_modalidades == null)
+            {
+                new frm_modalidades().Show();
+            }
+            else
+            {
+                MessageBox.Show("Já existe um aberto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void tmr_data_Tick(object sender, EventArgs e)

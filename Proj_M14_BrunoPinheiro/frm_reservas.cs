@@ -90,7 +90,7 @@ namespace Proj_M14_BrunoPinheiro
 
         private void btn_efetuar_Click(object sender, EventArgs e)
         {
-            if (cbo_socio.SelectedIndex < 0 || cbo_instalacao.SelectedIndex < 0 || dtp_reserva.Value <= DateTime.Today || dtp_inicio.Value >= dtp_fim.Value)
+            if (cbo_socio.SelectedIndex < 0 || cbo_instalacao.SelectedIndex < 0 || dtp_reserva.Value <= DateTime.Today || dtp_inicio.Value == dtp_fim.Value)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios e verifique as datas e horários!", "Efetuar Reserva");
                 return;
@@ -118,7 +118,15 @@ namespace Proj_M14_BrunoPinheiro
                 else
                 {
                     btn_efetuar.Enabled = false;
+                    btn_efetuar.Visible = false;
+                    btn_cancelar.Enabled = true;
+                    btn_cancelar.Visible = true;
                     btn_concluir.Enabled = true;
+                    cbo_instalacao.Enabled = false;
+                    cbo_socio.Enabled = false;
+                    dtp_reserva.Enabled = false;
+                    dtp_inicio.Enabled = false;
+                    dtp_fim.Enabled = false;
                 }
                 dr.Close();
 
@@ -132,7 +140,18 @@ namespace Proj_M14_BrunoPinheiro
             }
 
             // Cálculo do valor da reserva
-            TimeSpan totalHoras = dtp_fim.Value.Subtract(dtp_inicio.Value);
+
+            // Cálculo do valor da reserva
+
+            TimeSpan totalHoras;
+            if (dtp_inicio.Value <= dtp_fim.Value)
+            {
+                totalHoras = dtp_fim.Value.Subtract(dtp_inicio.Value);
+            }
+            else
+            {
+                totalHoras = dtp_fim.Value.AddDays(1).Subtract(dtp_inicio.Value);
+            }
             con.Open();
             decimal valorHora = 0;
             MySqlCommand cmd = new MySqlCommand("SELECT precoHora FROM Instalacao WHERE idInstalacao = @id", con);
@@ -178,10 +197,18 @@ namespace Proj_M14_BrunoPinheiro
                         con.Close();
 
                         ListarOcupacao();
-                        dgv_detalhereserva.Rows.Clear();
                         MessageBox.Show("Reserva concluída com sucesso!", "Concluir Reserva");
                         btn_efetuar.Enabled = true;
+                        btn_efetuar.Visible = true;
                         btn_concluir.Enabled = false;
+                        dgv_detalhereserva.Rows.Clear();
+                        btn_cancelar.Enabled = false;
+                        btn_cancelar.Visible = false;
+                        cbo_instalacao.Enabled = true;
+                        cbo_socio.Enabled = true;
+                        dtp_reserva.Enabled = true;
+                        dtp_inicio.Enabled = true;
+                        dtp_fim.Enabled = true;
                     }
                     catch (Exception ex)
                     {
@@ -191,14 +218,37 @@ namespace Proj_M14_BrunoPinheiro
                 else
                 {
                     btn_efetuar.Enabled = true;
+                    btn_efetuar.Visible = true;
                     btn_concluir.Enabled = false;
-                    dgv_detalhereserva.DataSource = null;
+                    dgv_detalhereserva.Rows.Clear();
+                    btn_cancelar.Enabled = false;
+                    btn_cancelar.Visible = false;
+                    cbo_instalacao.Enabled = true;
+                    cbo_socio.Enabled = true;
+                    dtp_reserva.Enabled = true;
+                    dtp_inicio.Enabled = true;
+                    dtp_fim.Enabled = true;
                 }
             }
             else
             {
                 MessageBox.Show("Não há detalhes de reserva para concluir!", "Concluir Reserva");
             }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            btn_efetuar.Enabled = true;
+            btn_efetuar.Visible = true;
+            btn_concluir.Enabled = false;
+            dgv_detalhereserva.Rows.Clear();
+            btn_cancelar.Enabled = false;
+            btn_cancelar.Visible = false;
+            cbo_instalacao.Enabled = true;
+            cbo_socio.Enabled = true;
+            dtp_reserva.Enabled = true;
+            dtp_inicio.Enabled = true;
+            dtp_fim.Enabled = true;
         }
     }
 }

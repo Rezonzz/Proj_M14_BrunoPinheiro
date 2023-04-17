@@ -335,7 +335,7 @@
             this.txt_morada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_morada.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_morada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_morada.Location = new System.Drawing.Point(95, 350);
+            this.txt_morada.Location = new System.Drawing.Point(95, 349);
             this.txt_morada.Name = "txt_morada";
             this.txt_morada.Size = new System.Drawing.Size(191, 22);
             this.txt_morada.TabIndex = 104;
@@ -370,10 +370,9 @@
             this.txt_telefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefone.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
-            this.txt_telefone.Location = new System.Drawing.Point(359, 346);
-            this.txt_telefone.Multiline = true;
+            this.txt_telefone.Location = new System.Drawing.Point(359, 349);
             this.txt_telefone.Name = "txt_telefone";
-            this.txt_telefone.Size = new System.Drawing.Size(191, 27);
+            this.txt_telefone.Size = new System.Drawing.Size(191, 22);
             this.txt_telefone.TabIndex = 108;
             this.txt_telefone.Text = "Telefone";
             this.txt_telefone.Click += new System.EventHandler(this.txt_telefone_Click);

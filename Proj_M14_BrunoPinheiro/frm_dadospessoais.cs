@@ -90,5 +90,58 @@ namespace Proj_M14_BrunoPinheiro
                 MessageBox.Show("Erro ao atualizar dados do cliente: " + ex.Message);
             }
         }
+
+        private void txt_nome_TextChanged(object sender, EventArgs e)
+        {
+            txt_nome.MaxLength = 50;
+            if (txt_nome.Text.Any(char.IsDigit))
+            {
+                txt_nome.Text = new string(txt_nome.Text.Where(c => !char.IsDigit(c)).ToArray());
+
+                txt_nome.SelectionStart = txt_nome.Text.Length;
+            }
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            txt_email.MaxLength = 50;
+                if (txt_email.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_email.Text = new string(txt_email.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_email.SelectionStart = txt_email.Text.Length;
+            }
+
+        private void txt_telefone_TextChanged(object sender, EventArgs e)
+        {
+            txt_telefone.MaxLength = 9;
+            if (txt_telefone.Text.Any(char.IsLetter))
+            {
+                txt_telefone.Text = new string(txt_telefone.Text.Where(c => !char.IsLetter(c)).ToArray());
+            }
+            if (txt_telefone.Text.Any(char.IsWhiteSpace))
+            {
+                txt_telefone.Text = new string(txt_telefone.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+            }
+
+            txt_telefone.SelectionStart = txt_telefone.Text.Length;
+
+        }
+
+        private void txt_nif_TextChanged(object sender, EventArgs e)
+        {
+            txt_nif.MaxLength = 9;
+            if (txt_nif.Text.Any(char.IsLetter))
+            {
+                txt_nif.Text = new string(txt_nif.Text.Where(c => !char.IsLetter(c)).ToArray());
+            }
+            if (txt_nif.Text.Any(char.IsWhiteSpace))
+            {
+                txt_nif.Text = new string(txt_nif.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+            }
+
+            txt_nif.SelectionStart = txt_nif.Text.Length;
+        }
     }
 }

@@ -163,6 +163,12 @@ namespace Proj_M14_BrunoPinheiro
             txt_nome.MaxLength = 50;
             if (txt_nome.Text != "" && txt_nome.Text != "Nome")
             {
+                if (txt_nome.Text.Any(char.IsDigit))
+                {
+                    txt_nome.Text = new string(txt_nome.Text.Where(c => !char.IsDigit(c)).ToArray());
+
+                    txt_nome.SelectionStart = txt_nome.Text.Length;
+                }
                 lbl_nome.Visible = true;
             }
         }
@@ -181,6 +187,16 @@ namespace Proj_M14_BrunoPinheiro
             txt_nif.MaxLength = 9;
             if (txt_nif.Text != "" && txt_nif.Text != "NIF")
             {
+                if (txt_nif.Text.Any(char.IsLetter))
+                {
+                    txt_nif.Text = new string(txt_nif.Text.Where(c => !char.IsLetter(c)).ToArray());
+                }
+                if (txt_nif.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_nif.Text = new string(txt_nif.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_nif.SelectionStart = txt_nif.Text.Length;
                 lbl_nif.Visible = true;
             }
         }
@@ -190,6 +206,12 @@ namespace Proj_M14_BrunoPinheiro
             txt_email.MaxLength = 50;
             if (txt_email.Text != "" && txt_email.Text != "Email")
             {
+                if (txt_email.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_email.Text = new string(txt_email.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_email.SelectionStart = txt_email.Text.Length;
                 lbl_email.Visible = true;
             }
         }
@@ -199,6 +221,16 @@ namespace Proj_M14_BrunoPinheiro
             txt_telefone.MaxLength = 9;
             if (txt_telefone.Text != "" && txt_telefone.Text != "Telefone")
             {
+                if (txt_telefone.Text.Any(char.IsLetter))
+                {
+                    txt_telefone.Text = new string(txt_telefone.Text.Where(c => !char.IsLetter(c)).ToArray());
+                }
+                if (txt_telefone.Text.Any(char.IsWhiteSpace))
+                {
+                    txt_telefone.Text = new string(txt_telefone.Text.Where(c => !char.IsWhiteSpace(c)).ToArray());
+                }
+
+                txt_telefone.SelectionStart = txt_telefone.Text.Length;
                 lbl_telefone.Visible = true;
             }
         }

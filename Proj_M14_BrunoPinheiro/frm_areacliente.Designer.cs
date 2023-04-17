@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_areacliente));
             this.pnl_fundo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.pnl_modalidades = new System.Windows.Forms.Panel();
             this.pnl_selected3 = new System.Windows.Forms.Panel();
             this.btn_modalidades = new System.Windows.Forms.Button();
@@ -47,11 +48,10 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_logout = new System.Windows.Forms.Button();
+            this.tmr_data = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.pnl_modalidades.SuspendLayout();
             this.pnl_treinadores.SuspendLayout();
@@ -82,6 +82,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(185, 465);
             this.panel1.TabIndex = 72;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_logout.Location = new System.Drawing.Point(0, 300);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(185, 96);
+            this.btn_logout.TabIndex = 3;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // pnl_modalidades
             // 
@@ -258,12 +273,6 @@
             this.lbl_name.TabIndex = 101;
             this.lbl_name.Text = "BLUE LOCK";
             // 
-            // tmr_data
-            // 
-            this.tmr_data.Enabled = true;
-            this.tmr_data.Interval = 1000;
-            this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
-            // 
             // pic_close
             // 
             this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -298,20 +307,11 @@
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
             // 
-            // btn_logout
+            // tmr_data
             // 
-            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_logout.Location = new System.Drawing.Point(0, 300);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(185, 96);
-            this.btn_logout.TabIndex = 3;
-            this.btn_logout.Text = "Log Out";
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            this.tmr_data.Enabled = true;
+            this.tmr_data.Interval = 1000;
+            this.tmr_data.Tick += new System.EventHandler(this.tmr_data_Tick);
             // 
             // frm_areacliente
             // 

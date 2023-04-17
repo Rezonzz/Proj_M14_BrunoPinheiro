@@ -36,13 +36,6 @@ namespace Proj_M14_BrunoPinheiro
             frm_menu.Show();
         }
 
-        private void pic_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
-        }
-
         private void frm_areacliente_Load(object sender, EventArgs e)
         {
             lbl_nome.Text = user.nome_user;
@@ -82,8 +75,6 @@ namespace Proj_M14_BrunoPinheiro
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frm_menu frm_menu = new frm_menu();
-                frm_menu.Show();
             }
         }
 
@@ -161,8 +152,6 @@ namespace Proj_M14_BrunoPinheiro
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frm_menu frm_menu = new frm_menu();
-                frm_menu.Show();
             }
         }
     }

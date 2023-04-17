@@ -234,6 +234,27 @@ namespace Proj_M14_BrunoPinheiro
                     }
                 }
 
+                // Cria a query para verificar se já existe uma quota paga para o mês e ano selecionados
+                string checkQuery = @"SELECT COUNT(*) FROM quota 
+                      WHERE idCliente = @idCliente 
+                      AND YEAR(dataQuota) = @ano 
+                      AND MONTH(dataQuota) = @mes";
+
+                // Cria o comando para executar a consulta
+                MySqlCommand checkCmd = new MySqlCommand(checkQuery, con);
+                checkCmd.Parameters.AddWithValue("@idCliente", lbl_idsocio.Text);
+                checkCmd.Parameters.AddWithValue("@ano", dtp_quota.Value.Year);
+                checkCmd.Parameters.AddWithValue("@mes", dtp_quota.Value.Month);
+
+                // Executa a consulta e obtém o resultado
+                int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                // Verifica se já existe uma quota paga para o mês e ano selecionados
+                if (count > 0)
+                {
+                    MessageBox.Show("Já existe uma quota paga para o mês selecionado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 // Atualiza a DataGridView com os dados da quota paga
                 string queryDgv = @"SELECT idQuota, idCliente, dataQuota, valorQuota, dataPagamento 

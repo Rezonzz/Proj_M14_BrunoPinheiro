@@ -83,6 +83,7 @@
             this.txt_nif.Name = "txt_nif";
             this.txt_nif.Size = new System.Drawing.Size(191, 22);
             this.txt_nif.TabIndex = 143;
+            this.txt_nif.TextChanged += new System.EventHandler(this.txt_nif_TextChanged);
             // 
             // panel4
             // 
@@ -113,6 +114,7 @@
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(191, 22);
             this.txt_telefone.TabIndex = 139;
+            this.txt_telefone.TextChanged += new System.EventHandler(this.txt_telefone_TextChanged);
             // 
             // panel3
             // 
@@ -173,6 +175,7 @@
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(191, 22);
             this.txt_nome.TabIndex = 131;
+            this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
             // 
             // panel1
             // 
@@ -203,6 +206,7 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(194, 22);
             this.txt_email.TabIndex = 123;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // pnl_1
             // 
@@ -265,6 +269,7 @@
             // cbo_estado
             // 
             this.cbo_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_estado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));

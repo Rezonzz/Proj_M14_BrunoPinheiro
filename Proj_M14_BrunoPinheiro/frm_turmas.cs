@@ -21,6 +21,8 @@ namespace Proj_M14_BrunoPinheiro
 
         private void frm_turmas_Load(object sender, EventArgs e)
         {
+            dtp_hora.MinDate = DateTime.Today.AddHours(16);
+            dtp_hora.MaxDate = DateTime.Today.AddHours(22);
             carregaComboboxTreinador();
             carregaComboboxModalidades();
             carregaComboboxSocios();
@@ -263,7 +265,7 @@ namespace Proj_M14_BrunoPinheiro
                 {
                     con.Open();
 
-                    MySqlCommand verificaTreinadorModalidade = new MySqlCommand("SELECT * FROM detalheturma WHERE idTurma IN (SELECT idTurma FROM turmas WHERE idModalidade = @idModalidade) AND idCliente = @idTreinador", con);
+                    MySqlCommand verificaTreinadorModalidade = new MySqlCommand("SELECT * FROM detalhetreinador WHERE idModalidade = @idModalidade AND idTreinador = @idTreinador", con);
                     verificaTreinadorModalidade.Parameters.AddWithValue("@idModalidade", cbo_modalidade.SelectedValue);
                     verificaTreinadorModalidade.Parameters.AddWithValue("@idTreinador", cbo_treinadores.SelectedValue);
 

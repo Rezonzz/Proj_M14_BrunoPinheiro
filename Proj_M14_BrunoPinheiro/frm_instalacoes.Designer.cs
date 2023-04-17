@@ -174,6 +174,7 @@
             // cbo_estado
             // 
             this.cbo_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_estado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_estado.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -208,6 +209,7 @@
             // cbo_modalidade
             // 
             this.cbo_modalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_modalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_modalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_modalidade.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_modalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -239,6 +241,7 @@
             // cbo_instalacao
             // 
             this.cbo_instalacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_instalacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_instalacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_instalacao.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_instalacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));

@@ -70,6 +70,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalhereserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ocupacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -225,6 +226,7 @@
             // cbo_socio
             // 
             this.cbo_socio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_socio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_socio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_socio.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_socio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -256,6 +258,7 @@
             // cbo_instalacao
             // 
             this.cbo_instalacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
+            this.cbo_instalacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_instalacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_instalacao.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_instalacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
@@ -492,12 +495,29 @@
             this.pic_username.TabIndex = 269;
             this.pic_username.TabStop = false;
             // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Enabled = false;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("CCElephantmenAged-Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(59)))), ((int)(((byte)(122)))));
+            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cancelar.Location = new System.Drawing.Point(572, 56);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(239, 37);
+            this.btn_cancelar.TabIndex = 321;
+            this.btn_cancelar.Text = "Cancelar Reserva";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Visible = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
             // frm_reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(3)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(860, 465);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.dtp_fim);
             this.Controls.Add(this.dtp_inicio);
             this.Controls.Add(this.dtp_reserva);
@@ -574,5 +594,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalHoras;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorPagar;
+        private System.Windows.Forms.Button btn_cancelar;
     }
 }

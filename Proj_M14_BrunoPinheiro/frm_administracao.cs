@@ -30,20 +30,12 @@ namespace Proj_M14_BrunoPinheiro
            int nHeightEllipse
        );
 
-        private void frm_administracao_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
-        }
-
         private void pic_close_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Tem certeza que deseja fazer logout?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frm_menu frm_menu = new frm_menu();
-                frm_menu.Show();
             }
         }
 
@@ -347,8 +339,6 @@ namespace Proj_M14_BrunoPinheiro
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                frm_menu frm_menu = new frm_menu();
-                frm_menu.Show();
             }
         }
 
@@ -375,6 +365,12 @@ namespace Proj_M14_BrunoPinheiro
             pnl_selected8.Enabled = false;
             pnl_selected9.Visible = false;
             pnl_selected9.Enabled = false;
+        }
+
+        private void frm_administracao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
         }
     }
 }
