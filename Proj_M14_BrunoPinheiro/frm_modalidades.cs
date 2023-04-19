@@ -89,6 +89,24 @@ namespace Proj_M14_BrunoPinheiro
 
         private void frm_modalidades_Load(object sender, EventArgs e)
         {
+            OpenChildForm(new frm_futebol());
+            pnl_selected1.Visible = true;
+            pnl_selected1.Enabled = true;
+            pnl_selected2.Visible = false;
+            pnl_selected2.Enabled = false;
+            pnl_selected3.Visible = false;
+            pnl_selected3.Enabled = false;
+            pnl_selected4.Visible = false;
+            pnl_selected4.Enabled = false;
+            pnl_selected5.Visible = false;
+            pnl_selected5.Enabled = false;
+            pnl_selected6.Visible = false;
+            pnl_selected6.Enabled = false;
+            pnl_selected7.Visible = false;
+            pnl_selected7.Enabled = false;
+            pnl_selected8.Visible = false;
+            pnl_selected8.Enabled = false;
+
             var modalidades = new[] { "Futebol", "Voleibol", "Basquetebol", "Tênis", "Badminton", "Natação", "Ginástica", "Andebol" };
 
             using (var con = conn.GetConnection())

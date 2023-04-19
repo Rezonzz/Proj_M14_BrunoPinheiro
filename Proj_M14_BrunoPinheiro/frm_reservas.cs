@@ -117,16 +117,36 @@ namespace Proj_M14_BrunoPinheiro
                 }
                 else
                 {
-                    btn_efetuar.Enabled = false;
-                    btn_efetuar.Visible = false;
-                    btn_cancelar.Enabled = true;
-                    btn_cancelar.Visible = true;
-                    btn_concluir.Enabled = true;
-                    cbo_instalacao.Enabled = false;
-                    cbo_socio.Enabled = false;
-                    dtp_reserva.Enabled = false;
-                    dtp_inicio.Enabled = false;
-                    dtp_fim.Enabled = false;
+                    dr.Close();
+                    // Verificação de conflitos de reserva em cima da hora
+                    MySqlCommand verifConflitos = new MySqlCommand("SELECT * FROM reservas WHERE idInstalacao = @idInstalacao AND dataReserva = @dataReserva AND ((horaInicio <= @horaInicio AND horaFim >= @horaInicio) OR (horaInicio <= @horaFim AND horaFim >= @horaFim))", con);
+                    verifConflitos.Parameters.AddWithValue("@idInstalacao", cbo_instalacao.SelectedValue);
+                    verifConflitos.Parameters.AddWithValue("@dataReserva", dtp_reserva.Value.Date);
+                    verifConflitos.Parameters.AddWithValue("@horaInicio", dtp_inicio.Value.TimeOfDay);
+                    verifConflitos.Parameters.AddWithValue("@horaFim", dtp_fim.Value.TimeOfDay);
+
+                    MySqlDataReader dr2 = verifConflitos.ExecuteReader();
+                    if (dr2.Read())
+                    {
+                        MessageBox.Show("Já existe uma reserva para esta instalação com conflito de horários!", "Efetuar Reserva");
+                        dr2.Close();
+                        dr.Close();
+                        return;
+                    }
+                    else
+                    {
+                        btn_efetuar.Enabled = false;
+                        btn_efetuar.Visible = false;
+                        btn_cancelar.Enabled = true;
+                        btn_cancelar.Visible = true;
+                        btn_concluir.Enabled = true;
+                        cbo_instalacao.Enabled = false;
+                        cbo_socio.Enabled = false;
+                        dtp_reserva.Enabled = false;
+                        dtp_inicio.Enabled = false;
+                        dtp_fim.Enabled = false;
+                    }
+                    dr2.Close();
                 }
                 dr.Close();
 
